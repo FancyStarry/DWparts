@@ -1,0 +1,107 @@
+<!-- BST602 -->
+<article class="monster" id="BST602" data-id="BST602" data-name="蛇发女妖"
+         data-race="beast" data-level="6" data-dom="9"
+         data-str="11" data-dex="12" data-con="17" data-int="18" data-wis="15" data-cha="13" data-hp="88" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/BST602.webp" alt="蛇发女妖"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">蛇发女妖</h2>
+      <p class="monster__meta"><span class="monster__level">6级</span><span class="monster__race">野兽</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">9</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability"><dt>力量</dt><dd>11</dd></div>
+      <div class="ability"><dt>敏捷</dt><dd>12</dd></div>
+      <div class="ability"><dt>体质</dt><dd>17</dd></div>
+      <div class="ability adv"><dt>智力</dt><dd>18</dd></div>
+      <div class="ability"><dt>感知</dt><dd>15</dd></div>
+      <div class="ability"><dt>魅力</dt><dd>13</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>88</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main"
+        data-dmg="mag3"
+        data-check="save" data-save="str:15">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/BST602.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">黄金牛面具</h3>
+        <p class="part__bonus"><span>免疫震慑</span><span>免疫盲目</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line mag3">1d10 <img class="ico" src="img/common/mag3.webp" alt="">力场伤害<img class="ico" src="img/common/CHA.webp" alt="魅力" title="魅力"></span>
+          </span>
+        </div>
+        <p class="part__desc">交战开始时，使前排敌人陷入<span class="pink">倒地</span>状态，并造成<span class="mag3">1d10 <img src="img/common/mag3.webp" alt="">额外力场伤害</span><img src="img/common/CHA.webp" alt="">。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">倒地</span>：自身的<span class="blue">命中检定</span>获得<span class="blue">劣势</span>。受到的近战命中会被赋予<span class="blue">优势</span>，而受到的远程命中则被赋予<span class="blue">劣势</span>。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="int" data-dmg="mag3" data-mult="int"
+        data-dcbonus="int" data-attack="spell ranged aoe"
+        data-check="save" data-save="str:12">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/BST602.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">念动压杀</h3>
+        <p class="part__bonus"><span>智力+2</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line mag3">4d8 <img class="ico" src="img/common/mag3.webp" alt="">力场伤害<img class="ico" src="img/common/INT.webp" alt="智力" title="智力"></span>
+            <span class="dmg__line mag3">+ 2d8 <img class="ico" src="img/common/mag3.webp" alt="">力场伤害</span>
+          </span>
+        </div>
+        <p class="part__desc">碾压目标及目标后方的敌人。对处于<span class="pink">倒地</span>状态的目标造成额外<img src="img/common/mag3.webp" alt=""><span class="mag3">力场伤害</span>。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="passive"
+        data-bonus="cha">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/BST602.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">支配斗篷</h3>
+        <p class="part__bonus"><span>魅力+2</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">在带有<img src="img/common/mag3.webp" alt=""><span class="mag3">力场伤害</span>的攻击中，增加相当于<img src="img/common/CHA.webp" alt="">魅力调整值的<img src="img/common/mag3.webp" alt=""><span class="mag3">力场伤害</span>。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="react"
+        data-bonus="dc"
+        data-dcbonus="cha"
+        data-check="save" data-save="wis:12">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/BST602.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">冻结凝视</h3>
+        <p class="part__bonus"><span>法术豁免难度+1</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">友军成为攻击目标时作为反应，有一定概率使该攻击无效。</p>
+      </div>
+    </li>
+  </ul>
+</article>

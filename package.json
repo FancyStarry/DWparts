@@ -1,0 +1,46 @@
+{
+  "name": "dwparts",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "^24.22.1",
+    "pnpm": ">=11"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "check": "node scripts/validate.ts",
+    "build": "node scripts/validate.ts && astro build",
+    "preview": "astro preview",
+    "test": "node scripts/test-filter.ts",
+    "visual": "node scripts/visual-check.mjs",
+    "shot": "node scripts/shot.mjs",
+    "images": "bash tools/build-images.sh",
+    "layout": "node scripts/verify-layout.mjs",
+    "badge": "node scripts/badge-corners.mjs",
+    "vertical": "node scripts/verify-vertical.mjs",
+    "corners": "node scripts/audit-corners.mjs",
+    "contrast": "node scripts/audit-contrast.mjs",
+    "palette": "node scripts/verify-palette.mjs",
+    "panel": "node scripts/verify-panel.mjs",
+    "masks": "node scripts/build-masks.mjs",
+    "fixes": "node scripts/verify-ui.mjs",
+    "mask": "node scripts/verify-mask.mjs",
+    "blur": "node scripts/verify-blur-anim.mjs"
+  },
+  "dependencies": {
+    "astro": "^7.4.2",
+    "parse5": "^8.0.1",
+    "yaml": "^2.9.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/jsdom": "^30.0.0",
+    "@types/node": "^26.6.5",
+    "jsdom": "^30.1.3",
+    "lightningcss": "^1.33.0",
+    "pngjs": "^7.0.0",
+    "puppeteer-core": "^25.16.0"
+  },
+  "packageManager": "pnpm@11.21.0"
+}

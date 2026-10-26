@@ -1,0 +1,112 @@
+<!-- ELM902 -->
+<article class="monster" id="ELM902" data-id="ELM902" data-name="超越体"
+         data-race="elf" data-level="9" data-dom="32"
+         data-str="6" data-dex="16" data-con="20" data-int="34" data-wis="38" data-cha="40" data-hp="160" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/ELM902.webp" alt="超越体"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">超越体</h2>
+      <p class="monster__meta"><span class="monster__level">9级</span><span class="monster__race">精灵</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">32</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability"><dt>力量</dt><dd>6</dd></div>
+      <div class="ability"><dt>敏捷</dt><dd>16</dd></div>
+      <div class="ability"><dt>体质</dt><dd>20</dd></div>
+      <div class="ability"><dt>智力</dt><dd>34</dd></div>
+      <div class="ability"><dt>感知</dt><dd>38</dd></div>
+      <div class="ability adv"><dt>魅力</dt><dd>40</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>160</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main"
+        data-check="save" data-save="wis:12">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/ELM902.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">世界之精神</h3>
+        <p class="part__bonus"><span>免疫魅惑</span><span>免疫<img src="img/common/mag4.webp" alt=""><span class="mag4">心灵伤害</span></span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">自身造成的<img src="img/common/mag4.webp" alt=""><span class="mag4">心灵伤害</span>无视敌人的<span class="lb">抗性</span>和<span class="lb">免疫</span>。地下城内受到<img src="img/common/mag4.webp" alt=""><span class="mag4">心灵伤害</span>的敌人若豁免检定失败，则会陷入<span class="pink">超越连接</span>状态，使其受到的精神伤害永久增加。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">超越连接</span>：受到的<img src="img/common/mag4.webp" alt=""><span class="mag4">心灵伤害</span>增加，数值等同于施法者的魅力调整值。</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="cha" data-dmg="mag4" data-mult="cha"
+        data-attack="spell ranged"
+        data-check="hit" data-hit="cha">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/ELM902.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">超越法杖</h3>
+        <p class="part__bonus"><span>魅力+5</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line mag4">6d10 <img class="ico" src="img/common/mag4.webp" alt="">心灵伤害<img class="ico" src="img/common/CHA.webp" alt="魅力" title="魅力"></span>
+            <span class="dmg__line mag4">+ 3d8 <img class="ico" src="img/common/mag4.webp" alt="">心灵伤害<img class="ico" src="img/common/CHA.webp" alt=""><span class="dmg__mult">(0.5)</span></span>
+          </span>
+        </div>
+        <p class="part__desc">对目标造成强力<img src="img/common/mag4.webp" alt=""><span class="mag4">心灵伤害</span>。随后对地下城内所有处于<span class="pink">超越连接</span>状态的敌人造成额外<img src="img/common/mag4.webp" alt=""><span class="mag4">心灵伤害</span>。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="react"
+        data-bonus="wis" data-dmg="mag4" data-mult="cha"
+        data-dcbonus="cha"
+        data-check="save" data-save="wis:12">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/ELM902.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">万心洞察</h3>
+        <p class="part__bonus"><span>感知+4</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line mag4">6d12 <img class="ico" src="img/common/mag4.webp" alt="">心灵伤害<img class="ico" src="img/common/CHA.webp" alt="魅力" title="魅力"></span>
+          </span>
+        </div>
+        <p class="part__desc">受到攻击时作出反应，对后排敌人造成<span class="mag4">6d12 <img src="img/common/mag4.webp" alt="">额外心灵伤害</span><img src="img/common/CHA.webp" alt="">，随后强制其进行<span class="blue">感知豁免</span>。失败时，消耗1次尚未使用的<img src="img/common/main.webp" alt=""><span class="green">动作</span>。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="passive"
+        data-bonus="dc"
+        data-dcbonus="cha" data-attack="aoe"
+        data-check="save" data-save="int:12">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/ELM902.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">世界树之枝</h3>
+        <p class="part__bonus"><span>法术豁免难度+2</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">交战开始时，为后排敌人赋予<span class="pink">心灵易伤</span>和<span class="pink">混乱</span>状态。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">心灵易伤</span>：获得对<img src="img/common/mag4.webp" alt=""><span class="mag4">心灵伤害</span>的<span class="lb">易伤</span>。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+          <p class="effect"><span class="effect__name">混乱</span>：行动目标随机改变。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</article>

@@ -1,0 +1,64 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.21.0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.22.1
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Validate content
+        run: pnpm check
+
+      - name: Build
+        run: pnpm build
+
+      - name: Report size
+        run: |
+          echo "### 构建产物" >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          du -sh dist >> $GITHUB_STEP_SUMMARY
+          find dist -name '*.html' -o -name '*.css' -o -name '*.js' | while read f; do
+            raw=$(stat -c%s "$f"); gz=$(gzip -c "$f" | wc -c)
+            printf '%-52s %6s KB → %5s KB gzip\n' "$f" "$((raw/1024))" "$((gz/1024))" >> $GITHUB_STEP_SUMMARY
+          done
+          echo '```' >> $GITHUB_STEP_SUMMARY
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

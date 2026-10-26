@@ -1,0 +1,117 @@
+<!-- ELM802 -->
+<article class="monster" id="ELM802" data-id="ELM802" data-name="以太"
+         data-race="elf" data-level="8" data-dom="16"
+         data-str="6" data-dex="16" data-con="14" data-int="24" data-wis="18" data-cha="27" data-hp="100" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/ELM802.webp" alt="以太"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">以太</h2>
+      <p class="monster__meta"><span class="monster__level">8级</span><span class="monster__race">精灵</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">16</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability"><dt>力量</dt><dd>6</dd></div>
+      <div class="ability"><dt>敏捷</dt><dd>16</dd></div>
+      <div class="ability"><dt>体质</dt><dd>14</dd></div>
+      <div class="ability"><dt>智力</dt><dd>24</dd></div>
+      <div class="ability"><dt>感知</dt><dd>18</dd></div>
+      <div class="ability adv"><dt>魅力</dt><dd>27</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>100</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main"
+        data-dmg="mag1"
+        data-attack="aoe"
+        data-check="save" data-save="dex:18">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/ELM802.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">太阳之泪</h3>
+        <p class="part__bonus"><span>免疫盲目</span><span>免疫<img src="img/common/mag1.webp" alt=""><span class="mag1">光耀伤害</span></span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line mag1">10d10 <img class="ico" src="img/common/mag1.webp" alt="">光耀伤害<img class="ico" src="img/common/CHA.webp" alt="魅力" title="魅力"></span>
+          </span>
+        </div>
+        <p class="part__desc">自身的<img src="img/common/mag1.webp" alt=""><span class="mag1">光耀伤害</span>无视目标的抗性与免疫。交战开始时获得1层<span class="pink">超新星</span>，达到10层时消耗所有层数，对地下城全区域的所有敌人造成<span class="mag1">10d10 <img src="img/common/mag1.webp" alt="">额外光耀伤害</span><img src="img/common/CHA.webp" alt="">。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">超新星</span>：每层使自身造成的<img src="img/common/mag1.webp" alt=""><span class="mag1">光耀伤害</span>增加1d4。（最大层数：10）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="cha" data-dmg="mag1" data-mult="cha"
+        data-attack="spell ranged aoe"
+        data-check="hit" data-hit="cha">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/ELM802.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">审判射线</h3>
+        <p class="part__bonus"><span>魅力+3</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line mag1">6d8 <img class="ico" src="img/common/mag1.webp" alt="">光耀伤害<img class="ico" src="img/common/CHA.webp" alt=""><span class="dmg__mult">(1.5)</span></span>
+          </span>
+        </div>
+        <p class="part__desc">造成贯穿目标及目标身后敌人的强大<img src="img/common/mag1.webp" alt=""><span class="mag1">光耀伤害</span>。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="react"
+        data-bonus="wis" data-dmg="mag1" data-mult="cha"
+        data-dcbonus="cha"
+        data-check="save" data-save="cha:16">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/ELM802.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">惩戒之镜</h3>
+        <p class="part__bonus"><span>感知+3</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line mag1">4d6 <img class="ico" src="img/common/mag1.webp" alt="">光耀伤害<img class="ico" src="img/common/CHA.webp" alt="魅力" title="魅力"></span>
+          </span>
+        </div>
+        <p class="part__desc">成为法术目标时作出反应，使该法术无效化，并向攻击者反射<span class="mag1">4d6 <img src="img/common/mag1.webp" alt="">额外光耀伤害</span><img src="img/common/CHA.webp" alt="">。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="passive"
+        data-bonus="ac"
+        data-attack="aoe">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/ELM802.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">以太护盾</h3>
+        <p class="part__bonus"><span>护甲等级+3</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">交战开始时，为所有友军赋予<span class="pink">以太护盾</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">以太护盾</span>：获得对<img src="img/common/phy4.webp" alt=""><span class="phy4">物理伤害</span>与<img src="img/common/mag1.webp" alt=""><span class="mag1">光耀伤害</span>的<span class="lb">抗性</span>。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</article>

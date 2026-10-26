@@ -1,0 +1,106 @@
+<!-- UDD204 -->
+<article class="monster" id="UDD204" data-id="UDD204" data-name="吸血鬼衍体"
+         data-race="undead" data-level="2" data-dom="2"
+         data-str="6" data-dex="11" data-con="8" data-int="8" data-wis="9" data-cha="13" data-hp="22" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/UDD204.webp" alt="吸血鬼衍体"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">吸血鬼衍体</h2>
+      <p class="monster__meta"><span class="monster__level">2级</span><span class="monster__race">亡灵</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">2</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability"><dt>力量</dt><dd>6</dd></div>
+      <div class="ability"><dt>敏捷</dt><dd>11</dd></div>
+      <div class="ability"><dt>体质</dt><dd>8</dd></div>
+      <div class="ability"><dt>智力</dt><dd>8</dd></div>
+      <div class="ability"><dt>感知</dt><dd>9</dd></div>
+      <div class="ability adv"><dt>魅力</dt><dd>13</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>22</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main"
+        data-dmg="heal">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/UDD204.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">吸血鬼再生</h3>
+        <p class="part__bonus"><span>抵抗<img src="img/common/mag2.webp" alt=""><span class="mag2">死灵伤害</span></span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line heal">1d8 <img class="ico" src="img/common/heal.webp" alt="">治疗<img class="ico" src="img/common/CON.webp" alt="体质" title="体质"></span>
+          </span>
+        </div>
+        <p class="part__desc">交战开始时，对自身进行<span class="heal">1d8 治疗</span><img src="img/common/CON.webp" alt="">。</p>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="cha" data-dmg="mag4" data-mult="cha"
+        data-dcbonus="cha" data-attack="spell melee"
+        data-check="hit save" data-hit="cha" data-save="wis:11">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/UDD204.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">魅惑撕咬</h3>
+        <p class="part__bonus"><span>魅力+1</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line mag4">2d8 <img class="ico" src="img/common/mag4.webp" alt="">心灵伤害<img class="ico" src="img/common/CHA.webp" alt="魅力" title="魅力"></span>
+          </span>
+        </div>
+        <p class="part__desc">撕咬目标，使其陷入<span class="pink">魅惑</span>状态。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">魅惑</span>：在<span class="blue">命中检定</span>上获得<span class="blue">劣势</span>，造成的所有伤害加值减少2。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="passive"
+        data-bonus="ini">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/UDD204.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">隐秘接近</h3>
+        <p class="part__bonus"><span>先攻+1</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">交战开始时，进入<span class="pink">隐秘接近</span>状态，第一次命中检定获得<span class="blue">优势</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">隐秘接近</span>：在<span class="blue">命中检定</span>上获得<span class="blue">优势</span>，行动结束后解除。（持续时间：2.4秒 / 非战斗时4.8秒，独立层数）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="passive"
+        data-bonus="dex">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/UDD204.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">看破弱点</h3>
+        <p class="part__bonus"><span>敏捷+1</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">攻击处于<span class="pink">魅惑</span>或<span class="pink">恐慌</span>状态的目标时，命中检定获得<span class="blue">优势</span>。</p>
+      </div>
+    </li>
+  </ul>
+</article>

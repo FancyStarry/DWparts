@@ -1,0 +1,114 @@
+<!-- BST702 -->
+<article class="monster" id="BST702" data-id="BST702" data-name="多头蛇"
+         data-race="beast" data-level="7" data-dom="12"
+         data-str="23" data-dex="10" data-con="21" data-int="5" data-wis="10" data-cha="7" data-hp="121" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/BST702.webp" alt="多头蛇"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">多头蛇</h2>
+      <p class="monster__meta"><span class="monster__level">7级</span><span class="monster__race">野兽</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">12</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability adv"><dt>力量</dt><dd>23</dd></div>
+      <div class="ability"><dt>敏捷</dt><dd>10</dd></div>
+      <div class="ability"><dt>体质</dt><dd>21</dd></div>
+      <div class="ability"><dt>智力</dt><dd>5</dd></div>
+      <div class="ability"><dt>感知</dt><dd>10</dd></div>
+      <div class="ability"><dt>魅力</dt><dd>7</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>121</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/BST702.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">多头再生</h3>
+        <p class="part__bonus"><span>免疫中毒</span><span>免疫<img src="img/common/ele7.webp" alt=""><span class="ele7">自然伤害</span></span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">交战开始时获得9层<span class="pink">蛇头</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">蛇头</span>：受到伤害时，使受到的伤害减少2d8，同时层数减少1。对敌人造成的<img src="img/common/ele7.webp" alt=""><span class="ele7">自然伤害</span>增加等同于当前层数的数值。（最大层数：9）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="str" data-dmg="phy4 ele7" data-mult="str"
+        data-attack="melee aoe"
+        data-check="hit" data-hit="str">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/BST702.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">猛毒牙大剑</h3>
+        <p class="part__bonus"><span>力量+2</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line phy4">4d10 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<img class="ico" src="img/common/STR.webp" alt="力量" title="力量"></span>
+            <span class="dmg__line ele7">+ 2d12 <img class="ico" src="img/common/ele7.webp" alt="">自然伤害<img class="ico" src="img/common/CON.webp" alt="体质" title="体质"></span>
+          </span>
+        </div>
+        <p class="part__desc">用大剑横扫前排敌人，造成<img src="img/common/phy4.webp" alt=""><span class="phy4">物理伤害</span>与<img src="img/common/ele7.webp" alt=""><span class="ele7">自然伤害</span>。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="react"
+        data-bonus="con" data-dmg="ele7" data-mult="con"
+        data-dcbonus="con"
+        data-check="save" data-save="dex:16">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/BST702.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">九头蛇之鳞</h3>
+        <p class="part__bonus"><span>体质+2</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line ele7">3d10 <img class="ico" src="img/common/ele7.webp" alt="">自然伤害<img class="ico" src="img/common/CON.webp" alt="体质" title="体质"></span>
+          </span>
+        </div>
+        <p class="part__desc">受到攻击时，向前排敌人飞溅酸性血液并造成<span class="ele7">3d10 <img src="img/common/ele7.webp" alt="">额外自然伤害</span><img src="img/common/CON.webp" alt="">。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="passive"
+        data-bonus="mhp" data-dmg="heal">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/BST702.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">再生之头</h3>
+        <p class="part__bonus"><span>最大生命值+20</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line heal">2d12 <img class="ico" src="img/common/heal.webp" alt="">治疗<img class="ico" src="img/common/CON.webp" alt="体质" title="体质"></span>
+          </span>
+        </div>
+        <p class="part__desc">交战结束时，获得1层<span class="pink">蛇头</span>，并恢复<span class="heal">2d12 治疗</span><img src="img/common/CON.webp" alt="">生命值。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">蛇头</span>：受到伤害时，使受到的伤害减少2d8，同时层数减少1。对敌人造成的<img src="img/common/ele7.webp" alt=""><span class="ele7">自然伤害</span>增加等同于当前层数的数值。（最大层数：9）</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</article>

@@ -1,0 +1,101 @@
+<!-- BST901 -->
+<article class="monster" id="BST901" data-id="BST901" data-name="贝希摩斯"
+         data-race="beast" data-level="9" data-dom="32"
+         data-str="40" data-dex="8" data-con="38" data-int="4" data-wis="12" data-cha="8" data-hp="275" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/BST901.webp" alt="贝希摩斯"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">贝希摩斯</h2>
+      <p class="monster__meta"><span class="monster__level">9级</span><span class="monster__race">野兽</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">32</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability adv"><dt>力量</dt><dd>40</dd></div>
+      <div class="ability"><dt>敏捷</dt><dd>8</dd></div>
+      <div class="ability"><dt>体质</dt><dd>38</dd></div>
+      <div class="ability"><dt>智力</dt><dd>4</dd></div>
+      <div class="ability"><dt>感知</dt><dd>12</dd></div>
+      <div class="ability"><dt>魅力</dt><dd>8</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>275</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main"
+        data-check="save" data-save="con:12">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/BST901.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">巨兽甲壳</h3>
+        <p class="part__bonus"><span>抵抗<img src="img/common/phy4.webp" alt=""><span class="phy4">物理伤害</span></span><span>免疫倒地</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">入侵开始时，获得20层<span class="pink">魔晶石</span>。相邻狩猎场中的敌人施放法术时，强制其进行<span class="blue">体质豁免</span>。若失败，消耗1层<span class="pink">魔晶石</span>，完全阻止该法术。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">魔晶石</span>：每层使<img src="img/common/save.webp" alt=""><span class="orange">法术豁免加值</span>获得1点加值。受到钝击伤害时失去1层。（最大层数：20）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="str" data-dmg="phy4 ele7" data-mult="str"
+        data-dcbonus="str" data-attack="melee aoe"
+        data-check="hit save" data-hit="str" data-save="str:12">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/BST901.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">巨兽之拳</h3>
+        <p class="part__bonus"><span>力量+5</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line phy4">8d12 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<img class="ico" src="img/common/STR.webp" alt="力量" title="力量"></span>
+            <span class="dmg__line ele7">+ 4d10 <img class="ico" src="img/common/ele7.webp" alt="">自然伤害<img class="ico" src="img/common/CON.webp" alt="体质" title="体质"></span>
+          </span>
+        </div>
+        <p class="part__desc">移除目标的临时生命值并造成巨额<img src="img/common/phy4.webp" alt=""><span class="phy4">物理伤害</span>。命中时，对所有敌人造成额外<img src="img/common/ele7.webp" alt=""><span class="ele7">自然伤害</span>，并使豁免检定失败的敌人陷入<span class="pink">倒地</span>状态。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">倒地</span>：自身的<span class="blue">命中检定</span>获得<span class="blue">劣势</span>。受到的近战命中会被赋予<span class="blue">优势</span>，而受到的远程命中则被赋予<span class="blue">劣势</span>。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="passive"
+        data-bonus="con">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/BST901.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">不坏之躯</h3>
+        <p class="part__bonus"><span>体质+4</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">受到的所有物理伤害永久减少<span class="lb">物理伤害减免</span>+20（+体质调整值），但获得对<img src="img/common/mag3.webp" alt=""><span class="mag3">力场伤害</span>的<span class="lb">易伤</span>。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="passive"
+        data-bonus="mhp">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/BST901.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">巨兽生命力</h3>
+        <p class="part__bonus"><span>最大生命值+50</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">最大生命值大幅提高（最大生命值+80<img src="img/common/CON.webp" alt="">(6.0)），自身造成的所有<img src="img/common/phy4.webp" alt=""><span class="phy4">物理伤害</span>额外增加等同于体质调整值的数值。</p>
+      </div>
+    </li>
+  </ul>
+</article>

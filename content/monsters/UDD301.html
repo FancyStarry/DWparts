@@ -1,0 +1,118 @@
+<!-- UDD301 -->
+<article class="monster" id="UDD301" data-id="UDD301" data-name="妖鬼"
+         data-race="undead" data-level="3" data-dom="3"
+         data-str="10" data-dex="14" data-con="12" data-int="6" data-wis="7" data-cha="6" data-hp="34" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/UDD301.webp" alt="妖鬼"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">妖鬼</h2>
+      <p class="monster__meta"><span class="monster__level">3级</span><span class="monster__race">亡灵</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">3</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability"><dt>力量</dt><dd>10</dd></div>
+      <div class="ability adv"><dt>敏捷</dt><dd>14</dd></div>
+      <div class="ability"><dt>体质</dt><dd>12</dd></div>
+      <div class="ability"><dt>智力</dt><dd>6</dd></div>
+      <div class="ability"><dt>感知</dt><dd>7</dd></div>
+      <div class="ability"><dt>魅力</dt><dd>6</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>34</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main"
+        data-dmg="ele7"
+        data-check="save" data-save="con:12">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/UDD301.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">败血之爪</h3>
+        <p class="part__bonus"><span>免疫中毒</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line ele7">1d6 <img class="ico" src="img/common/ele7.webp" alt="">自然伤害<img class="ico" src="img/common/CON.webp" alt="体质" title="体质"></span>
+          </span>
+        </div>
+        <p class="part__desc">攻击命中时，对目标造成<span class="ele7">1d6 <img src="img/common/ele7.webp" alt="">额外自然伤害</span><img src="img/common/CON.webp" alt="">，并有一定概率使其陷入<span class="pink">中毒</span>状态。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">中毒</span>：交战结束时，受到1d4<img src="img/common/ele7.webp" alt=""><span class="ele7">自然伤害</span>，且<span class="blue">命中检定</span>获得<span class="blue">劣势</span>。（持续时间：2.4秒 / 非战斗时4.8秒，独立层数）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="dex" data-dmg="phy4" data-mult="dex"
+        data-attack="melee"
+        data-check="hit" data-hit="dex">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/UDD301.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">狂乱猛攻</h3>
+        <p class="part__bonus"><span>敏捷+1</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line phy4">1d6 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<img class="ico" src="img/common/DEX.webp" alt=""><span class="dmg__mult">(0.75)</span></span>
+            <span class="dmg__line phy4">+ 1d6 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<img class="ico" src="img/common/DEX.webp" alt=""><span class="dmg__mult">(0.5)</span></span>
+            <span class="dmg__line phy4">+ 1d6 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<img class="ico" src="img/common/DEX.webp" alt=""><span class="dmg__mult">(0.25)</span></span>
+          </span>
+        </div>
+        <p class="part__desc">连续攻击目标3次。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="passive"
+        data-bonus="ini">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/UDD301.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">野蛮捕食者</h3>
+        <p class="part__bonus"><span>先攻+2</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">攻击处于<span class="pink">中毒</span>或<span class="pink">流血</span>状态的敌人时，获得<span class="pink">近战伤害提升</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">近战伤害提升</span>：近战伤害加值增加2。（持续时间：4.8秒 / 非战斗时9.6秒，独立层数）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="react"
+        data-bonus="con" data-dmg="heal">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/UDD301.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">贪食内脏</h3>
+        <p class="part__bonus"><span>体质+1</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line heal">3d6 <img class="ico" src="img/common/heal.webp" alt="">治疗<img class="ico" src="img/common/CON.webp" alt="体质" title="体质"></span>
+          </span>
+        </div>
+        <p class="part__desc">每当有人死亡时作为反应，对自己进行<span class="heal">3d6 治疗</span><img src="img/common/CON.webp" alt="">并获得提高近战伤害的<span class="lgreen">近战伤害提升</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">近战伤害提升</span>：近战伤害加值增加2。（持续时间：4.8秒 / 非战斗时9.6秒，独立层数）</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</article>

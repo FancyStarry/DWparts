@@ -1,0 +1,107 @@
+<!-- UDD502 -->
+<article class="monster" id="UDD502" data-id="UDD502" data-name="吸血鬼"
+         data-race="undead" data-level="5" data-dom="6"
+         data-str="11" data-dex="17" data-con="13" data-int="12" data-wis="12" data-cha="16" data-hp="54" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/UDD502.webp" alt="吸血鬼"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">吸血鬼</h2>
+      <p class="monster__meta"><span class="monster__level">5级</span><span class="monster__race">亡灵</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">6</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability"><dt>力量</dt><dd>11</dd></div>
+      <div class="ability adv"><dt>敏捷</dt><dd>17</dd></div>
+      <div class="ability"><dt>体质</dt><dd>13</dd></div>
+      <div class="ability"><dt>智力</dt><dd>12</dd></div>
+      <div class="ability"><dt>感知</dt><dd>12</dd></div>
+      <div class="ability"><dt>魅力</dt><dd>16</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>54</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main"
+        data-dmg="mag2 heal">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/UDD502.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">猩红之渴</h3>
+        <p class="part__bonus"><span>免疫中毒</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line mag2">1d4 <img class="ico" src="img/common/mag2.webp" alt="">死灵伤害<img class="ico" src="img/common/CHA.webp" alt=""><span class="dmg__mult">(0.5)</span></span>
+            <span class="dmg__line heal">+ 0 <img class="ico" src="img/common/heal.webp" alt="">治疗<img class="ico" src="img/common/CHA.webp" alt="魅力" title="魅力"></span>
+          </span>
+        </div>
+        <p class="part__desc">攻击命中时，对目标造成额外<span class="mag2">1d4 <img src="img/common/mag2.webp" alt="">额外死灵伤害</span><img src="img/common/CHA.webp" alt="">( 0.5 )并对自己进行<span class="heal">0 治疗</span><img src="img/common/CHA.webp" alt="">。</p>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="dex" data-dmg="phy4 mag2 heal" data-mult="dex"
+        data-attack="spell melee"
+        data-check="hit" data-hit="dex">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/UDD502.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">猩红打击</h3>
+        <p class="part__bonus"><span>敏捷+2</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line phy4">3d8 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<img class="ico" src="img/common/DEX.webp" alt="敏捷" title="敏捷"></span>
+            <span class="dmg__line mag2">+ 2d8 <img class="ico" src="img/common/mag2.webp" alt="">死灵伤害<img class="ico" src="img/common/CHA.webp" alt="魅力" title="魅力"></span>
+            <span class="dmg__line heal">+ 2d8 <img class="ico" src="img/common/heal.webp" alt="">治疗</span>
+          </span>
+        </div>
+        <p class="part__desc">造成<span class="lb">重击</span>命中时，造成额外<img src="img/common/mag2.webp" alt=""><span class="mag2">死灵伤害</span>并恢复生命值。此攻击拥有<span class="lb">重击</span>触发加成。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="react"
+        data-bonus="cha">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/UDD502.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">滴血之刃</h3>
+        <p class="part__bonus"><span>魅力+2</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">成为近战攻击目标时作为反应，使受到的伤害减少3d10。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="passive"
+        data-bonus="ac"
+        data-attack="aoe">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/UDD502.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">鲜血贡品</h3>
+        <p class="part__bonus"><span>护甲等级+1</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">交战开始时，消耗15%的当前生命值，为所有友军赋予<span class="pink">鲜血贡品</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">鲜血贡品</span>：在下一次攻击时消耗，额外造成1d8 <img src="img/common/mag2.webp" alt=""><span class="mag2">死灵伤害</span>（+魅力调整值））。（持续时间：2.4秒 / 非战斗时4.8秒，独立层数）</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</article>

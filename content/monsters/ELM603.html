@@ -1,0 +1,112 @@
+<!-- ELM603 -->
+<article class="monster" id="ELM603" data-id="ELM603" data-name="凤凰"
+         data-race="elf" data-level="6" data-dom="9"
+         data-str="11" data-dex="16" data-con="14" data-int="19" data-wis="13" data-cha="12" data-hp="77" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/ELM603.webp" alt="凤凰"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">凤凰</h2>
+      <p class="monster__meta"><span class="monster__level">6级</span><span class="monster__race">精灵</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">9</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability"><dt>力量</dt><dd>11</dd></div>
+      <div class="ability"><dt>敏捷</dt><dd>16</dd></div>
+      <div class="ability"><dt>体质</dt><dd>14</dd></div>
+      <div class="ability adv"><dt>智力</dt><dd>19</dd></div>
+      <div class="ability"><dt>感知</dt><dd>13</dd></div>
+      <div class="ability"><dt>魅力</dt><dd>12</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>77</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main"
+        data-dmg="ele1"
+        data-attack="aoe">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/ELM603.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">永恒之火</h3>
+        <p class="part__bonus"><span>免疫<img src="img/common/ele1.webp" alt=""><span class="ele1">火焰伤害</span></span><span>易受<img src="img/common/ele2.webp" alt=""><span class="ele2">寒冷伤害</span></span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line ele1">4d10 <img class="ico" src="img/common/ele1.webp" alt="">火焰伤害<img class="ico" src="img/common/CHA.webp" alt="魅力" title="魅力"></span>
+          </span>
+        </div>
+        <p class="part__desc">受到致命伤害导致生命值归零时作为反应，触发<span class="lb">抵御死亡</span>并恢复50%最大生命值。触发时对所有敌人造成<span class="ele1">4d10 <img src="img/common/ele1.webp" alt="">额外火焰伤害</span><img src="img/common/CHA.webp" alt="">。</p>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="int" data-dmg="ele1" data-mult="int"
+        data-dcbonus="int" data-attack="spell melee aoe"
+        data-check="save" data-save="dex:12">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/ELM603.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">天界火焰</h3>
+        <p class="part__bonus"><span>智力+2</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line ele1">3d10 <img class="ico" src="img/common/ele1.webp" alt="">火焰伤害<img class="ico" src="img/common/INT.webp" alt="智力" title="智力"></span>
+          </span>
+        </div>
+        <p class="part__desc">燃烧前排敌人，赋予其<span class="pink">燃烧</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">燃烧</span>：交战结束时，受到1d4<img src="img/common/ele1.webp" alt=""><span class="ele1">火焰伤害</span>。（持续时间：4.8秒 / 非战斗时9.6秒，独立层数）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="passive"
+        data-bonus="dex" data-dmg="ele1" data-mult="int"
+        data-attack="aoe"
+        data-check="hit" data-hit="int">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/ELM603.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">凤凰之翼</h3>
+        <p class="part__bonus"><span>敏捷+2</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line ele1">1d8 <img class="ico" src="img/common/ele1.webp" alt="">火焰伤害<img class="ico" src="img/common/INT.webp" alt="智力" title="智力"></span>
+          </span>
+        </div>
+        <p class="part__desc">交战开始时，对所有处于<span class="pink">燃烧</span>状态的敌人造成<span class="ele1">1d8 <img src="img/common/ele1.webp" alt="">额外火焰伤害</span><img src="img/common/INT.webp" alt="">。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="passive"
+        data-bonus="wis">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/ELM603.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">炼狱形态</h3>
+        <p class="part__bonus"><span>感知+2</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">自身造成的<img src="img/common/ele1.webp" alt=""><span class="ele1">火焰伤害</span>无视目标的火焰抗性与免疫。</p>
+      </div>
+    </li>
+  </ul>
+</article>

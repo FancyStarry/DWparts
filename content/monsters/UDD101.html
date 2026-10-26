@@ -1,0 +1,107 @@
+<!-- UDD101 -->
+<article class="monster" id="UDD101" data-id="UDD101" data-name="丧尸"
+         data-race="undead" data-level="1" data-dom="1"
+         data-str="12" data-dex="4" data-con="12" data-int="4" data-wis="4" data-cha="3" data-hp="22" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/UDD101.webp" alt="丧尸"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">丧尸</h2>
+      <p class="monster__meta"><span class="monster__level">1级</span><span class="monster__race">亡灵</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">1</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability"><dt>力量</dt><dd>12</dd></div>
+      <div class="ability"><dt>敏捷</dt><dd>4</dd></div>
+      <div class="ability adv"><dt>体质</dt><dd>12</dd></div>
+      <div class="ability"><dt>智力</dt><dd>4</dd></div>
+      <div class="ability"><dt>感知</dt><dd>4</dd></div>
+      <div class="ability"><dt>魅力</dt><dd>3</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>22</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/UDD101.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">亡灵坚韧</h3>
+        <p class="part__bonus"><span>免疫中毒</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">进入<span class="pink">亡灵坚韧</span>状态。受到<span class="lb">重击</span>伤害或<img src="img/common/mag1.webp" alt=""><span class="mag1">光耀伤害</span>时不会触发。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">亡灵坚韧</span>：受到致命伤害时，若非<img src="img/common/mag1.webp" alt=""><span class="mag1">光耀伤害</span>或<span class="lb">重击</span>，则进行<span class="blue">体质豁免</span>（DC 10 + 生存次数 * 2），成功则保留1点生命值存活。</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="str" data-dmg="phy4" data-mult="str"
+        data-attack="melee"
+        data-check="hit" data-hit="str">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/UDD101.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">腐败之握</h3>
+        <p class="part__bonus"><span>力量+1</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line phy4">1d12 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<img class="ico" src="img/common/STR.webp" alt="力量" title="力量"></span>
+          </span>
+        </div>
+        <p class="part__desc">命中时，使目标陷入<span class="pink">擒抱</span>状态。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">擒抱</span>：无法移动，且在<span class="blue">敏捷豁免</span>上获得<span class="blue">劣势</span>。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="react"
+        data-bonus="con" data-dmg="ele7" data-mult="con"
+        data-dcbonus="con"
+        data-check="save" data-save="dex:11">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/UDD101.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">疫病囊</h3>
+        <p class="part__bonus"><span>体质+1</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line ele7">1d6 <img class="ico" src="img/common/ele7.webp" alt="">自然伤害<img class="ico" src="img/common/CON.webp" alt="体质" title="体质"></span>
+          </span>
+        </div>
+        <p class="part__desc">受到近战攻击时作为反应，有一定概率对攻击者造成<span class="ele7">1d6 <img src="img/common/ele7.webp" alt="">额外自然伤害</span><img src="img/common/CON.webp" alt="">。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="passive"
+        data-bonus="mhp">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/UDD101.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">迟钝神经</h3>
+        <p class="part__bonus"><span>最大生命值+5</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">对<span class="pink">恐慌</span>状态获得<span class="lb">免疫</span>。</p>
+      </div>
+    </li>
+  </ul>
+</article>

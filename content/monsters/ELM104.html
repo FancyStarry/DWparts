@@ -1,0 +1,102 @@
+<!-- ELM104 -->
+<article class="monster" id="ELM104" data-id="ELM104" data-name="史莱姆"
+         data-race="elf" data-level="1" data-dom="1"
+         data-str="6" data-dex="4" data-con="13" data-int="3" data-wis="4" data-cha="3" data-hp="26" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/ELM104.webp" alt="史莱姆"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">史莱姆</h2>
+      <p class="monster__meta"><span class="monster__level">1级</span><span class="monster__race">精灵</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">1</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability"><dt>力量</dt><dd>6</dd></div>
+      <div class="ability"><dt>敏捷</dt><dd>4</dd></div>
+      <div class="ability adv"><dt>体质</dt><dd>13</dd></div>
+      <div class="ability"><dt>智力</dt><dd>3</dd></div>
+      <div class="ability"><dt>感知</dt><dd>4</dd></div>
+      <div class="ability"><dt>魅力</dt><dd>3</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>26</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/ELM104.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">不定形身体</h3>
+        <p class="part__bonus"><span>免疫<img src="img/common/ele7.webp" alt=""><span class="ele7">自然伤害</span></span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">对<span class="lb">重击</span>和<span class="pink">倒地</span>状态获得<span class="lb">免疫</span>。</p>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="dc" data-dmg="ele7" data-mult="con"
+        data-dcbonus="con" data-attack="ranged"
+        data-check="save" data-save="dex:12">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/ELM104.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">腐蚀喷出口</h3>
+        <p class="part__bonus"><span>法术豁免难度+1</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line ele7">1d10 <img class="ico" src="img/common/ele7.webp" alt="">自然伤害<img class="ico" src="img/common/CON.webp" alt="体质" title="体质"></span>
+          </span>
+        </div>
+        <p class="part__desc">对目标喷吐腐蚀液，赋予<span class="lgreen">护甲减值</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">护甲减值</span>：护甲等级减少2。（持续时间：4.8秒 / 非战斗时9.6秒，独立层数）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="passive"
+        data-bonus="ac">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/ELM104.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">粘性表皮</h3>
+        <p class="part__bonus"><span>护甲等级+1</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">获得对<img src="img/common/ele7.webp" alt=""><span class="ele7">自然伤害</span>的<span class="lb">抗性</span>。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="react"
+        data-bonus="mhp" data-dmg="ele7" data-mult="con">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/ELM104.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">不稳定核心</h3>
+        <p class="part__bonus"><span>最大生命值+10</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line ele7">1d10 <img class="ico" src="img/common/ele7.webp" alt="">自然伤害<img class="ico" src="img/common/CON.webp" alt="体质" title="体质"></span>
+          </span>
+        </div>
+        <p class="part__desc">受到<span class="lb">重击</span>伤害时作为反应，对攻击者造成<span class="ele7">1d10 <img src="img/common/ele7.webp" alt="">额外自然伤害</span><img src="img/common/CON.webp" alt="">。</p>
+      </div>
+    </li>
+  </ul>
+</article>

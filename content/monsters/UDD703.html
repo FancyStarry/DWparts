@@ -1,0 +1,105 @@
+<!-- UDD703 -->
+<article class="monster" id="UDD703" data-id="UDD703" data-name="憎恶"
+         data-race="undead" data-level="7" data-dom="12"
+         data-str="23" data-dex="8" data-con="21" data-int="4" data-wis="6" data-cha="5" data-hp="121" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/UDD703.webp" alt="憎恶"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">憎恶</h2>
+      <p class="monster__meta"><span class="monster__level">7级</span><span class="monster__race">亡灵</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">12</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability adv"><dt>力量</dt><dd>23</dd></div>
+      <div class="ability"><dt>敏捷</dt><dd>8</dd></div>
+      <div class="ability"><dt>体质</dt><dd>21</dd></div>
+      <div class="ability"><dt>智力</dt><dd>4</dd></div>
+      <div class="ability"><dt>感知</dt><dd>6</dd></div>
+      <div class="ability"><dt>魅力</dt><dd>5</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>121</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/UDD703.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">不死之躯</h3>
+        <p class="part__bonus"><span>免疫中毒</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">入侵开始时获得3层<span class="pink">变异</span>。交战开始时获得1层<span class="pink">变异</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">变异</span>：力量与敏捷增加等同于层数的数值，智力与感知减少等同于层数的数值。（最大层数：10）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="str" data-dmg="phy4" data-mult="str"
+        data-attack="melee aoe"
+        data-check="hit" data-hit="str">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/UDD703.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">屠戮大剑</h3>
+        <p class="part__bonus"><span>力量+2</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line phy4">4d10 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<img class="ico" src="img/common/STR.webp" alt="力量" title="力量"></span>
+          </span>
+        </div>
+        <p class="part__desc">强力劈砍前排敌人。重击命中时，获得1层<span class="pink">变异</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">变异</span>：力量与敏捷增加等同于层数的数值，智力与感知减少等同于层数的数值。（最大层数：10）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="passive"
+        data-bonus="con">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/UDD703.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">缝合血肉</h3>
+        <p class="part__bonus"><span>体质+2</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">受到近战攻击时获得<span class="pink">脓液</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">脓液</span>：交战结束时消耗所有层数，每消耗1层恢复1d8生命值，并获得1层<span class="pink">变异</span>。（最大层数：20）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="react"
+        data-bonus="ac">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/UDD703.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">怪物脊椎</h3>
+        <p class="part__bonus"><span>护甲等级+2</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">受到致命伤害时，进入不会致死的<span class="pink">不死之躯</span>状态，该效果结束后即会死亡。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">不死之躯</span>：持续期间内受到致命伤害也将保留1点生命值存活，但持续时间结束后将死亡。（持续时间：4.8秒 / 非战斗时9.6秒）</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</article>

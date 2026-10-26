@@ -1,0 +1,60 @@
+---
+/**
+ * 筛选面板 —— 悬浮下拉式。
+ *
+ * 结构上是顶栏下方的一个浮层，覆盖主内容，收起时向上滑出（非线性缓动）。
+ * 每个类别首位为「全部」，选中即清除该组条件。
+ */
+import type { Taxonomy } from '../lib/taxonomy.ts';
+
+interface Props { tax: Taxonomy }
+const { tax } = Astro.props;
+---
+<!--
+  两层结构（关键）：
+    .filters        只负责毛玻璃与淡入淡出 —— 它绝不做几何动画
+    .filters__panel  负责展开/收起的位移与裁切
+
+  原因：带 backdrop-filter 的元素一旦自己做 transform / clip-path 动画，
+  浏览器会把它提升到独立合成层，合成层的 backdrop 采样不到下方内容，
+  表现为动画全程"半透明锐利"、动画结束才突然变模糊（= 看起来卡一下并变纯色）。
+  把几何动画拆到没有 backdrop-filter 的子元素上即可避免。
+-->
+<div class="filters" id="filters" data-filters hidden>
+  <div class="filters__panel">
+    <div class="filters__inner">
+    {
+      tax.groups.map((g) => (
+        <div class="filter-row">
+          <div class="filter-row__label">{g.label}</div>
+          <div class="filter-row__values" role="group" aria-label={`按${g.label}筛选`}>
+            <button
+              class="chip chip--all"
+              type="button"
+              aria-pressed="true"
+              data-group={g.id}
+              data-value=""
+              title={`不限${g.label}`}
+            >
+              <span>全部</span>
+            </button>
+            {g.values.map((v) => (
+              <button
+                class="chip"
+                type="button"
+                aria-pressed="false"
+                data-group={g.id}
+                data-value={v.id}
+                title={v.label}
+              >
+                {v.icon && <img class="ico" src={`img/common/${v.icon}`} alt="" width="16" height="16" loading="lazy" decoding="async" />}
+                <span>{v.label}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      ))
+    }
+    </div>
+  </div>
+</div>

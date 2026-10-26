@@ -1,0 +1,114 @@
+<!-- ELM901 -->
+<article class="monster" id="ELM901" data-id="ELM901" data-name="艾梅丽亚"
+         data-race="elf" data-level="9" data-dom="32"
+         data-str="10" data-dex="22" data-con="24" data-int="34" data-wis="40" data-cha="36" data-hp="185" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/ELM901.webp" alt="艾梅丽亚"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">艾梅丽亚</h2>
+      <p class="monster__meta"><span class="monster__level">9级</span><span class="monster__race">精灵</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">32</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability"><dt>力量</dt><dd>10</dd></div>
+      <div class="ability"><dt>敏捷</dt><dd>22</dd></div>
+      <div class="ability"><dt>体质</dt><dd>24</dd></div>
+      <div class="ability"><dt>智力</dt><dd>34</dd></div>
+      <div class="ability adv"><dt>感知</dt><dd>40</dd></div>
+      <div class="ability"><dt>魅力</dt><dd>36</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>185</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main"
+        data-attack="aoe">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/ELM901.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">精灵界权能</h3>
+        <p class="part__bonus"><span>免疫<img src="img/common/ele1.webp" alt=""><span class="ele1">火焰伤害</span></span><span>免疫<img src="img/common/ele2.webp" alt=""><span class="ele2">寒冷伤害</span></span><span>免疫<img src="img/common/ele3.webp" alt=""><span class="ele3">闪电伤害</span></span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">入侵开始时，为地下城内所有友军施加<span class="pink">元素权能</span>，使<img src="img/common/ele1.webp" alt=""><span class="ele1">火焰伤害</span>、<img src="img/common/ele2.webp" alt=""><span class="ele2">寒冷伤害</span>与<img src="img/common/ele3.webp" alt=""><span class="ele3">闪电伤害</span>提高等同于感知调整值的数值。自身的火焰、寒冷与电击伤害无视目标的<span class="lb">抗性</span>和<span class="lb">免疫</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">元素权能</span>：对敌人造成的<img src="img/common/ele1.webp" alt=""><span class="ele1">火焰伤害</span>、<img src="img/common/ele2.webp" alt=""><span class="ele2">寒冷伤害</span>与<img src="img/common/ele3.webp" alt=""><span class="ele3">闪电伤害</span>增加等同于施法者感知调整值的数值。</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="wis" data-dmg="ele1 ele2 ele3" data-mult="int"
+        data-dcbonus="wis" data-attack="spell ranged aoe"
+        data-check="save" data-save="dex:12">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/ELM901.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">万物和谐</h3>
+        <p class="part__bonus"><span>感知+5</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line ele1">6d8 <img class="ico" src="img/common/ele1.webp" alt="">火焰伤害<img class="ico" src="img/common/INT.webp" alt="智力" title="智力"></span>
+            <span class="dmg__line ele2">+ 6d8 <img class="ico" src="img/common/ele2.webp" alt="">寒冷伤害<img class="ico" src="img/common/CHA.webp" alt="魅力" title="魅力"></span>
+            <span class="dmg__line ele3">+ 6d8 <img class="ico" src="img/common/ele3.webp" alt="">闪电伤害<img class="ico" src="img/common/WIS.webp" alt="感知" title="感知"></span>
+          </span>
+        </div>
+        <p class="part__desc">同时对目标及其后方的敌人造成<img src="img/common/ele1.webp" alt=""><span class="ele1">火焰伤害</span>、<img src="img/common/ele2.webp" alt=""><span class="ele2">寒冷伤害</span>与<img src="img/common/ele3.webp" alt=""><span class="ele3">闪电伤害</span>。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="passive"
+        data-bonus="cha" data-dmg="ele1 ele2 ele3" data-mult="wis">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/ELM901.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">精灵统御</h3>
+        <p class="part__bonus"><span>魅力+4</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line ele1">2d8 <img class="ico" src="img/common/ele1.webp" alt="">火焰伤害<img class="ico" src="img/common/WIS.webp" alt=""><span class="dmg__mult">(0.25)</span></span>
+            <span class="dmg__line ele2">+ 2d8 <img class="ico" src="img/common/ele2.webp" alt="">寒冷伤害<img class="ico" src="img/common/WIS.webp" alt=""><span class="dmg__mult">(0.25)</span></span>
+            <span class="dmg__line ele3">+ 2d8 <img class="ico" src="img/common/ele3.webp" alt="">闪电伤害<img class="ico" src="img/common/WIS.webp" alt=""><span class="dmg__mult">(0.25)</span></span>
+          </span>
+        </div>
+        <p class="part__desc">获得对所有元素伤害的<span class="lb">抗性</span>。受到敌人伤害时，立即对该敌人造成<span class="ele1">2d8 <img src="img/common/ele1.webp" alt="">额外火焰伤害</span><img src="img/common/WIS.webp" alt="">、<span class="ele2">2d8 <img src="img/common/ele2.webp" alt="">额外寒冷伤害</span><img src="img/common/WIS.webp" alt="">和<span class="ele3">2d8 <img src="img/common/ele3.webp" alt="">额外闪电伤害</span><img src="img/common/WIS.webp" alt="">。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="passive"
+        data-bonus="int"
+        data-dcbonus="wis" data-attack="aoe"
+        data-check="save" data-save="wis:12">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/ELM901.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">元素花冠</h3>
+        <p class="part__bonus"><span>智力+4</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">交战开始时，对所有敌人施加<span class="pink">火焰易伤</span>、<span class="pink">寒冷易伤</span>与<span class="pink">闪电易伤</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">火焰易伤</span>：获得对<img src="img/common/ele1.webp" alt=""><span class="ele1">火焰伤害</span>的<span class="lb">易伤</span>。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+          <p class="effect"><span class="effect__name">寒冷易伤</span>：获得对<img src="img/common/ele2.webp" alt=""><span class="ele2">寒冷伤害</span>的<span class="lb">易伤</span>。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+          <p class="effect"><span class="effect__name">闪电易伤</span>：获得对<img src="img/common/ele3.webp" alt=""><span class="ele3">闪电伤害</span>的<span class="lb">易伤</span>。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</article>

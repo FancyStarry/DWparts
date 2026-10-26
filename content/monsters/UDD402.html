@@ -1,0 +1,102 @@
+<!-- UDD402 -->
+<article class="monster" id="UDD402" data-id="UDD402" data-name="死亡祭司"
+         data-race="undead" data-level="4" data-dom="4"
+         data-str="7" data-dex="9" data-con="12" data-int="13" data-wis="16" data-cha="9" data-hp="40" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/UDD402.webp" alt="死亡祭司"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">死亡祭司</h2>
+      <p class="monster__meta"><span class="monster__level">4级</span><span class="monster__race">亡灵</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">4</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability"><dt>力量</dt><dd>7</dd></div>
+      <div class="ability"><dt>敏捷</dt><dd>9</dd></div>
+      <div class="ability"><dt>体质</dt><dd>12</dd></div>
+      <div class="ability"><dt>智力</dt><dd>13</dd></div>
+      <div class="ability adv"><dt>感知</dt><dd>16</dd></div>
+      <div class="ability"><dt>魅力</dt><dd>9</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>40</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main"
+        data-attack="aoe">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/UDD402.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">死亡缓刑</h3>
+        <p class="part__bonus"><span>免疫中毒</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">交战开始时，对前排友军赋予<span class="pink">死亡喘息</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">死亡喘息</span>：受到致命伤害时，恢复1点生命值并解除。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="int" data-dmg="mag2 mag1" data-mult="int"
+        data-attack="spell ranged"
+        data-check="hit" data-hit="int">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/UDD402.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">堕落之炎</h3>
+        <p class="part__bonus"><span>智力+1</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line mag2">1d12 <img class="ico" src="img/common/mag2.webp" alt="">死灵伤害<img class="ico" src="img/common/INT.webp" alt="智力" title="智力"></span>
+            <span class="dmg__line mag1">+ 1d12 <img class="ico" src="img/common/mag1.webp" alt="">光耀伤害<img class="ico" src="img/common/WIS.webp" alt="感知" title="感知"></span>
+          </span>
+        </div>
+        <p class="part__desc">用堕落之炎焚烧目标。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="passive"
+        data-bonus="wis">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/UDD402.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">死灵法师的誓约</h3>
+        <p class="part__bonus"><span>感知+1</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">自身造成的<img src="img/common/mag2.webp" alt=""><span class="mag2">死灵伤害</span>无视目标的<span class="lb">抗性</span>。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="passive"
+        data-bonus="dc"
+        data-attack="aoe">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/UDD402.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">死灵吸收护盾</h3>
+        <p class="part__bonus"><span>法术豁免难度+1</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">交战开始时，为所有友军附加吸收<img src="img/common/mag2.webp" alt=""><span class="mag2">死灵伤害</span>的<span class="pink">死灵吸收护盾</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">死灵吸收护盾</span>：使下1次<img src="img/common/mag2.webp" alt=""><span class="mag2">死灵伤害</span>无效，并进行等同于该数值的生命值<span class="blue">治疗</span>后解除。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</article>

@@ -1,0 +1,141 @@
+# ════════════════════════════════════════════════════════════════
+#  标签体系 —— 唯一真源
+#
+#  顶栏筛选、卡片上可见的标签、构建期校验都读这一份文件。
+#  魔物 HTML 里只写 data-<attr>="<id> …"，不写字面量中文标签。
+#
+#  scope: monster → 写在 <article class="monster"> 上（如种族、等级）
+#         part    → 写在 <li class="part"> 上
+#  多值以空格分隔，例如 data-dmg="phy4 ele1"
+# ════════════════════════════════════════════════════════════════
+
+groups:
+  - id: race
+    label: 种族
+    attr: race
+    scope: monster
+    values:
+      - { id: beast,  label: 野兽, icon: beast.webp }
+      - { id: elf,    label: 精灵, icon: elf.webp }
+      - { id: undead, label: 亡灵, icon: undead.webp }
+
+  - id: level
+    label: 等级
+    attr: level
+    scope: monster
+    values:
+      - { id: "1", label: "1" }
+      - { id: "2", label: "2" }
+      - { id: "3", label: "3" }
+      - { id: "4", label: "4" }
+      - { id: "5", label: "5" }
+      - { id: "6", label: "6" }
+      - { id: "7", label: "7" }
+      - { id: "8", label: "8" }
+      - { id: "9", label: "9" }
+
+  - id: part
+    label: 部件
+    attr: part
+    scope: part
+    values:
+      - { id: basic, label: 基础攻击 }
+      - { id: m,     label: M,  icon: m.webp }
+      - { id: s1,    label: S1, icon: s1.webp }
+      - { id: s2,    label: S2, icon: s2.webp }
+
+  - id: act
+    label: 动作
+    attr: act
+    scope: part
+    values:
+      - { id: main,    label: 主要,     icon: main.webp }
+      - { id: react,   label: 反应,     icon: reactive.webp }
+      - { id: passive, label: 总是生效 }
+
+  - id: bonus
+    label: 加成
+    attr: bonus
+    scope: part
+    values:
+      - { id: str, label: 力量,     icon: STR.webp }
+      - { id: dex, label: 敏捷,     icon: DEX.webp }
+      - { id: con, label: 体质,     icon: CON.webp }
+      - { id: int, label: 智力,     icon: INT.webp }
+      - { id: wis, label: 感知,     icon: WIS.webp }
+      - { id: cha, label: 魅力,     icon: CHA.webp }
+      - { id: mhp, label: 最大生命值, icon: MHP.webp }
+      - { id: ac,  label: 护甲,     icon: AC.webp }
+      - { id: ini, label: 先攻,     icon: INI.webp }
+      - { id: hit, label: 命中,     icon: attack.webp }
+      - { id: dc,  label: 豁免DC,   icon: save.webp }
+
+  - id: dmg
+    label: 伤害类型
+    attr: dmg
+    scope: part
+    # 挥砍、穿刺、钝击已由游戏合并为「物理」，雷鸣、强酸、毒素已合并为「自然」，
+    # 因此仅保留合并后的条目。
+    values:
+      - { id: phy4,   label: 物理,       color: phy4, icon: phy4.webp }
+      - { id: ele1,   label: 火焰,       color: ele1, icon: ele1.webp }
+      - { id: ele2,   label: 寒冷,       color: ele2, icon: ele2.webp }
+      - { id: ele3,   label: 闪电,       color: ele3, icon: ele3.webp }
+      - { id: ele7,   label: 自然,       color: ele7, icon: ele7.webp }
+      - { id: mag1,   label: 光耀,       color: mag1, icon: mag1.webp }
+      - { id: mag2,   label: 死灵,       color: mag2, icon: mag2.webp }
+      - { id: mag3,   label: 力场,       color: mag3, icon: mag3.webp }
+      - { id: mag4,   label: 心灵,       color: mag4, icon: mag4.webp }
+      - { id: heal,   label: 治疗,       color: heal, icon: heal.webp }
+      - { id: shield, label: 临时生命值, color: heal, icon: shield.webp }
+
+  - id: mult
+    label: 伤害加值
+    attr: mult
+    scope: part
+    values:
+      - { id: str, label: 力量, icon: STR.webp }
+      - { id: dex, label: 敏捷, icon: DEX.webp }
+      - { id: con, label: 体质, icon: CON.webp }
+      - { id: int, label: 智力, icon: INT.webp }
+      - { id: wis, label: 感知, icon: WIS.webp }
+      - { id: cha, label: 魅力, icon: CHA.webp }
+
+  - id: dcbonus
+    label: DC加值
+    attr: dcbonus
+    scope: part
+    values:
+      - { id: str, label: 力量, icon: STR.webp }
+      - { id: dex, label: 敏捷, icon: DEX.webp }
+      - { id: con, label: 体质, icon: CON.webp }
+      - { id: int, label: 智力, icon: INT.webp }
+      - { id: wis, label: 感知, icon: WIS.webp }
+      - { id: cha, label: 魅力, icon: CHA.webp }
+
+  - id: attack
+    label: 攻击类型
+    attr: attack
+    scope: part
+    values:
+      - { id: melee,  label: 近战, icon: melee.webp }
+      - { id: ranged, label: 远程, icon: ranged.webp }
+      - { id: spell,  label: 法术, icon: spell.webp }
+      - { id: aoe,    label: 范围, icon: AoE.webp }
+
+  - id: check
+    label: 检定
+    attr: check
+    scope: part
+    values:
+      - { id: hit,  label: 需要命中, icon: attack.webp }
+      - { id: save, label: 需要豁免, icon: save.webp }
+
+# 卡片上展示的标签（顺序即渲染顺序）
+#   from: 取值来源属性；prefix: 文字前缀
+chips:
+  - { key: 动作,     from: act }
+  - { key: 加值,     from: mult, prefix: 基于 }
+  - { key: 攻击类型, from: attack }
+  - { key: 命中检定, from: hit }        # data-check 含 hit 时显示，值取 data-hit
+  - { key: 豁免检定, from: save }       # data-check 含 save 时显示，值取 data-save="wis:12"

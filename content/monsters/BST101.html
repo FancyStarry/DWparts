@@ -1,0 +1,96 @@
+<!-- BST101 -->
+<article class="monster" id="BST101" data-id="BST101" data-name="拉塔托斯克"
+         data-race="beast" data-level="1" data-dom="1"
+         data-str="5" data-dex="12" data-con="6" data-int="7" data-wis="10" data-cha="8" data-hp="10" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/BST101.webp" alt="拉塔托斯克"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">拉塔托斯克</h2>
+      <p class="monster__meta"><span class="monster__level">1级</span><span class="monster__race">野兽</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">1</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability"><dt>力量</dt><dd>5</dd></div>
+      <div class="ability adv"><dt>敏捷</dt><dd>12</dd></div>
+      <div class="ability"><dt>体质</dt><dd>6</dd></div>
+      <div class="ability"><dt>智力</dt><dd>7</dd></div>
+      <div class="ability"><dt>感知</dt><dd>10</dd></div>
+      <div class="ability"><dt>魅力</dt><dd>8</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>10</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/BST101.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">敏捷动作</h3>
+        <p class="part__bonus"><span>先攻+1</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">在<span class="blue">敏捷豁免</span>上获得<span class="blue">优势</span>。</p>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="dc" data-dmg="phy4" data-mult="dex"
+        data-dcbonus="cha" data-attack="ranged"
+        data-check="hit save" data-hit="dex" data-save="wis:12">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/BST101.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">嘲讽橡子</h3>
+        <p class="part__bonus"><span>法术豁免难度+1</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line phy4">1d12 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<img class="ico" src="img/common/DEX.webp" alt="敏捷" title="敏捷"></span>
+          </span>
+        </div>
+        <p class="part__desc">使目标陷入<span class="pink">嘲讽</span>状态。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">嘲讽</span>：选择攻击目标时，会被强制指定为嘲讽施放者。（持续时间：4.8秒 / 非战斗时9.6秒）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="passive"
+        data-bonus="wis">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/BST101.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">世界树之眼</h3>
+        <p class="part__bonus"><span>感知+1</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">获得先攻+2，并对<span class="pink">盲目</span>状态获得<span class="lb">免疫</span>。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="react"
+        data-bonus="dex">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/BST101.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">迅捷之尾</h3>
+        <p class="part__bonus"><span>敏捷+1</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">成为攻击目标时作为反应，对攻击者的命中检定赋予<span class="blue">劣势</span>。</p>
+      </div>
+    </li>
+  </ul>
+</article>

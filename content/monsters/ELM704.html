@@ -1,0 +1,111 @@
+<!-- ELM704 -->
+<article class="monster" id="ELM704" data-id="ELM704" data-name="泰坦妮亚"
+         data-race="elf" data-level="7" data-dom="12"
+         data-str="8" data-dex="13" data-con="13" data-int="14" data-wis="20" data-cha="23" data-hp="89" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/ELM704.webp" alt="泰坦妮亚"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">泰坦妮亚</h2>
+      <p class="monster__meta"><span class="monster__level">7级</span><span class="monster__race">精灵</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">12</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability"><dt>力量</dt><dd>8</dd></div>
+      <div class="ability"><dt>敏捷</dt><dd>13</dd></div>
+      <div class="ability"><dt>体质</dt><dd>13</dd></div>
+      <div class="ability"><dt>智力</dt><dd>14</dd></div>
+      <div class="ability"><dt>感知</dt><dd>20</dd></div>
+      <div class="ability adv"><dt>魅力</dt><dd>23</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>89</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main"
+        data-attack="aoe">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/ELM704.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">妖精女王的庇护</h3>
+        <p class="part__bonus"><span>免疫魅惑</span><span>免疫睡眠</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">交战开始时，对所有友军赋予<span class="pink">妖精祝福</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">妖精祝福</span>：交战期间受到的法术伤害减少6，且<span class="blue">感知豁免</span>增加4。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="cha" data-dmg="heal"
+        data-attack="ranged aoe">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/ELM704.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">世界树之杖</h3>
+        <p class="part__bonus"><span>魅力+2</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line heal">3d8 <img class="ico" src="img/common/heal.webp" alt="">治疗<img class="ico" src="img/common/CHA.webp" alt="魅力" title="魅力"></span>
+          </span>
+        </div>
+        <p class="part__desc">降下<span class="pink">世界树祝福</span>于前排友军。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">世界树祝福</span>：交战期间<img src="img/common/save.webp" alt=""><span class="orange">豁免检定加值</span>增加1d8，并在所有检定加值上获得1d4的加值。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="passive"
+        data-bonus="wis" data-dmg="heal"
+        data-attack="aoe">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/ELM704.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">女王花冠</h3>
+        <p class="part__bonus"><span>感知+2</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line heal">2d6 <img class="ico" src="img/common/heal.webp" alt="">治疗<img class="ico" src="img/common/CHA.webp" alt="魅力" title="魅力"></span>
+          </span>
+        </div>
+        <p class="part__desc">每次交战开始时，对后排的所有友军进行<span class="heal">2d6 治疗</span><img src="img/common/CHA.webp" alt="">。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="react"
+        data-bonus="dc"
+        data-dcbonus="cha"
+        data-check="save" data-save="wis:12">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/ELM704.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">精灵之翼</h3>
+        <p class="part__bonus"><span>法术豁免难度+2</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">受到近战攻击时产生反应，使攻击者陷入<span class="pink">魅惑</span>状态。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">魅惑</span>：在<span class="blue">命中检定</span>上获得<span class="blue">劣势</span>，造成的所有伤害加值减少2。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</article>

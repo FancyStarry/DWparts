@@ -1,0 +1,103 @@
+<!-- UDD203 -->
+<article class="monster" id="UDD203" data-id="UDD203" data-name="骷髅战马"
+         data-race="undead" data-level="2" data-dom="2"
+         data-str="12" data-dex="11" data-con="10" data-int="4" data-wis="7" data-cha="5" data-hp="25" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/UDD203.webp" alt="骷髅战马"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">骷髅战马</h2>
+      <p class="monster__meta"><span class="monster__level">2级</span><span class="monster__race">亡灵</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">2</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability adv"><dt>力量</dt><dd>12</dd></div>
+      <div class="ability"><dt>敏捷</dt><dd>11</dd></div>
+      <div class="ability"><dt>体质</dt><dd>10</dd></div>
+      <div class="ability"><dt>智力</dt><dd>4</dd></div>
+      <div class="ability"><dt>感知</dt><dd>7</dd></div>
+      <div class="ability"><dt>魅力</dt><dd>5</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>25</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/UDD203.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">幽灵冲刺</h3>
+        <p class="part__bonus"><span>免疫倒地</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">对<span class="pink">束缚</span>和<span class="pink">擒抱</span>状态获得<span class="lb">免疫</span>。</p>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="str" data-dmg="phy4" data-mult="str"
+        data-attack="melee"
+        data-check="hit" data-hit="str">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/UDD203.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">死亡冲锋</h3>
+        <p class="part__bonus"><span>力量+1</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line phy4">2d8 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<img class="ico" src="img/common/STR.webp" alt="力量" title="力量"></span>
+          </span>
+        </div>
+        <p class="part__desc">向目标冲锋。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="passive"
+        data-bonus="ini"
+        data-dcbonus="cha"
+        data-check="save" data-save="wis:10">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/UDD203.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">空洞之蹄</h3>
+        <p class="part__bonus"><span>先攻+1</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">交战开始时，对前排敌人赋予<span class="pink">恐慌</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">恐慌</span>：向入口撤退，且在<span class="blue">命中检定</span>上获得<span class="blue">劣势</span>。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="react"
+        data-bonus="wis"
+        data-dcbonus="wis"
+        data-check="save" data-save="wis:12">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/UDD203.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">亡者哀嚎</h3>
+        <p class="part__bonus"><span>感知+1</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">受到近战攻击时作为反应，有一定概率对攻击者赋予<span class="pink">恐慌</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">恐慌</span>：向入口撤退，且在<span class="blue">命中检定</span>上获得<span class="blue">劣势</span>。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</article>

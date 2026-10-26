@@ -1,0 +1,106 @@
+<!-- ELM602 -->
+<article class="monster" id="ELM602" data-id="ELM602" data-name="阿剌克涅"
+         data-race="elf" data-level="6" data-dom="9"
+         data-str="18" data-dex="14" data-con="17" data-int="11" data-wis="11" data-cha="9" data-hp="88" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/ELM602.webp" alt="阿剌克涅"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">阿剌克涅</h2>
+      <p class="monster__meta"><span class="monster__level">6级</span><span class="monster__race">精灵</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">9</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability adv"><dt>力量</dt><dd>18</dd></div>
+      <div class="ability"><dt>敏捷</dt><dd>14</dd></div>
+      <div class="ability"><dt>体质</dt><dd>17</dd></div>
+      <div class="ability"><dt>智力</dt><dd>11</dd></div>
+      <div class="ability"><dt>感知</dt><dd>11</dd></div>
+      <div class="ability"><dt>魅力</dt><dd>9</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>88</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main"
+        data-dmg="phy4">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/ELM602.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">编织蛛网</h3>
+        <p class="part__bonus"><span>免疫束缚</span><span>免疫中毒</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line phy4">6 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<span class="dmg__mult">(每层)</span></span>
+          </span>
+        </div>
+        <p class="part__desc">攻击命中时，根据目标的<span class="pink">蛛网</span>层数造成额外<span class="phy4">6 <img src="img/common/phy4.webp" alt="">额外物理伤害</span>(每层)。命中后赋予1层<span class="pink">蛛网</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">蛛网</span>：<span class="blue">敏捷豁免</span>每层减少1，达到最大层数时陷入<span class="pink">束缚</span>状态。（持续时间：7.2秒 / 非战斗时14.4秒，最大层数：3）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="str" data-dmg="phy4" data-mult="str"
+        data-attack="melee"
+        data-check="hit" data-hit="str">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/ELM602.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">泰坦践踏</h3>
+        <p class="part__bonus"><span>力量+2</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line phy4">4d12 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<img class="ico" src="img/common/STR.webp" alt="力量" title="力量"></span>
+          </span>
+        </div>
+        <p class="part__desc">若目标处于<span class="pink">束缚</span>状态，则必定以<span class="lb">重击</span>命中，并使目标陷入<span class="pink">倒地</span>状态。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">倒地</span>：自身的<span class="blue">命中检定</span>获得<span class="blue">劣势</span>。受到的近战命中会被赋予<span class="blue">优势</span>，而受到的远程命中则被赋予<span class="blue">劣势</span>。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="passive"
+        data-bonus="con">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/ELM602.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">钢铁甲壳</h3>
+        <p class="part__bonus"><span>体质+2</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">获得对<img src="img/common/phy4.webp" alt=""><span class="phy4">物理伤害</span>的抗性，并免疫<span class="lb">重击</span>攻击。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="react"
+        data-bonus="dex">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/ELM602.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">蛛网穹顶</h3>
+        <p class="part__bonus"><span>敏捷+2</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">敌人施放群体法术时作为反应，将目标集中于自身，并使受到的伤害减少5d8。</p>
+      </div>
+    </li>
+  </ul>
+</article>

@@ -1,0 +1,111 @@
+<!-- ELM702 -->
+<article class="monster" id="ELM702" data-id="ELM702" data-name="风之君主"
+         data-race="elf" data-level="7" data-dom="12"
+         data-str="10" data-dex="24" data-con="13" data-int="13" data-wis="14" data-cha="13" data-hp="91" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/ELM702.webp" alt="风之君主"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">风之君主</h2>
+      <p class="monster__meta"><span class="monster__level">7级</span><span class="monster__race">精灵</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">12</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability"><dt>力量</dt><dd>10</dd></div>
+      <div class="ability adv"><dt>敏捷</dt><dd>24</dd></div>
+      <div class="ability"><dt>体质</dt><dd>13</dd></div>
+      <div class="ability"><dt>智力</dt><dd>13</dd></div>
+      <div class="ability"><dt>感知</dt><dd>14</dd></div>
+      <div class="ability"><dt>魅力</dt><dd>13</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>91</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main"
+        data-attack="aoe">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/ELM702.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">风暴之眼</h3>
+        <p class="part__bonus"><span>免疫<img src="img/common/ele3.webp" alt=""><span class="ele3">闪电伤害</span></span><span>免疫倒地</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">交战开始时，在交战期间为所有友军的远程命中检定赋予优势。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">风暴之眼</span>：交战结束前，在远程攻击上获得优势。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="dex" data-dmg="phy4 ele3" data-mult="dex"
+        data-attack="ranged aoe"
+        data-check="hit" data-hit="dex">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/ELM702.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">雷霆之弓</h3>
+        <p class="part__bonus"><span>敏捷+2</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line phy4">2d12 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<img class="ico" src="img/common/DEX.webp" alt="敏捷" title="敏捷"></span>
+            <span class="dmg__line ele3">+ 2d12 <img class="ico" src="img/common/ele3.webp" alt="">闪电伤害<img class="ico" src="img/common/INT.webp" alt="智力" title="智力"></span>
+          </span>
+        </div>
+        <p class="part__desc">射出雷电箭，对目标及其后方的敌人造成<img src="img/common/phy4.webp" alt=""><span class="phy4">物理伤害</span>与<img src="img/common/ele3.webp" alt=""><span class="ele3">闪电伤害</span>。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="react"
+        data-bonus="ini" data-dmg="ele3" data-mult="dex">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/ELM702.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">风之翼</h3>
+        <p class="part__bonus"><span>先攻+3</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line ele3">2d10 <img class="ico" src="img/common/ele3.webp" alt="">闪电伤害<img class="ico" src="img/common/DEX.webp" alt="敏捷" title="敏捷"></span>
+          </span>
+        </div>
+        <p class="part__desc">成为远程攻击的目标时作出反应，以猛烈阵风完全闪避该攻击，并用<img src="img/common/ele3.webp" alt=""><span class="ele3">闪电伤害</span>反击攻击者。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="passive"
+        data-bonus="hit" data-dmg="ele3" data-mult="int"
+        data-attack="aoe">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/ELM702.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">雷云之箭</h3>
+        <p class="part__bonus"><span>远程命中+2</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line ele3">2d8 <img class="ico" src="img/common/ele3.webp" alt="">闪电伤害<img class="ico" src="img/common/INT.webp" alt="智力" title="智力"></span>
+          </span>
+        </div>
+        <p class="part__desc">自身远程攻击每次命中时，对后排敌人造成<span class="ele3">2d8 <img src="img/common/ele3.webp" alt="">额外闪电伤害</span><img src="img/common/INT.webp" alt="">。</p>
+      </div>
+    </li>
+  </ul>
+</article>

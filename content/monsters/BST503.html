@@ -1,0 +1,112 @@
+<!-- BST503 -->
+<article class="monster" id="BST503" data-id="BST503" data-name="鸡蛇"
+         data-race="beast" data-level="5" data-dom="6"
+         data-str="10" data-dex="14" data-con="12" data-int="10" data-wis="12" data-cha="17" data-hp="52" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/BST503.webp" alt="鸡蛇"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">鸡蛇</h2>
+      <p class="monster__meta"><span class="monster__level">5级</span><span class="monster__race">野兽</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">6</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability"><dt>力量</dt><dd>10</dd></div>
+      <div class="ability"><dt>敏捷</dt><dd>14</dd></div>
+      <div class="ability"><dt>体质</dt><dd>12</dd></div>
+      <div class="ability"><dt>智力</dt><dd>10</dd></div>
+      <div class="ability"><dt>感知</dt><dd>12</dd></div>
+      <div class="ability adv"><dt>魅力</dt><dd>17</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>52</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="react"
+        data-check="save" data-save="con:14">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/BST503.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">石化凝视</h3>
+        <p class="part__bonus"><span>免疫石化</span><span>免疫中毒</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">交战开始时，有一定概率对前排敌人施加<span class="pink">石化进行</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">石化进行</span>：每层使<span class="blue">敏捷豁免</span>减少1，达到最大层数时陷入<span class="pink">石化</span>状态。（持续时间：7.2秒 / 非战斗时14.4秒，最大层数：10）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="cha" data-dmg="mag2" data-mult="cha"
+        data-dcbonus="cha" data-attack="spell ranged aoe"
+        data-check="hit save" data-hit="cha" data-save="con:14">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/BST503.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">死亡射线</h3>
+        <p class="part__bonus"><span>魅力+2</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line mag2">2d8 <img class="ico" src="img/common/mag2.webp" alt="">死灵伤害<img class="ico" src="img/common/CHA.webp" alt="魅力" title="魅力"></span>
+          </span>
+        </div>
+        <p class="part__desc">向前排敌人发射死亡射线。命中时，有一定概率施加3层<span class="pink">石化进行</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">石化进行</span>：每层使<span class="blue">敏捷豁免</span>减少1，达到最大层数时陷入<span class="pink">石化</span>状态。（持续时间：7.2秒 / 非战斗时14.4秒，最大层数：10）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="react"
+        data-bonus="wis" data-dmg="mag3" data-mult="cha">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/BST503.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">粉碎</h3>
+        <p class="part__bonus"><span>感知+2</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line mag3">6d10 <img class="ico" src="img/common/mag3.webp" alt="">力场伤害<img class="ico" src="img/common/CHA.webp" alt="魅力" title="魅力"></span>
+          </span>
+        </div>
+        <p class="part__desc">目标陷入<span class="pink">石化</span>状态时作为反应，对目标造成<span class="mag3">6d10 <img src="img/common/mag3.webp" alt="">额外力场伤害</span><img src="img/common/CHA.webp" alt="">并解除<span class="pink">石化</span>状态。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="react"
+        data-bonus="dc"
+        data-dcbonus="cha"
+        data-check="save" data-save="con:14">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/BST503.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">石化皮肤</h3>
+        <p class="part__bonus"><span>法术豁免难度+1</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">受到伤害时作为反应，有一定概率降低攻击者的护甲，并将1层<span class="pink">石化进行</span>转移给目标。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">石化进行</span>：每层使<span class="blue">敏捷豁免</span>减少1，达到最大层数时陷入<span class="pink">石化</span>状态。（持续时间：7.2秒 / 非战斗时14.4秒，最大层数：10）</p>
+          <p class="effect"><span class="effect__name">护甲减值</span>：护甲等级减少2。（持续时间：4.8秒 / 非战斗时9.6秒，独立层数）</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</article>

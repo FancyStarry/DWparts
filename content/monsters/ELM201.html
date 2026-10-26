@@ -1,0 +1,107 @@
+<!-- ELM201 -->
+<article class="monster" id="ELM201" data-id="ELM201" data-name="梦境元素"
+         data-race="elf" data-level="2" data-dom="2"
+         data-str="4" data-dex="8" data-con="8" data-int="9" data-wis="13" data-cha="12" data-hp="18" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/ELM201.webp" alt="梦境元素"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">梦境元素</h2>
+      <p class="monster__meta"><span class="monster__level">2级</span><span class="monster__race">精灵</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">2</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability"><dt>力量</dt><dd>4</dd></div>
+      <div class="ability"><dt>敏捷</dt><dd>8</dd></div>
+      <div class="ability"><dt>体质</dt><dd>8</dd></div>
+      <div class="ability"><dt>智力</dt><dd>9</dd></div>
+      <div class="ability adv"><dt>感知</dt><dd>13</dd></div>
+      <div class="ability"><dt>魅力</dt><dd>12</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>18</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/ELM201.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">梦境漫步</h3>
+        <p class="part__bonus"><span>抵抗<img src="img/common/mag4.webp" alt=""><span class="mag4">心灵伤害</span></span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">对<span class="pink">震慑</span>免疫。</p>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="cha" data-dmg="mag4" data-mult="cha"
+        data-dcbonus="cha" data-attack="spell ranged"
+        data-check="hit save" data-hit="cha" data-save="wis:11">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/ELM201.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">梦境吞噬</h3>
+        <p class="part__bonus"><span>魅力+1</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line mag4">2d8 <img class="ico" src="img/common/mag4.webp" alt="">心灵伤害<img class="ico" src="img/common/CHA.webp" alt="魅力" title="魅力"></span>
+          </span>
+        </div>
+        <p class="part__desc">使目标陷入<span class="pink">睡眠</span>状态。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">睡眠</span>：无法行动，受到伤害时解除。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="passive"
+        data-bonus="wis"
+        data-dcbonus="cha" data-attack="aoe"
+        data-check="save" data-save="wis:11">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/ELM201.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">催眠之眼</h3>
+        <p class="part__bonus"><span>感知+1</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">交战开始时，对所有敌人赋予<span class="lgreen">豁免检定减值</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">豁免检定减值</span>：<img src="img/common/save.webp" alt=""><span class="orange">豁免检定加值</span>减少2。（持续时间：4.8秒 / 非战斗时9.6秒，独立层数）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="react"
+        data-bonus="dc" data-dmg="heal">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/ELM201.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">精神加护</h3>
+        <p class="part__bonus"><span>法术豁免难度+1</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line heal">1d8 <img class="ico" src="img/common/heal.webp" alt="">治疗<img class="ico" src="img/common/CHA.webp" alt="魅力" title="魅力"></span>
+          </span>
+        </div>
+        <p class="part__desc">友军受到精神系状态异常时作为反应，立即解除该状态并对该友军进行<span class="heal">1d8 治疗</span><img src="img/common/CHA.webp" alt="">。</p>
+      </div>
+    </li>
+  </ul>
+</article>

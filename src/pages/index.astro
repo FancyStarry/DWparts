@@ -1,0 +1,67 @@
+---
+/**
+ * 单页 wiki：把 76 个手写 HTML 魔物卡拼成一个页面。
+ *
+ * 本文件只负责组装：卡片 HTML 由 src/lib/monsters.ts 抽取并标准化后原样输出，
+ * 筛选索引以 data-* 属性内联在卡片上，客户端脚本读取。
+ */
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import FilterBar from '../components/FilterBar.astro';
+import { loadTaxonomy } from '../lib/taxonomy.ts';
+import { loadMonsters } from '../lib/monsters.ts';
+
+const tax = loadTaxonomy();
+/* base 用于拼绝对路径（mask 图 URL 必须绝对），子路径部署时自动跟随 astro.config 的 base */
+const { monsters, issues } = loadMonsters(tax, { base: import.meta.env.BASE_URL });
+
+/* 警告不阻断构建（缺 alt 等已自动修复），错误必须阻断 */
+const errors = issues.filter((i) => i.level === 'error');
+if (errors.length) {
+  console.error('\n构建期校验失败：');
+  for (const e of errors.slice(0, 40)) console.error(`  ✗ ${e.file}: ${e.message}`);
+  console.error(`共 ${errors.length} 个错误`);
+  throw new Error(`content/monsters 校验未通过（${errors.length} 个错误）`);
+}
+
+const totalParts = monsters.reduce((s, m) => s + m.index.parts, 0);
+
+/* 客户端引导数据：只有标签枚举，不含卡片内容 */
+const boot = {
+  groups: tax.groups.map((g) => ({
+    id: g.id,
+    attr: g.attr,
+    scope: g.scope,
+    values: g.values.map((v) => ({ id: v.id, label: v.label })),
+  })),
+  total: monsters.length,
+};
+
+const desc = `《地下城深处》(Dungeon Within) 魔物图鉴：${monsters.length} 种魔物、${totalParts} 个部件的属性、动作与伤害类型，支持按种族、等级、动作、伤害类型等标签组合筛选。`;
+---
+<Base title="DW Wiki — 地下城深处 魔物图鉴" description={desc}>
+  <Fragment slot="top">
+    <!-- 只有这一条是 sticky；筛选面板在正常流里，滚过就消失 -->
+    <div class="site-top" data-site-top>
+      <Header total={monsters.length} parts={totalParts} />
+    </div>
+    <FilterBar tax={tax} />
+  </Fragment>
+
+  <section class="content" aria-label="魔物图鉴">
+    {monsters.map((m) => (
+      <Fragment set:html={m.html} />
+    ))}
+  </section>
+
+  <div class="empty" data-empty-state hidden>
+    <p class="empty__title">没有匹配的魔物</p>
+    <p>试试减少标签，或清空搜索关键词。</p>
+  </div>
+
+  <script id="filter-boot" type="application/json" is:inline set:html={JSON.stringify(boot)} />
+</Base>
+
+<script>
+  import '../client/filter.ts';
+</script>

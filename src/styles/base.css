@@ -1,0 +1,73 @@
+/* ═══════════════════════════════════════════════
+   Reset + 排版基线
+   ═══════════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--sticky-top) + var(--s-4));
+}
+
+body {
+  margin: 0;
+  background: var(--bg-0);
+  color: var(--fg-0);
+  font-family: var(--sans);
+  font-size: var(--fs-base);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, p, dl, dd, figure, ul, ol { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 1px solid var(--accent);
+  outline-offset: 3px;
+}
+
+::selection { background: rgb(255 255 255 / 0.22); color: #fff; }
+
+/* 滚动条：使用标准属性 */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-2) transparent;
+}
+
+/* 视觉隐藏但可读屏 */
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* 装饰性小图标：跟随文字行高，不参与布局抖动 */
+.ico {
+  width: 1em;
+  height: 1em;
+  object-fit: contain;
+  vertical-align: -0.15em;
+  margin-inline: 2px;
+}

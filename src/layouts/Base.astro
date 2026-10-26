@@ -1,0 +1,40 @@
+---
+import '../styles/tokens.css';
+import '../styles/base.css';
+import '../styles/layout.css';
+import '../styles/card.css';
+
+interface Props {
+  title: string;
+  description: string;
+}
+const { title, description } = Astro.props;
+
+/* 规范地址由配置的 site 与 base 推导，避免在模板中写死域名 */
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+const canonical = new URL(base, Astro.site ?? 'https://example.invalid').href;
+---
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content={description}>
+  <meta name="color-scheme" content="dark">
+  <title>{title}</title>
+  <link rel="icon" href="img/common/DungeonWithin.webp" type="image/webp">
+  <link rel="canonical" href={canonical}>
+</head>
+<body>
+  <a class="visually-hidden" href="#main">跳到主内容</a>
+  <slot name="top" />
+  <main class="main" id="main">
+    <slot />
+  </main>
+  <button class="to-top" type="button" aria-label="回到顶部" data-to-top>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 19V5M5 12l7-7 7 7"></path>
+    </svg>
+  </button>
+</body>
+</html>

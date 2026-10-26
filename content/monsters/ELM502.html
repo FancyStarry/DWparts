@@ -1,0 +1,99 @@
+<!-- ELM502 -->
+<article class="monster" id="ELM502" data-id="ELM502" data-name="风元素"
+         data-race="elf" data-level="5" data-dom="6"
+         data-str="11" data-dex="18" data-con="12" data-int="10" data-wis="12" data-cha="10" data-hp="53" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/ELM502.webp" alt="风元素"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">风元素</h2>
+      <p class="monster__meta"><span class="monster__level">5级</span><span class="monster__race">精灵</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">6</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability"><dt>力量</dt><dd>11</dd></div>
+      <div class="ability adv"><dt>敏捷</dt><dd>18</dd></div>
+      <div class="ability"><dt>体质</dt><dd>12</dd></div>
+      <div class="ability"><dt>智力</dt><dd>10</dd></div>
+      <div class="ability"><dt>感知</dt><dd>12</dd></div>
+      <div class="ability"><dt>魅力</dt><dd>10</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>53</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/ELM502.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">流动之优雅</h3>
+        <p class="part__bonus"><span>免疫<img src="img/common/ele3.webp" alt=""><span class="ele3">闪电伤害</span></span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">获得敏捷豁免检定加值（敏捷豁免检定+4）与魅力豁免检定加值（魅力豁免检定+4）。</p>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="dex" data-dmg="phy4" data-mult="dex"
+        data-dcbonus="dex" data-attack="melee"
+        data-check="hit save" data-hit="dex" data-save="dex:14">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/ELM502.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">风暴之鞭</h3>
+        <p class="part__bonus"><span>敏捷+2</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line phy4">3d12 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<img class="ico" src="img/common/DEX.webp" alt="敏捷" title="敏捷"></span>
+            <span class="dmg__line phy4">+ 1d6 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<img class="ico" src="img/common/WIS.webp" alt="感知" title="感知"></span>
+          </span>
+        </div>
+        <p class="part__desc">命中时，有一定概率对所有敌人造成额外<img src="img/common/phy4.webp" alt=""><span class="phy4">物理伤害</span>。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="passive"
+        data-bonus="ini"
+        data-dcbonus="dex"
+        data-check="save" data-save="str:13">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/ELM502.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">狂风打击</h3>
+        <p class="part__bonus"><span>先攻+3</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">攻击命中时，有一定概率使目标陷入<span class="pink">震慑</span>状态。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">震慑</span>：无法行动或移动。受到的<span class="blue">命中检定</span>会被赋予<span class="blue">优势</span>，在<span class="blue">力量豁免</span>和<span class="blue">敏捷豁免</span>上获得<span class="blue">劣势</span>，且护甲等级减少2。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="passive"
+        data-bonus="ac">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/ELM502.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">模糊身形</h3>
+        <p class="part__bonus"><span>护甲等级+1</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">受到的远程攻击伤害减少2d10。</p>
+      </div>
+    </li>
+  </ul>
+</article>

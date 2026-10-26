@@ -1,0 +1,105 @@
+<!-- BST603 -->
+<article class="monster" id="BST603" data-id="BST603" data-name="乌伽鲁"
+         data-race="beast" data-level="6" data-dom="9"
+         data-str="19" data-dex="13" data-con="17" data-int="12" data-wis="12" data-cha="10" data-hp="95" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/BST603.webp" alt="乌伽鲁"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">乌伽鲁</h2>
+      <p class="monster__meta"><span class="monster__level">6级</span><span class="monster__race">野兽</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">9</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability adv"><dt>力量</dt><dd>19</dd></div>
+      <div class="ability"><dt>敏捷</dt><dd>13</dd></div>
+      <div class="ability"><dt>体质</dt><dd>17</dd></div>
+      <div class="ability"><dt>智力</dt><dd>12</dd></div>
+      <div class="ability"><dt>感知</dt><dd>12</dd></div>
+      <div class="ability"><dt>魅力</dt><dd>10</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>95</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/BST603.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">风暴先兆</h3>
+        <p class="part__bonus"><span>免疫<img src="img/common/ele3.webp" alt=""><span class="ele3">闪电伤害</span></span><span>抵抗<img src="img/common/ele7.webp" alt=""><span class="ele7">自然伤害</span></span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">带有<img src="img/common/phy4.webp" alt=""><span class="phy4">物理伤害</span>的攻击会追加等同于<img src="img/common/DEX.webp" alt="">敏捷调整值的<img src="img/common/phy4.webp" alt=""><span class="phy4">物理伤害</span>，带有<img src="img/common/ele7.webp" alt=""><span class="ele7">自然伤害</span>的攻击会追加等同于<img src="img/common/INT.webp" alt="">智力调整值的<img src="img/common/ele7.webp" alt=""><span class="ele7">自然伤害</span>。</p>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="str" data-dmg="phy4 ele7" data-mult="str"
+        data-attack="melee aoe"
+        data-check="hit" data-hit="str">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/BST603.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">雷鸣碎击</h3>
+        <p class="part__bonus"><span>力量+2</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line phy4">3d10 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<img class="ico" src="img/common/STR.webp" alt="力量" title="力量"></span>
+            <span class="dmg__line ele7">+ 1d10 <img class="ico" src="img/common/ele7.webp" alt="">自然伤害<img class="ico" src="img/common/WIS.webp" alt="感知" title="感知"></span>
+          </span>
+        </div>
+        <p class="part__desc">用雷电战锤猛击敌人，命中时对所有敌人造成额外<img src="img/common/ele7.webp" alt=""><span class="ele7">自然伤害</span>。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="react"
+        data-bonus="int" data-dmg="phy4" data-mult="int">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/BST603.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">风之刃</h3>
+        <p class="part__bonus"><span>智力+2</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line phy4">0 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<img class="ico" src="img/common/INT.webp" alt="智力" title="智力"></span>
+          </span>
+        </div>
+        <p class="part__desc">攻击命中时作为反应，对目标造成额外<span class="phy4">0 <img src="img/common/phy4.webp" alt="">额外物理伤害</span><img src="img/common/INT.webp" alt="">。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="passive"
+        data-bonus="ac"
+        data-dcbonus="int" data-attack="aoe"
+        data-check="save" data-save="con:15">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/BST603.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">风暴之眼</h3>
+        <p class="part__bonus"><span>护甲等级+2</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">交战开始时，对所有敌人施加<span class="lgreen">风暴之眼</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">风暴之眼</span>：获得对<img src="img/common/ele7.webp" alt=""><span class="ele7">自然伤害</span>与<img src="img/common/phy4.webp" alt=""><span class="phy4">物理伤害</span>的<span class="lb">易伤</span>。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</article>

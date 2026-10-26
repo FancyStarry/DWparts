@@ -1,0 +1,98 @@
+<!-- BST402 -->
+<article class="monster" id="BST402" data-id="BST402" data-name="狮鹫"
+         data-race="beast" data-level="4" data-dom="4"
+         data-str="12" data-dex="16" data-con="12" data-int="7" data-wis="10" data-cha="7" data-hp="52" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/BST402.webp" alt="狮鹫"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">狮鹫</h2>
+      <p class="monster__meta"><span class="monster__level">4级</span><span class="monster__race">野兽</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">4</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability"><dt>力量</dt><dd>12</dd></div>
+      <div class="ability adv"><dt>敏捷</dt><dd>16</dd></div>
+      <div class="ability"><dt>体质</dt><dd>12</dd></div>
+      <div class="ability"><dt>智力</dt><dd>7</dd></div>
+      <div class="ability"><dt>感知</dt><dd>10</dd></div>
+      <div class="ability"><dt>魅力</dt><dd>7</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>52</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/BST402.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">骑士战术</h3>
+        <p class="part__bonus"><span>敏捷+1</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">位于前排时获得<span class="org">护甲等级（AC）</span>加值(护甲等级+2)，位于后排时获得<span class="lgreen">先攻</span>和命中检定加值（先攻+5，<img src="img/common/attack.webp" alt="">命中+1）。</p>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="dex" data-dmg="phy4" data-mult="dex"
+        data-attack="melee aoe"
+        data-check="hit" data-hit="dex">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/BST402.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">守护狂风</h3>
+        <p class="part__bonus"><span>敏捷+2</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line phy4">3d8 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<img class="ico" src="img/common/DEX.webp" alt="敏捷" title="敏捷"></span>
+          </span>
+        </div>
+        <p class="part__desc">命中时，为所有友军赋予<span class="lgreen">护甲加值</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">护甲加值</span>：护甲等级增加2。（持续时间：4.8秒 / 非战斗时9.6秒，独立层数）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="react"
+        data-bonus="ini">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/BST402.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">护卫之翼</h3>
+        <p class="part__bonus"><span>先攻+2</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">友军成为远程攻击目标时作为反应，将目标更改为自身，并使受到的伤害减少3d8。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="react"
+        data-bonus="ac" data-dmg="shield"
+        data-dcbonus="int"
+        data-check="save" data-save="cha:10">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/BST402.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">黄金鬃毛</h3>
+        <p class="part__bonus"><span>护甲等级+1</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">成为法术攻击目标时作为反应，有一定概率使该法术无效并获得<span class="heal">15 <img src="img/common/shield.webp" alt="">临时生命值</span>。</p>
+      </div>
+    </li>
+  </ul>
+</article>

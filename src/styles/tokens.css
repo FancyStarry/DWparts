@@ -1,0 +1,122 @@
+/* ═══════════════════════════════════════════════
+   Design tokens —— 视觉常量唯一来源
+
+   页面底色、表面色、分隔线、文字阶梯、伤害类型色板与语义色集中于此。
+   --accent 为品牌色，用于标题、链接与焦点环。
+   ═══════════════════════════════════════════════ */
+:root {
+  /* ── 底色：纯黑 + 唯一的卡片面 ──
+     整站只有 .monster 大卡片是"有底色的圆角块"，
+     其余一律透明，靠细线与留白分隔，避免满屏小方块。 */
+  --bg-0: #000000;                    /* 页面：纯黑 */
+  --bg-1: #0a0a0a;                    /* 魔物大卡片（全站唯一的圆角矩形） */
+  --bg-2: #0a0a0a;                    /* 与卡片同色：不再有独立色块 */
+  --bg-3: #161616;                    /* 浮层 / hover 底 */
+  --bg-glass: rgb(0 0 0 / 0.82);      /* 顶栏毛玻璃 */
+
+  /* ── 分隔线：半透明白，在纯黑上比灰值更通透 ── */
+  --line-1: rgb(255 255 255 / 0.09);   /* 常规细线 */
+  --line-2: rgb(255 255 255 / 0.18);   /* 强调分隔 */
+  --line-3: rgb(255 255 255 / 0.28);   /* 交互边框 */
+
+  /* ── 文字阶梯 ──
+     main：body/name 用 white，effects 用 lightgray，.tags 用 gray，.tag_upp 用 #888 */
+  --fg-0: #ffffff;   /* 标题、魔物名、部件名（main: white） */
+  --fg-1: #d3d3d3;   /* 正文、说明（main: lightgray） */
+  --fg-2: #a8a8a8;   /* 次要信息 */
+  --fg-3: #888888;   /* 小标题、标签键名（main: .tag_upp） */
+  --fg-4: #808080;   /* 最弱（main: gray） */
+
+  /* ── 品牌色：只用于标题的「Wiki」与链接、焦点环 ── */
+  --accent: #4fb3d9;
+  --accent-dim: #2b7fa3;
+
+  /* main: .adv {color: gold} */
+  --gold: gold;
+
+  /* ── 语义色（main 原值） ── */
+  --c-buff: #ffbbff;   /* .pink .buff .debuff */
+  --c-info: #55aaff;   /* .blue .b */
+  --c-key: #00ddff;    /* .lblue .lb */
+  --c-warn: #ffcc00;   /* .orange .org */
+  --c-good: #63a440;   /* .green .g */
+  --c-bad: #ff5555;    /* .red .r */
+  --c-bright: #55ff55; /* .lgreen .lg */
+
+  /* ── 伤害类型色板（main 原值，逐项对应） ── */
+  --dmg-phy1: #c9c9c9;
+  --dmg-phy2: #b0b0b0;
+  --dmg-phy3: #dcdcdc;
+  --dmg-phy4: #dcdcdc;
+  --dmg-ele1: #ff8c5c;
+  --dmg-ele2: #8fa8e8;
+  --dmg-ele3: #ffcc4d;
+  --dmg-ele4: #b388e8;
+  --dmg-ele5: #b5dc5c;
+  --dmg-ele6: #a8c97d;
+  --dmg-ele7: #a8c97d;
+  --dmg-mag1: #f5e5a0;
+  --dmg-mag2: #6fae9b;
+  --dmg-mag3: #c84a4a;
+  --dmg-mag4: #ffa0c4;
+  --dmg-heal: #80e0cd;
+
+  /* ── 间距（4 的倍数） ── */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+
+  /* ── 字号 ── */
+  --fs-xs: 0.72rem;
+  --fs-sm: 0.8rem;
+  --fs-md: 0.9rem;
+  --fs-base: 1rem;
+  --fs-lg: 1.15rem;
+  --fs-xl: 1.4rem;
+
+  --radius-1: 4px;
+  --radius-2: 8px;
+  --radius-3: 10px;   /* 全站唯一的圆角：魔物大卡片 */
+
+  --shadow-1: 0 1px 2px rgb(0 0 0 / 0.4);
+  --shadow-2: 0 4px 12px rgb(0 0 0 / 0.5);   /* main: tooltip box-shadow */
+  --shadow-3: 0 8px 28px rgb(0 0 0 / 0.55);
+
+  --mono: ui-monospace, 'SF Mono', 'Cascadia Mono', 'Roboto Mono', monospace;
+  --sans: 'Segoe UI', 'Noto Sans SC', 'Source Han Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+
+  /* 由脚本实测写入，供 scroll-margin / 锚点定位使用 */
+  --sticky-top: 0px;
+  --header-h: 56px;
+}
+
+/* 伤害类型 → 颜色映射：任何地方写 .phy4 / .ele1 / .mag2 都拿到对应色 */
+.phy1 { color: var(--dmg-phy1); }
+.phy2 { color: var(--dmg-phy2); }
+.phy3 { color: var(--dmg-phy3); }
+.phy4 { color: var(--dmg-phy4); }
+.ele1 { color: var(--dmg-ele1); }
+.ele2 { color: var(--dmg-ele2); }
+.ele3 { color: var(--dmg-ele3); }
+.ele4 { color: var(--dmg-ele4); }
+.ele5 { color: var(--dmg-ele5); }
+.ele6 { color: var(--dmg-ele6); }
+.ele7 { color: var(--dmg-ele7); }
+.mag1 { color: var(--dmg-mag1); }
+.mag2 { color: var(--dmg-mag2); }
+.mag3 { color: var(--dmg-mag3); }
+.mag4 { color: var(--dmg-mag4); }
+.heal { color: var(--dmg-heal); }
+
+/* 文本语义色（手写 HTML 里 .blue / .pink 这类短类名） */
+.pink, .buff, .debuff, .eff { color: var(--c-buff); }
+.blue, .b { color: var(--c-info); }
+.lb { color: var(--c-key); }
+.orange, .org { color: var(--c-warn); }
+.green, .g { color: var(--c-good); }
+.red, .r { color: var(--c-bad); }
+.lgreen, .lg { color: var(--c-bright); }
+.gold { color: var(--gold); }

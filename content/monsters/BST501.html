@@ -1,0 +1,113 @@
+<!-- BST501 -->
+<article class="monster" id="BST501" data-id="BST501" data-name="斯芬克斯"
+         data-race="beast" data-level="5" data-dom="6"
+         data-str="14" data-dex="10" data-con="14" data-int="17" data-wis="16" data-cha="11" data-hp="65" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/BST501.webp" alt="斯芬克斯"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">斯芬克斯</h2>
+      <p class="monster__meta"><span class="monster__level">5级</span><span class="monster__race">野兽</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">6</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability"><dt>力量</dt><dd>14</dd></div>
+      <div class="ability"><dt>敏捷</dt><dd>10</dd></div>
+      <div class="ability"><dt>体质</dt><dd>14</dd></div>
+      <div class="ability adv"><dt>智力</dt><dd>17</dd></div>
+      <div class="ability"><dt>感知</dt><dd>16</dd></div>
+      <div class="ability"><dt>魅力</dt><dd>11</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>65</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="react"
+        data-check="save" data-save="int:12">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/BST501.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">斯芬克斯之谜</h3>
+        <p class="part__bonus"><span>免疫沉默</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">交战开始时作为反应，有一定几率使前排敌人陷入<span class="pink">沉默</span>和<span class="pink">有罪</span>状态。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">沉默</span>：陷入沉默状态，无法使用<span class="blue">法术</span>。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+          <p class="effect"><span class="effect__name">有罪</span>：在<span class="blue">感知豁免</span>上获得<span class="blue">劣势</span>。（持续时间：4.8秒 / 非战斗时9.6秒）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="str" data-dmg="phy4 mag4" data-mult="str"
+        data-dcbonus="cha" data-attack="spell melee"
+        data-check="hit save" data-hit="str" data-save="con:12">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/BST501.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">审判之锤</h3>
+        <p class="part__bonus"><span>力量+2</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line phy4">3d8 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<img class="ico" src="img/common/STR.webp" alt="力量" title="力量"></span>
+            <span class="dmg__line mag4">+ 2d8 <img class="ico" src="img/common/mag4.webp" alt="">心灵伤害<img class="ico" src="img/common/INT.webp" alt="智力" title="智力"></span>
+          </span>
+        </div>
+        <p class="part__desc">如果目标处于<span class="pink">有罪</span>状态，则造成<img src="img/common/mag4.webp" alt=""><span class="mag4">心灵伤害</span>，并使其陷入<span class="pink">震慑</span>状态。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">震慑</span>：无法行动或移动。受到的<span class="blue">命中检定</span>会被赋予<span class="blue">优势</span>，在<span class="blue">力量豁免</span>和<span class="blue">敏捷豁免</span>上获得<span class="blue">劣势</span>，且护甲等级减少2。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="passive"
+        data-bonus="int">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/BST501.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">真实卷轴</h3>
+        <p class="part__bonus"><span>智力+2</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">对<span class="pink">盲目</span>状态免疫，并获得对<img src="img/common/mag4.webp" alt=""><span class="mag4">心灵伤害</span>的抗性。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="react"
+        data-bonus="ac" data-dmg="mag4" data-mult="int"
+        data-dcbonus="int"
+        data-check="save" data-save="wis:15">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/BST501.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">最终判决</h3>
+        <p class="part__bonus"><span>护甲等级+1</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line mag4">3d10 <img class="ico" src="img/common/mag4.webp" alt="">心灵伤害<img class="ico" src="img/common/INT.webp" alt="智力" title="智力"></span>
+          </span>
+        </div>
+        <p class="part__desc">敌人击杀友军时作为反应，有一定概率对该敌人造成<span class="mag4">3d10 <img src="img/common/mag4.webp" alt="">额外心灵伤害</span><img src="img/common/INT.webp" alt="">并使其陷入<span class="pink">有罪</span>状态。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">有罪</span>：在<span class="blue">感知豁免</span>上获得<span class="blue">劣势</span>。（持续时间：4.8秒 / 非战斗时9.6秒）</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</article>

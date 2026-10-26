@@ -1,0 +1,110 @@
+<!-- UDD902 -->
+<article class="monster" id="UDD902" data-id="UDD902" data-name="菲西斯"
+         data-race="undead" data-level="9" data-dom="32"
+         data-str="12" data-dex="16" data-con="32" data-int="30" data-wis="34" data-cha="38" data-hp="210" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/UDD902.webp" alt="菲西斯"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">菲西斯</h2>
+      <p class="monster__meta"><span class="monster__level">9级</span><span class="monster__race">亡灵</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">32</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability"><dt>力量</dt><dd>12</dd></div>
+      <div class="ability"><dt>敏捷</dt><dd>16</dd></div>
+      <div class="ability"><dt>体质</dt><dd>32</dd></div>
+      <div class="ability"><dt>智力</dt><dd>30</dd></div>
+      <div class="ability"><dt>感知</dt><dd>34</dd></div>
+      <div class="ability adv"><dt>魅力</dt><dd>38</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>210</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/UDD902.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">鲜血统治</h3>
+        <p class="part__bonus"><span>免疫魅惑</span><span>免疫<img src="img/common/mag2.webp" alt=""><span class="mag2">死灵伤害</span></span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">对入侵地下城的敌人赋予1层<span class="pink">鲜血统治</span>。敌人每次被赋予<span class="pink">流血</span>或受到<span class="pink">流血</span>造成的伤害时，额外获得1层<span class="pink">鲜血统治</span>。自身造成的<img src="img/common/mag2.webp" alt=""><span class="mag2">死灵伤害</span>无视敌人的<span class="lb">抗性</span>和<span class="lb">免疫</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">鲜血统治</span>：每当<span class="pink">流血</span>造成伤害时，额外造成等同于菲西斯的魅力调整值＋每层1d6的<img src="img/common/mag2.webp" alt=""><span class="mag2">死灵伤害</span>。（最大层数：20）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="cha" data-dmg="mag2" data-mult="cha"
+        data-dcbonus="cha" data-attack="spell ranged aoe"
+        data-check="save" data-save="con:12">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/UDD902.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">猩红王座</h3>
+        <p class="part__bonus"><span>魅力+5</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line mag2">8d10 <img class="ico" src="img/common/mag2.webp" alt="">死灵伤害<img class="ico" src="img/common/CHA.webp" alt="魅力" title="魅力"></span>
+            <span class="dmg__line mag2">+ 1d10 <img class="ico" src="img/common/mag2.webp" alt="">死灵伤害<span class="dmg__mult">(每层)</span></span>
+          </span>
+        </div>
+        <p class="part__desc">抽取后排敌人的血液，并赋予<span class="pink">流血</span>状态。根据目标的<span class="pink">鲜血统治</span>层数造成额外<img src="img/common/mag2.webp" alt=""><span class="mag2">死灵伤害</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">流血</span>：交战结束时，受到1d4<span class="phy1">挥砍伤害</span>。（持续时间：4.8秒 / 非战斗时9.6秒，独立层数）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="passive"
+        data-bonus="wis">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/UDD902.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">鲜血帷幕</h3>
+        <p class="part__bonus"><span>感知+4</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">处于<span class="pink">流血</span>状态的敌人死亡时，恢复已消耗的<img src="img/common/main.webp" alt=""><span class="green">动作</span>。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="react"
+        data-bonus="dc" data-dmg="mag2 heal" data-mult="cha">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/UDD902.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">生命之源</h3>
+        <p class="part__bonus"><span>法术豁免难度+2</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line mag2">3d10 <img class="ico" src="img/common/mag2.webp" alt="">死灵伤害<img class="ico" src="img/common/CHA.webp" alt="魅力" title="魅力"></span>
+            <span class="dmg__line heal">+ 3d10 <img class="ico" src="img/common/heal.webp" alt="">治疗<img class="ico" src="img/common/CHA.webp" alt="魅力" title="魅力"></span>
+          </span>
+        </div>
+        <p class="part__desc">受到近战攻击时进行反应，对前排的攻击者造成<span class="mag2">3d10 <img src="img/common/mag2.webp" alt="">额外死灵伤害</span><img src="img/common/CHA.webp" alt="">并赋予<span class="pink">流血</span>，随后为自身恢复<span class="heal">3d10 治疗</span><img src="img/common/CHA.webp" alt="">。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">流血</span>：交战结束时，受到1d4<span class="phy1">挥砍伤害</span>。（持续时间：4.8秒 / 非战斗时9.6秒，独立层数）</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</article>

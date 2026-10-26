@@ -1,0 +1,105 @@
+<!-- BST401 -->
+<article class="monster" id="BST401" data-id="BST401" data-name="米诺陶洛斯"
+         data-race="beast" data-level="4" data-dom="4"
+         data-str="16" data-dex="9" data-con="15" data-int="6" data-wis="8" data-cha="5" data-hp="59" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/BST401.webp" alt="米诺陶洛斯"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">米诺陶洛斯</h2>
+      <p class="monster__meta"><span class="monster__level">4级</span><span class="monster__race">野兽</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">4</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability adv"><dt>力量</dt><dd>16</dd></div>
+      <div class="ability"><dt>敏捷</dt><dd>9</dd></div>
+      <div class="ability"><dt>体质</dt><dd>15</dd></div>
+      <div class="ability"><dt>智力</dt><dd>6</dd></div>
+      <div class="ability"><dt>感知</dt><dd>8</dd></div>
+      <div class="ability"><dt>魅力</dt><dd>5</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>59</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/BST401.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">迷宫之怒</h3>
+        <p class="part__bonus"><span>抵抗<img src="img/common/phy4.webp" alt=""><span class="phy4">物理伤害</span></span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">每次受到伤害或攻击命中时，获得1层<span class="pink">狂怒</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">狂怒</span>：近战伤害加值每层增加2，攻击后解除。（持续时间：2.4秒 / 非战斗时4.8秒，最大层数：10）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="str" data-dmg="phy4" data-mult="str"
+        data-attack="melee aoe"
+        data-check="hit" data-hit="str">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/BST401.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">屠杀之斧</h3>
+        <p class="part__bonus"><span>力量+2</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line phy4">3d8 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<img class="ico" src="img/common/STR.webp" alt="力量" title="力量"></span>
+          </span>
+        </div>
+        <p class="part__desc">攻击前排的所有敌人。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="passive"
+        data-bonus="con">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/BST401.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">猛牛之韧</h3>
+        <p class="part__bonus"><span>体质+2</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">在<span class="blue">力量豁免</span>上获得<span class="blue">优势</span>。每次豁免成功时获得1层<span class="pink">狂怒</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">狂怒</span>：近战伤害加值每层增加2，攻击后解除。（持续时间：2.4秒 / 非战斗时4.8秒，最大层数：10）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="passive"
+        data-bonus="ac" data-dmg="phy4" data-mult="str">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/BST401.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">贯穿之角</h3>
+        <p class="part__bonus"><span>护甲等级+1</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line phy4">0 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<img class="ico" src="img/common/STR.webp" alt="力量" title="力量"></span>
+          </span>
+        </div>
+        <p class="part__desc">每次基于<img src="img/common/STR.webp" alt="">力量的攻击命中时，对目标造成额外<span class="phy4">0 <img src="img/common/phy4.webp" alt="">额外物理伤害</span><img src="img/common/STR.webp" alt="">。</p>
+      </div>
+    </li>
+  </ul>
+</article>

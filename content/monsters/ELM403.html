@@ -1,0 +1,106 @@
+<!-- ELM403 -->
+<article class="monster" id="ELM403" data-id="ELM403" data-name="花蕾骑士"
+         data-race="elf" data-level="4" data-dom="4"
+         data-str="15" data-dex="8" data-con="15" data-int="5" data-wis="10" data-cha="7" data-hp="56" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/ELM403.webp" alt="花蕾骑士"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">花蕾骑士</h2>
+      <p class="monster__meta"><span class="monster__level">4级</span><span class="monster__race">精灵</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">4</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability adv"><dt>力量</dt><dd>15</dd></div>
+      <div class="ability"><dt>敏捷</dt><dd>8</dd></div>
+      <div class="ability"><dt>体质</dt><dd>15</dd></div>
+      <div class="ability"><dt>智力</dt><dd>5</dd></div>
+      <div class="ability"><dt>感知</dt><dd>10</dd></div>
+      <div class="ability"><dt>魅力</dt><dd>7</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>56</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/ELM403.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">花瓣架势</h3>
+        <p class="part__bonus"><span>易受<img src="img/common/ele1.webp" alt=""><span class="ele1">火焰伤害</span></span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">行动结束时，获得<span class="pink">花瓣架势</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">花瓣架势</span>：护甲等级增加2，且在<span class="blue">敏捷豁免</span>上获得<span class="blue">优势</span>。（持续时间：4.8秒 / 非战斗时9.6秒）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="dex" data-dmg="phy4 mag1" data-mult="dex"
+        data-attack="spell melee"
+        data-check="hit" data-hit="dex">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/ELM403.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">盛放之刃</h3>
+        <p class="part__bonus"><span>敏捷+2</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line phy4">2d10 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<img class="ico" src="img/common/DEX.webp" alt="敏捷" title="敏捷"></span>
+            <span class="dmg__line mag1">+ 2d10 <img class="ico" src="img/common/mag1.webp" alt="">光耀伤害<img class="ico" src="img/common/CHA.webp" alt="魅力" title="魅力"></span>
+          </span>
+        </div>
+        <p class="part__desc"><span class="lb">重击</span>命中时造成<img src="img/common/mag1.webp" alt=""><span class="mag1">光耀伤害</span>。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="react"
+        data-bonus="con" data-dmg="shield">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/ELM403.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">守护誓约</h3>
+        <p class="part__bonus"><span>体质+2</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">后排友军成为攻击目标时作为反应，将目标更改为自身并获得<span class="heal">0 <img src="img/common/shield.webp" alt="">临时生命值</span>。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="passive"
+        data-bonus="ac" data-dmg="heal">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/ELM403.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">飞舞花瓣</h3>
+        <p class="part__bonus"><span>护甲等级+2</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line heal">1d4 <img class="ico" src="img/common/heal.webp" alt="">治疗<img class="ico" src="img/common/CON.webp" alt="体质" title="体质"></span>
+          </span>
+        </div>
+        <p class="part__desc">交战开始时获得3层<span class="pink">花瓣</span>。受到伤害时作为反应，消耗1层对自身进行<span class="heal">1d4 治疗</span><img src="img/common/CON.webp" alt="">。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">花瓣</span>：护甲等级和<img src="img/common/CON.webp" alt="">体质加值每层增加1。（持续时间：2.4秒 / 非战斗时4.8秒，最大层数：5）</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</article>

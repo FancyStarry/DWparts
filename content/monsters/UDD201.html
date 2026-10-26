@@ -1,0 +1,107 @@
+<!-- UDD201 -->
+<article class="monster" id="UDD201" data-id="UDD201" data-name="食尸鬼"
+         data-race="undead" data-level="2" data-dom="2"
+         data-str="10" data-dex="12" data-con="10" data-int="5" data-wis="6" data-cha="4" data-hp="23" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/UDD201.webp" alt="食尸鬼"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">食尸鬼</h2>
+      <p class="monster__meta"><span class="monster__level">2级</span><span class="monster__race">亡灵</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">2</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability"><dt>力量</dt><dd>10</dd></div>
+      <div class="ability adv"><dt>敏捷</dt><dd>12</dd></div>
+      <div class="ability"><dt>体质</dt><dd>10</dd></div>
+      <div class="ability"><dt>智力</dt><dd>5</dd></div>
+      <div class="ability"><dt>感知</dt><dd>6</dd></div>
+      <div class="ability"><dt>魅力</dt><dd>4</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>23</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main"
+        data-check="save" data-save="con:12">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/UDD201.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">麻痹之触</h3>
+        <p class="part__bonus"><span>免疫中毒</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">攻击命中时，使目标陷入<span class="pink">麻痹</span>状态。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">麻痹</span>：无法行动，<span class="blue">力量豁免</span>和<span class="blue">敏捷豁免</span>加值减少20，必定检定失败。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="dex" data-dmg="phy4" data-mult="dex"
+        data-attack="melee"
+        data-check="hit" data-hit="dex">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/UDD201.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">神经毒爪</h3>
+        <p class="part__bonus"><span>敏捷+1</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line phy4">1d8 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<img class="ico" src="img/common/DEX.webp" alt=""><span class="dmg__mult">(0.75)</span></span>
+            <span class="dmg__line phy4">+ 1d8 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<img class="ico" src="img/common/DEX.webp" alt=""><span class="dmg__mult">(0.5)</span></span>
+          </span>
+        </div>
+        <p class="part__desc">抓挠目标2次。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="passive"
+        data-bonus="ini">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/UDD201.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">伏击者之爪</h3>
+        <p class="part__bonus"><span>先攻+2</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">交战开始时，进入<span class="pink">伏击</span>状态直到下一次行动结束。在此期间，对敌人的命中检定获得<span class="blue">优势</span>，针对自身的命中检定则处于<span class="blue">劣势</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">伏击</span>：自身的<span class="blue">命中检定</span>获得<span class="blue">优势</span>，受击时强制赋予<span class="blue">劣势</span>，行动后解除。</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="passive"
+        data-bonus="con" data-dmg="heal">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/UDD201.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">贪食之胃</h3>
+        <p class="part__bonus"><span>体质+1</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line heal">2d6 <img class="ico" src="img/common/heal.webp" alt="">治疗<img class="ico" src="img/common/CON.webp" alt="体质" title="体质"></span>
+          </span>
+        </div>
+        <p class="part__desc">每当有人死亡时作为反应，对自己进行<span class="heal">2d6 治疗</span><img src="img/common/CON.webp" alt="">。</p>
+      </div>
+    </li>
+  </ul>
+</article>

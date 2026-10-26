@@ -1,0 +1,101 @@
+<!-- BST201 -->
+<article class="monster" id="BST201" data-id="BST201" data-name="鹰身女妖"
+         data-race="beast" data-level="2" data-dom="2"
+         data-str="6" data-dex="12" data-con="8" data-int="5" data-wis="7" data-cha="12" data-hp="20" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/BST201.webp" alt="鹰身女妖"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">鹰身女妖</h2>
+      <p class="monster__meta"><span class="monster__level">2级</span><span class="monster__race">野兽</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">2</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability"><dt>力量</dt><dd>6</dd></div>
+      <div class="ability adv"><dt>敏捷</dt><dd>12</dd></div>
+      <div class="ability"><dt>体质</dt><dd>8</dd></div>
+      <div class="ability"><dt>智力</dt><dd>5</dd></div>
+      <div class="ability"><dt>感知</dt><dd>7</dd></div>
+      <div class="ability"><dt>魅力</dt><dd>12</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>20</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main"
+        data-check="save" data-save="dex:10">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/BST201.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">鹰身女妖之翼</h3>
+        <p class="part__bonus"><span>抵抗<img src="img/common/ele7.webp" alt=""><span class="ele7">自然伤害</span></span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">进入<span class="pink">飞行</span>状态，使针对自身的近战命中检定获得<span class="blue">劣势</span>。受到伤害时会失去平衡并陷入<span class="pink">倒地</span>状态。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">飞行</span>：漂浮在空中，强制针对自身的<span class="blue">近战</span>获得<span class="blue">劣势</span>。</p>
+          <p class="effect"><span class="effect__name">倒地</span>：自身的<span class="blue">命中检定</span>获得<span class="blue">劣势</span>。受到的近战命中会被赋予<span class="blue">优势</span>，而受到的远程命中则被赋予<span class="blue">劣势</span>。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="dex" data-dmg="phy4" data-mult="dex"
+        data-dcbonus="cha" data-attack="melee aoe"
+        data-check="save" data-save="wis:12">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/BST201.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">钢羽狂风</h3>
+        <p class="part__bonus"><span>敏捷+1</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line phy4">1d12 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<img class="ico" src="img/common/DEX.webp" alt="敏捷" title="敏捷"></span>
+          </span>
+        </div>
+        <p class="part__desc">攻击前排的敌人以妨碍其攻击。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">命中检定减值</span>：<img src="img/common/attack.webp" alt="">命中减少2。（持续时间：4.8秒 / 非战斗时9.6秒，独立层数）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="passive"
+        data-bonus="hit">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/BST201.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">锋利刃羽</h3>
+        <p class="part__bonus"><span>近战命中+1</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">带有<img src="img/common/phy4.webp" alt=""><span class="phy4">物理伤害</span>的攻击会追加等同于<img src="img/common/DEX.webp" alt="">敏捷调整值的<img src="img/common/phy4.webp" alt=""><span class="phy4">物理伤害</span>。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="react"
+        data-bonus="ini">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/BST201.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">回避机动</h3>
+        <p class="part__bonus"><span>先攻+1</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">成为远程攻击目标时作为反应，使该攻击未命中。</p>
+      </div>
+    </li>
+  </ul>
+</article>

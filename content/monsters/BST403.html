@@ -1,0 +1,108 @@
+<!-- BST403 -->
+<article class="monster" id="BST403" data-id="BST403" data-name="蝎尾狮"
+         data-race="beast" data-level="4" data-dom="4"
+         data-str="12" data-dex="14" data-con="12" data-int="8" data-wis="10" data-cha="7" data-hp="48" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/BST403.webp" alt="蝎尾狮"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">蝎尾狮</h2>
+      <p class="monster__meta"><span class="monster__level">4级</span><span class="monster__race">野兽</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">4</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability"><dt>力量</dt><dd>12</dd></div>
+      <div class="ability adv"><dt>敏捷</dt><dd>14</dd></div>
+      <div class="ability"><dt>体质</dt><dd>12</dd></div>
+      <div class="ability"><dt>智力</dt><dd>8</dd></div>
+      <div class="ability"><dt>感知</dt><dd>10</dd></div>
+      <div class="ability"><dt>魅力</dt><dd>7</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>48</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/BST403.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">锯齿之爪</h3>
+        <p class="part__bonus"><span>抵抗<img src="img/common/ele7.webp" alt=""><span class="ele7">自然伤害</span></span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">自身造成的<img src="img/common/phy4.webp" alt=""><span class="phy4">物理伤害</span>无视目标的<span class="lb">抗性</span>。造成<img src="img/common/phy4.webp" alt=""><span class="phy4">物理伤害</span>时，对目标施加<span class="pink">流血</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">流血</span>：交战结束时，受到1d4<span class="phy1">挥砍伤害</span>。（持续时间：4.8秒 / 非战斗时9.6秒，独立层数）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="str" data-dmg="phy4" data-mult="str"
+        data-attack="melee"
+        data-check="hit" data-hit="str">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/BST403.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">鲜血连枷</h3>
+        <p class="part__bonus"><span>力量+2</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line phy4">3d8 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<img class="ico" src="img/common/STR.webp" alt="力量" title="力量"></span>
+            <span class="dmg__line phy4">+ 2d8 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害</span>
+          </span>
+        </div>
+        <p class="part__desc">若目标处于<span class="pink">流血</span>状态，则造成额外伤害。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="passive"
+        data-bonus="ini"
+        data-dcbonus="str"
+        data-check="save" data-save="wis:13">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/BST403.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">蝙蝠之翼</h3>
+        <p class="part__bonus"><span>先攻+2</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">攻击目标固定为护甲最低的敌人。命中时，有一定概率使目标陷入<span class="pink">恐慌</span>状态。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">恐慌</span>：向入口撤退，且在<span class="blue">命中检定</span>上获得<span class="blue">劣势</span>。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="react"
+        data-bonus="ac" data-dmg="mag1" data-mult="str">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/BST403.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">黄金之角</h3>
+        <p class="part__bonus"><span>护甲等级+1</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line mag1">0 <img class="ico" src="img/common/mag1.webp" alt="">光耀伤害<img class="ico" src="img/common/STR.webp" alt="力量" title="力量"></span>
+          </span>
+        </div>
+        <p class="part__desc">受到近战攻击时作为反应，对攻击者造成<span class="mag1">0 <img src="img/common/mag1.webp" alt="">额外光耀伤害</span><img src="img/common/STR.webp" alt="">。</p>
+      </div>
+    </li>
+  </ul>
+</article>

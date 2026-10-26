@@ -1,0 +1,387 @@
+/* ═══════════════════════════════════════════════
+   魔物卡 / 部件卡
+   ═══════════════════════════════════════════════ */
+
+/* ── 魔物容器 ── */
+/* 纵向排布：头部在上，部件网格在下。不要用 grid-area 把两者塞进同一格。 */
+.monster {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+  padding: var(--s-4);
+  margin-block-end: var(--s-4);
+  background: var(--bg-1);
+  border: 1px solid var(--line-1);
+  border-radius: var(--radius-3);
+  scroll-margin-top: calc(var(--sticky-top) + var(--s-4));
+}
+.monster[hidden] { display: none; }
+
+/* 卡片被筛选命中时给个左侧提示条 */
+.monster[data-hit='full'] { border-color: var(--line-2); }
+
+/* ── 头部 ── */
+.monster__head {
+  display: grid;
+  grid-template-columns: auto minmax(150px, 1fr) minmax(0, 2.1fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: var(--s-4);
+  padding-block-end: var(--s-3);
+  border-bottom: 1px solid var(--line-2);
+}
+
+/* 立绘本身是不透明矩形（游戏自带底色），不要圆角、不要光晕，
+   否则会在卡片上多出一个方框。直接贴平即可。 */
+.monster__portrait {
+  width: 96px;
+  aspect-ratio: 159 / 195;
+  display: block;
+  background: none;
+  border-radius: 0;
+  overflow: hidden;
+}
+.monster__portrait img { width: 100%; height: 100%; object-fit: contain; }
+
+.monster__title { min-width: 0; }
+.monster__name {
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+}
+.monster__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-2);
+  margin-block-start: var(--s-2);
+  font-size: var(--fs-sm);
+  color: var(--fg-2);
+}
+.monster__meta > span {
+  white-space: nowrap;
+}
+/* 用细分隔点替代药丸底色 */
+.monster__meta > span + span::before {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 0.9em;
+  margin-inline-end: var(--s-2);
+  background: var(--line-2);
+  vertical-align: -0.1em;
+}
+.monster__level { color: var(--gold); }
+.monster__race { color: var(--fg-1); }
+.monster__dom { display: inline-flex; align-items: center; gap: 3px; }
+
+/* 属性 */
+.monster__abilities {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0;
+  border-block: 1px solid var(--line-1);
+}
+.ability {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--s-2) 2px;
+  border-inline-start: 1px solid var(--line-1);
+}
+.ability:first-child { border-inline-start: none; }
+.ability dt {
+  font-size: var(--fs-xs);
+  /* main 的 #888 是配在页面底色 #0d1418 上的；卡片表面 #1a2a33 更亮，
+     同一档色只有 4.16 对比度，这里用 --fg-2（main 阶梯里更亮的一档） */
+  color: var(--fg-2);
+  letter-spacing: 0.02em;
+}
+.ability dd {
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.2;
+}
+/* 优势属性以金色标示 */
+.ability.adv dd { color: var(--gold); }
+
+/* 生命/护甲 */
+.monster__vitals {
+  display: grid;
+  gap: var(--s-1);
+}
+.vital {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s-2);
+  padding: 3px 0;
+  border-block-end: 1px solid var(--line-1);
+}
+.vital:last-child { border-block-end: none; }
+.vital dt {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-size: var(--fs-sm);
+  color: var(--fg-2);
+  white-space: nowrap;
+}
+.vital dd {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── 部件列表 ── */
+/*
+ * 部件网格。
+ *   宽屏：一行四个（基础 / M / S1 / S2），整齐对齐，不出现 "1 个 + 3 个" 的断行
+ *   中屏：两列
+ *   竖屏 / 窄屏：一列，逐张往下排
+ */
+.parts {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--s-3);
+  /* 同一行的卡片高度对齐到最高的一张（grid 默认 stretch）。
+     单列布局每行只有一张卡，此规则自然不起作用，各自按内容收缩。 */
+  align-items: stretch;
+}
+
+/* 部件不再是独立色块：透明底，靠间距与细线归组 */
+.part {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: var(--s-3) 0;
+  transition: background 0.15s;
+}
+.part:hover { background: rgb(255 255 255 / 0.02); }
+.part[hidden] { display: none !important; }
+
+/* 基础攻击卡：与其它卡完全同构，无任何特殊样式 */
+
+/* ── 部件头 ── */
+.part__head {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    'badge name'
+    'badge bonus';
+  align-items: center;
+  gap: 0 var(--s-3);
+  padding-block-end: var(--s-2);
+  margin-block-end: var(--s-2);
+  border-bottom: 1px solid var(--line-1);
+}
+.part__name {
+  grid-area: name;
+  font-size: var(--fs-md);
+  font-weight: 700;
+  line-height: 1.3;
+  align-self: end;
+}
+.part__bonus {
+  grid-area: bonus;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px var(--s-2);
+  font-size: var(--fs-xs);
+  color: var(--fg-1);
+  align-self: start;
+}
+.part__bonus > span {
+  color: var(--gold);
+  white-space: nowrap;
+}
+.part__bonus img,
+.part__desc img,
+.effect img,
+.dmg__line img {
+  width: 1em;
+  height: 1em;
+  object-fit: contain;
+  vertical-align: -0.12em;
+}
+.part__bonus .ico,
+.part__desc .ico,
+.effect .ico { width: 1em; height: 1em; }
+
+/* ── 部件徽章（三层叠加：底框 + 头像 + 角标） ── */
+.badge {
+  grid-area: badge;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  display: block;
+}
+.badge__frame {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+/*
+ * 头像裁切。
+ *
+ * 四种徽章的洞口形状各不相同（正圆 / 菱形 / 左斜带 / 右斜带），
+ * 所以遮罩必须来自素材本身，不能用写死的 circle()。
+ *
+ * 素材 `<kind>_back.png` 是"实心遮罩、中间挖洞"，直接用会得到反效果，
+ * 需要 mask-composite 再叠一层取反 —— 但那个属性兼容性差，不支持的浏览器
+ * 会把两层当并集，于是整块立绘露出来，看着就是个方框。
+ *
+ * 因此构建期已把 alpha 取反（scripts/build-masks.mjs），产出 mask-<kind>.png：
+ * 洞口内不透明、洞口外透明。CSS 这里只需要单层 mask-image，
+ * 无图层合成、无兼容性差异、也不会在方框四边留下描边。
+ *
+ * 遮罩图路径由构建器写在 --badge-matte 上（相对样式表会 404，故必须绝对路径）。
+ */
+.badge__portrait {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  z-index: 0;
+  width: 48px;
+  height: 48px;
+  overflow: hidden;          /* 裁掉立绘超出的竖长部分 */
+  /* 同样只写标准属性，前缀由构建器补齐 */
+  mask-image: var(--badge-matte);
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  mask-position: 0 0;
+}
+.badge__portrait img {
+  width: 48px;
+  height: auto;
+}
+.badge__frame { z-index: 2; }
+.badge__label {
+  position: absolute;
+  inset-inline-start: auto;
+  inset-inline-end: 0;
+  inset-block-start: auto;
+  inset-block-end: 0;
+  z-index: 3;
+  /* 角标是 48×33 的横图，必须 width:24px + height:auto */
+  width: 24px;
+  height: auto;
+}
+
+/* ── 部件正文 ── */
+.part__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+  min-width: 0;
+  font-size: var(--fs-md);
+  line-height: 1.65;
+  /* 卡片被拉伸到同行最高高度时由正文吸收多余空间，内容仍然从顶部开始排 ——
+     文字必须紧跟标题，垂直居中会让人找不到阅读起点。
+     多出来的空白留在卡片底部；单列布局卡片高度等于内容高度，此规则不起作用。 */
+  flex: 1 1 auto;
+  justify-content: flex-start;
+}
+.part__desc { color: var(--fg-1); overflow-wrap: anywhere; }
+.part__desc .ico { width: 1.15em; height: 1.15em; }
+
+/* 伤害区 */
+.dmg {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+}
+.dmg__die { flex: 0 0 auto; display: flex; }
+.dmg__die img {
+  width: 1.7em;
+  height: 1.7em;
+  opacity: 0.85;
+}
+.dmg__lines { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+.dmg__line {
+  display: block;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5;
+}
+.dmg__line .ico { width: 1.05em; height: 1.05em; }
+.dmg__mult {
+  /* main: .dmg_mult { color: lightgray } */
+  color: lightgray;
+  font-size: 0.9em;
+}
+
+/* 效果说明 */
+.effects {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-1);
+  padding: 0 0 0 var(--s-3);
+  border-inline-start: 1px solid var(--line-2);
+}
+.effect {
+  font-size: var(--fs-sm);
+  line-height: 1.6;
+  /* main: .effects { color: lightgray } */
+  color: lightgray;
+  overflow-wrap: anywhere;
+}
+.effect__name { font-weight: 700; color: var(--fg-0); }
+.effect .ico { width: 1.1em; height: 1.1em; }
+
+/* ── 筛选态 ── */
+:root[data-filter-mode='part'] .part[hidden] { display: none !important; }
+
+/* ── 响应式 ── */
+@media (max-width: 1200px) {
+  .monster__head {
+    grid-template-columns: auto minmax(140px, 1fr) minmax(0, 1.6fr);
+    grid-template-areas:
+      'portrait title title'
+      'portrait abil  vitals';
+  }
+  .monster__portrait { grid-area: portrait; }
+  .monster__title { grid-area: title; }
+  .monster__abilities { grid-area: abil; }
+  .monster__vitals { grid-area: vitals; }
+}
+
+/* 中屏：两列 */
+@media (max-width: 1279px) {
+  .parts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .monster { padding: var(--s-3); gap: var(--s-2); }
+}
+
+/* 竖屏 / 窄屏：一列，逐张往下排 */
+@media (max-width: 899px), (orientation: portrait) and (max-width: 1100px) {
+  .parts { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 720px) {
+  .monster__head {
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-areas:
+      'portrait title'
+      'abil abil'
+      'vitals vitals';
+    gap: var(--s-2);
+  }
+  .monster__portrait { width: 68px; }
+  .monster__name { font-size: var(--fs-lg); }
+  .monster { border-radius: var(--radius-2); }
+  .dmg__line { white-space: normal; text-overflow: clip; }
+}
+
+/* 打印：去掉交互外壳，保留卡片 */
+@media print {
+  .site-header, .to-top, .filters__foot { display: none !important; }
+  body { background: #fff; color: #000; }
+  .monster, .part { border-color: #ccc; background: #fff; break-inside: avoid; }
+  .monster__name, .part__name { color: #000; }
+}

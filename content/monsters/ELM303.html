@@ -1,0 +1,109 @@
+<!-- ELM303 -->
+<article class="monster" id="ELM303" data-id="ELM303" data-name="希尔芙"
+         data-race="elf" data-level="3" data-dom="3"
+         data-str="5" data-dex="15" data-con="8" data-int="8" data-wis="10" data-cha="13" data-hp="28" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/ELM303.webp" alt="希尔芙"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">希尔芙</h2>
+      <p class="monster__meta"><span class="monster__level">3级</span><span class="monster__race">精灵</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">3</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability"><dt>力量</dt><dd>5</dd></div>
+      <div class="ability adv"><dt>敏捷</dt><dd>15</dd></div>
+      <div class="ability"><dt>体质</dt><dd>8</dd></div>
+      <div class="ability"><dt>智力</dt><dd>8</dd></div>
+      <div class="ability"><dt>感知</dt><dd>10</dd></div>
+      <div class="ability"><dt>魅力</dt><dd>13</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>28</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/ELM303.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">气流</h3>
+        <p class="part__bonus"><span>抵抗<img src="img/common/ele3.webp" alt=""><span class="ele3">闪电伤害</span></span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">进入无视战斗阵型站位限制的<span class="pink">空气形态</span>状态。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">空气形态</span>：搜索目标时射程增加，可对后排进行打击。</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="dex" data-dmg="phy4" data-mult="dex"
+        data-attack="melee"
+        data-check="hit" data-hit="dex">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/ELM303.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">狂风打击</h3>
+        <p class="part__bonus"><span>敏捷+1</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line phy4">3d6 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<img class="ico" src="img/common/DEX.webp" alt="敏捷" title="敏捷"></span>
+          </span>
+        </div>
+        <p class="part__desc">造成<span class="lb">重击</span>命中时，进入<span class="pink">隐形</span>状态。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">隐形</span>：从视野中消失，对敌人的<span class="blue">命中检定</span>获得<span class="blue">优势</span>。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="passive"
+        data-bonus="ini">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/ELM303.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">气流捕捉</h3>
+        <p class="part__bonus"><span>先攻+2</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">始终处于<span class="pink">气流捕捉</span>状态。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">气流捕捉</span>：攻击先攻值低于自身的敌人时，在<span class="blue">命中检定</span>上获得<span class="blue">优势</span>。</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="passive"
+        data-bonus="cha" data-dmg="mag4" data-mult="cha">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/ELM303.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">刺客之刃</h3>
+        <p class="part__bonus"><span>魅力+1</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line mag4">2d6 <img class="ico" src="img/common/mag4.webp" alt="">心灵伤害<img class="ico" src="img/common/CHA.webp" alt="魅力" title="魅力"></span>
+            <span class="dmg__line mag4">+ 2d6 <img class="ico" src="img/common/mag4.webp" alt="">心灵伤害<img class="ico" src="img/common/CHA.webp" alt="魅力" title="魅力"></span>
+          </span>
+        </div>
+        <p class="part__desc">攻击命中后排或生命值在50%以下的敌人时，造成额外<span class="mag4">2d6 <img src="img/common/mag4.webp" alt="">额外心灵伤害</span><img src="img/common/CHA.webp" alt="">。</p>
+      </div>
+    </li>
+  </ul>
+</article>

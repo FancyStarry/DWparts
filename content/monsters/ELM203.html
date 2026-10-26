@@ -1,0 +1,99 @@
+<!-- ELM203 -->
+<article class="monster" id="ELM203" data-id="ELM203" data-name="花蕾士兵"
+         data-race="elf" data-level="2" data-dom="2"
+         data-str="12" data-dex="6" data-con="12" data-int="4" data-wis="8" data-cha="5" data-hp="32" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/ELM203.webp" alt="花蕾士兵"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">花蕾士兵</h2>
+      <p class="monster__meta"><span class="monster__level">2级</span><span class="monster__race">精灵</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">2</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability adv"><dt>力量</dt><dd>12</dd></div>
+      <div class="ability"><dt>敏捷</dt><dd>6</dd></div>
+      <div class="ability"><dt>体质</dt><dd>12</dd></div>
+      <div class="ability"><dt>智力</dt><dd>4</dd></div>
+      <div class="ability"><dt>感知</dt><dd>8</dd></div>
+      <div class="ability"><dt>魅力</dt><dd>5</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>32</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/ELM203.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">荆棘树皮</h3>
+        <p class="part__bonus"><span>易受<img src="img/common/ele1.webp" alt=""><span class="ele1">火焰伤害</span></span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">获得对<img src="img/common/ele7.webp" alt=""><span class="ele7">自然伤害</span>的<span class="lb">抗性</span>，但获得对<img src="img/common/ele1.webp" alt=""><span class="ele1">火焰伤害</span>的<span class="lb">易伤</span>。</p>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="str" data-dmg="phy4" data-mult="str"
+        data-attack="melee"
+        data-check="hit" data-hit="str">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/ELM203.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">荆棘之枪</h3>
+        <p class="part__bonus"><span>力量+1</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line phy4">2d10 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<img class="ico" src="img/common/STR.webp" alt="力量" title="力量"></span>
+          </span>
+        </div>
+        <p class="part__desc">对目标赋予<span class="pink">流血</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">流血</span>：交战结束时，受到1d4<span class="phy1">挥砍伤害</span>。（持续时间：4.8秒 / 非战斗时9.6秒，独立层数）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="passive"
+        data-bonus="con">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/ELM203.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">坚固根茎</h3>
+        <p class="part__bonus"><span>体质+1</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">在<span class="blue">体质豁免</span>上获得<span class="blue">优势</span>。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="passive"
+        data-bonus="ac">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/ELM203.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">层叠花瓣</h3>
+        <p class="part__bonus"><span>护甲等级+1</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">交战开始时，获得3层可减轻受到伤害的<span class="pink">花瓣守卫</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">花瓣守卫</span>：受到<img src="img/common/phy4.webp" alt=""><span class="phy4">物理伤害</span>或<img src="img/common/ele7.webp" alt=""><span class="ele7">自然伤害</span>时，消耗1层使该伤害减半。（最大层数：5）</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</article>

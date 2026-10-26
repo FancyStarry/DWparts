@@ -1,0 +1,115 @@
+<!-- UDD802 -->
+<article class="monster" id="UDD802" data-id="UDD802" data-name="暗夜漫步者"
+         data-race="undead" data-level="8" data-dom="16"
+         data-str="22" data-dex="26" data-con="18" data-int="10" data-wis="12" data-cha="14" data-hp="120" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/UDD802.webp" alt="暗夜漫步者"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">暗夜漫步者</h2>
+      <p class="monster__meta"><span class="monster__level">8级</span><span class="monster__race">亡灵</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">16</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability"><dt>力量</dt><dd>22</dd></div>
+      <div class="ability adv"><dt>敏捷</dt><dd>26</dd></div>
+      <div class="ability"><dt>体质</dt><dd>18</dd></div>
+      <div class="ability"><dt>智力</dt><dd>10</dd></div>
+      <div class="ability"><dt>感知</dt><dd>12</dd></div>
+      <div class="ability"><dt>魅力</dt><dd>14</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>120</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main"
+        data-attack="aoe">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/UDD802.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">深渊帷幕</h3>
+        <p class="part__bonus"><span>免疫盲目</span><span>易受<img src="img/common/mag1.webp" alt=""><span class="mag1">光耀伤害</span></span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">交战开始时，使自身与后排友军进入<span class="pink">隐形</span>状态，并为所有处于<span class="pink">隐形</span>状态的友军赋予<span class="pink">暗影加护</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">隐形</span>：从视野中消失，对敌人的<span class="blue">命中检定</span>获得<span class="blue">优势</span>。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+          <p class="effect"><span class="effect__name">暗影加护</span>：护甲等级增加2，并获得对<img src="img/common/mag2.webp" alt=""><span class="mag2">死灵伤害</span>和<img src="img/common/mag4.webp" alt=""><span class="mag4">心灵伤害</span>的抗性。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="dex" data-dmg="mag2 mag4" data-mult="dex"
+        data-attack="spell melee aoe"
+        data-check="hit" data-hit="dex">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/UDD802.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">形体切断</h3>
+        <p class="part__bonus"><span>敏捷+3</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line mag2">6d10 <img class="ico" src="img/common/mag2.webp" alt="">死灵伤害<img class="ico" src="img/common/DEX.webp" alt=""><span class="dmg__mult">(1.5)</span></span>
+            <span class="dmg__line mag4">+ 4d8 <img class="ico" src="img/common/mag4.webp" alt="">心灵伤害<img class="ico" src="img/common/WIS.webp" alt="感知" title="感知"></span>
+          </span>
+        </div>
+        <p class="part__desc">挥砍前排敌人，造成<img src="img/common/mag2.webp" alt=""><span class="mag2">死灵伤害</span>。若自身处于<span class="pink">隐形</span>状态，则额外造成<img src="img/common/mag4.webp" alt=""><span class="mag4">心灵伤害</span>。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="passive"
+        data-bonus="cha"
+        data-dcbonus="cha"
+        data-check="save" data-save="cha:16">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/UDD802.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">吞噬暗影</h3>
+        <p class="part__bonus"><span>魅力+3</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">攻击时目标获得<span class="pink">暗影吞噬</span>层数。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">暗影吞噬</span>：交战开始时，受到1d10<img src="img/common/mag2.webp" alt=""><span class="mag2">死灵伤害</span>，且该效果的伤害量增加2。此效果持续至敌人死亡。</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="passive"
+        data-bonus="hit" data-dmg="mag4" data-mult="wis"
+        data-dcbonus="cha"
+        data-check="save" data-save="wis:16">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/UDD802.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">恐惧打击</h3>
+        <p class="part__bonus"><span>近战命中+2</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line mag4">4d8 <img class="ico" src="img/common/mag4.webp" alt="">心灵伤害<img class="ico" src="img/common/WIS.webp" alt="感知" title="感知"></span>
+          </span>
+        </div>
+        <p class="part__desc">造成重击时，对目标造成额外<span class="mag4">4d8 <img src="img/common/mag4.webp" alt="">额外心灵伤害</span><img src="img/common/WIS.webp" alt="">并使其陷入<span class="pink">恐慌</span>状态。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">恐慌</span>：向入口撤退，且在<span class="blue">命中检定</span>上获得<span class="blue">劣势</span>。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</article>

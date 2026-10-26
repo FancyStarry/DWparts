@@ -1,0 +1,105 @@
+<!-- BST703 -->
+<article class="monster" id="BST703" data-id="BST703" data-name="特提斯"
+         data-race="beast" data-level="7" data-dom="12"
+         data-str="13" data-dex="13" data-con="14" data-int="18" data-wis="14" data-cha="21" data-hp="99" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/BST703.webp" alt="特提斯"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">特提斯</h2>
+      <p class="monster__meta"><span class="monster__level">7级</span><span class="monster__race">野兽</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">12</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability"><dt>力量</dt><dd>13</dd></div>
+      <div class="ability"><dt>敏捷</dt><dd>13</dd></div>
+      <div class="ability"><dt>体质</dt><dd>14</dd></div>
+      <div class="ability"><dt>智力</dt><dd>18</dd></div>
+      <div class="ability"><dt>感知</dt><dd>14</dd></div>
+      <div class="ability adv"><dt>魅力</dt><dd>21</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>99</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main"
+        data-attack="aoe"
+        data-check="save" data-save="str:12">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/BST703.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">海洋支配者</h3>
+        <p class="part__bonus"><span>免疫<img src="img/common/ele2.webp" alt=""><span class="ele2">寒冷伤害</span></span><span>免疫束缚</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">每次交战开始时，对所有敌人赋予1层<span class="pink">深海重压</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">深海重压</span>：每层使敏捷豁免和先攻值减少1。（持续时间：4.8秒 / 非战斗时9.6秒，最大层数：5）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="cha" data-dmg="phy4 ele2" data-mult="cha"
+        data-attack="spell ranged"
+        data-check="hit" data-hit="cha">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/BST703.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">螺旋海螺枪</h3>
+        <p class="part__bonus"><span>魅力+2</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line phy4">5d10 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<img class="ico" src="img/common/CHA.webp" alt="魅力" title="魅力"></span>
+            <span class="dmg__line ele2">+ 1d10 <img class="ico" src="img/common/ele2.webp" alt="">寒冷伤害<span class="dmg__mult">(每层)</span></span>
+          </span>
+        </div>
+        <p class="part__desc">根据目标的<span class="pink">深海重压</span>层数造成额外的<img src="img/common/ele2.webp" alt=""><span class="ele2">寒冷伤害</span>。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="react"
+        data-bonus="str">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/BST703.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">珍珠之冠</h3>
+        <p class="part__bonus"><span>力量+2</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">友军攻击前，对目标赋予<span class="pink">深渊寒意</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">深渊寒意</span>：攻击时额外造成1d6 <img src="img/common/ele2.webp" alt=""><span class="ele2">寒冷伤害</span>。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="react"
+        data-bonus="ini">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/BST703.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">海啸斗篷</h3>
+        <p class="part__bonus"><span>先攻+3</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">当友军成为远程攻击的目标时，使该友军陷入<span class="pink">漩涡帷幕</span>状态。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">漩涡帷幕</span>：交战结束前，受到的远程攻击伤害减半，并获得对<img src="img/common/ele2.webp" alt=""><span class="ele2">寒冷伤害</span>的<span class="lb">抗性</span>。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</article>

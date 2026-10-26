@@ -1,0 +1,117 @@
+<!-- ELM501 -->
+<article class="monster" id="ELM501" data-id="ELM501" data-name="水元素"
+         data-race="elf" data-level="5" data-dom="6"
+         data-str="10" data-dex="12" data-con="13" data-int="11" data-wis="16" data-cha="17" data-hp="59" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/ELM501.webp" alt="水元素"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">水元素</h2>
+      <p class="monster__meta"><span class="monster__level">5级</span><span class="monster__race">精灵</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">6</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability"><dt>力量</dt><dd>10</dd></div>
+      <div class="ability"><dt>敏捷</dt><dd>12</dd></div>
+      <div class="ability"><dt>体质</dt><dd>13</dd></div>
+      <div class="ability"><dt>智力</dt><dd>11</dd></div>
+      <div class="ability"><dt>感知</dt><dd>16</dd></div>
+      <div class="ability adv"><dt>魅力</dt><dd>17</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>59</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main"
+        data-dmg="heal">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/ELM501.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">鼓舞之歌</h3>
+        <p class="part__bonus"><span>抵抗<img src="img/common/ele2.webp" alt=""><span class="ele2">寒冷伤害</span></span><span>易受<img src="img/common/ele1.webp" alt=""><span class="ele1">火焰伤害</span></span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line heal">1d6 <img class="ico" src="img/common/heal.webp" alt="">治疗<img class="ico" src="img/common/CHA.webp" alt="魅力" title="魅力"></span>
+            <span class="dmg__line heal">+ 1d6 <img class="ico" src="img/common/heal.webp" alt="">治疗<img class="ico" src="img/common/CHA.webp" alt="魅力" title="魅力"></span>
+          </span>
+        </div>
+        <p class="part__desc">每当友军触发<span class="lb">重击</span>或抵抗敌人效果时，对该友军进行<span class="heal">1d6 治疗</span><img src="img/common/CHA.webp" alt="">。</p>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="cha" data-dmg="mag4 ele2" data-mult="cha"
+        data-dcbonus="cha" data-attack="spell ranged aoe"
+        data-check="save" data-save="wis:12">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/ELM501.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">不谐和音</h3>
+        <p class="part__bonus"><span>魅力+2</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line mag4">2d6 <img class="ico" src="img/common/mag4.webp" alt="">心灵伤害<img class="ico" src="img/common/CHA.webp" alt="魅力" title="魅力"></span>
+            <span class="dmg__line ele2">+ 2d6 <img class="ico" src="img/common/ele2.webp" alt="">寒冷伤害<img class="ico" src="img/common/INT.webp" alt="智力" title="智力"></span>
+          </span>
+        </div>
+        <p class="part__desc">攻击前排的敌人。有一定概率赋予<span class="lgreen">攻击劣势</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">攻击劣势</span>：在<span class="blue">命中检定</span>上获得<span class="blue">劣势</span>。（持续时间：4.8秒 / 非战斗时9.6秒，独立层数）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="passive"
+        data-bonus="wis">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/ELM501.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">激励旋律</h3>
+        <p class="part__bonus"><span>感知+2</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">每当使用治疗能力直接恢复友军生命值时，为目标赋予检定加值(<span class="lgreen">所有检定加值</span>)。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">所有检定加值</span>：所有检定加值增加1d4。（持续时间：4.8秒 / 非战斗时9.6秒，独立层数）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="react"
+        data-bonus="dc" data-dmg="heal">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/ELM501.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">守护之歌</h3>
+        <p class="part__bonus"><span>法术豁免难度+1</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line heal">3d10 <img class="ico" src="img/common/heal.webp" alt="">治疗<img class="ico" src="img/common/WIS.webp" alt="感知" title="感知"></span>
+          </span>
+        </div>
+        <p class="part__desc">友军受到<span class="lb">重击</span>攻击时作为反应，对该友军进行<span class="heal">3d10 治疗</span><img src="img/common/WIS.webp" alt="">并赋予提高护甲的<span class="lgreen">护甲加值</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">护甲加值</span>：护甲等级增加2。（持续时间：4.8秒 / 非战斗时9.6秒，独立层数）</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</article>

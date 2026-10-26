@@ -1,0 +1,100 @@
+<!-- BST202 -->
+<article class="monster" id="BST202" data-id="BST202" data-name="老虎"
+         data-race="beast" data-level="2" data-dom="2"
+         data-str="13" data-dex="12" data-con="12" data-int="3" data-wis="6" data-cha="4" data-hp="28" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/BST202.webp" alt="老虎"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">老虎</h2>
+      <p class="monster__meta"><span class="monster__level">2级</span><span class="monster__race">野兽</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">2</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability adv"><dt>力量</dt><dd>13</dd></div>
+      <div class="ability"><dt>敏捷</dt><dd>12</dd></div>
+      <div class="ability"><dt>体质</dt><dd>12</dd></div>
+      <div class="ability"><dt>智力</dt><dd>3</dd></div>
+      <div class="ability"><dt>感知</dt><dd>6</dd></div>
+      <div class="ability"><dt>魅力</dt><dd>4</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>28</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/BST202.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">血之气息</h3>
+        <p class="part__bonus"><span>抵抗<img src="img/common/ele7.webp" alt=""><span class="ele7">自然伤害</span></span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">进入<span class="pink">血之气息</span>状态，在攻击未受伤害的敌人时降低<span class="lb">重击</span>触发要求值。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">血之气息</span>：攻击未受伤害的敌人时，<span class="lb">重击</span>需求值减少3。</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="str" data-dmg="phy4" data-mult="str"
+        data-attack="melee"
+        data-check="hit" data-hit="str">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/BST202.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">撕裂前爪</h3>
+        <p class="part__bonus"><span>力量+1</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line phy4">1d10 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<img class="ico" src="img/common/STR.webp" alt=""><span class="dmg__mult">(0.75)</span></span>
+            <span class="dmg__line phy4">+ 1d10 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<img class="ico" src="img/common/STR.webp" alt=""><span class="dmg__mult">(0.5)</span></span>
+          </span>
+        </div>
+        <p class="part__desc">抓挠目标2次。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="passive"
+        data-bonus="ini">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/BST202.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">野性本能</h3>
+        <p class="part__bonus"><span>先攻+1</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">暴击命中时，额外投掷1个伤害骰子。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="passive"
+        data-bonus="ac">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/BST202.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">老虎毛皮</h3>
+        <p class="part__bonus"><span>护甲等级+1</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">交战开始时，在第一次行动前处于<span class="pink">条纹伪装</span>状态。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">条纹伪装</span>：强制针对自身的<span class="blue">命中检定</span>获得<span class="blue">劣势</span>，结束主动作后伪装解除。</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</article>

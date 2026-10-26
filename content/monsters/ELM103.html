@@ -1,0 +1,105 @@
+<!-- ELM103 -->
+<article class="monster" id="ELM103" data-id="ELM103" data-name="下级风元素"
+         data-race="elf" data-level="1" data-dom="1"
+         data-str="5" data-dex="12" data-con="8" data-int="7" data-wis="9" data-cha="6" data-hp="12" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/ELM103.webp" alt="下级风元素"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">下级风元素</h2>
+      <p class="monster__meta"><span class="monster__level">1级</span><span class="monster__race">精灵</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">1</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability"><dt>力量</dt><dd>5</dd></div>
+      <div class="ability adv"><dt>敏捷</dt><dd>12</dd></div>
+      <div class="ability"><dt>体质</dt><dd>8</dd></div>
+      <div class="ability"><dt>智力</dt><dd>7</dd></div>
+      <div class="ability"><dt>感知</dt><dd>9</dd></div>
+      <div class="ability"><dt>魅力</dt><dd>6</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>12</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/ELM103.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">空气形态</h3>
+        <p class="part__bonus"><span>抵抗<img src="img/common/ele3.webp" alt=""><span class="ele3">闪电伤害</span></span><span>抵抗<img src="img/common/ele7.webp" alt=""><span class="ele7">自然伤害</span></span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">获得对<img src="img/common/ele3.webp" alt=""><span class="ele3">闪电伤害</span>的<span class="lb">抗性</span>，并获得对<span class="pink">倒地</span>状态的<span class="lb">免疫</span>。</p>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="dex" data-dmg="phy4" data-mult="dex"
+        data-dcbonus="dex" data-attack="ranged"
+        data-check="save" data-save="str:12">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/ELM103.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">狂风核心</h3>
+        <p class="part__bonus"><span>敏捷+1</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line phy4">2d6 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<img class="ico" src="img/common/DEX.webp" alt="敏捷" title="敏捷"></span>
+          </span>
+        </div>
+        <p class="part__desc">使目标陷入<span class="pink">震慑</span>状态。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">震慑</span>：无法行动或移动。受到的<span class="blue">命中检定</span>会被赋予<span class="blue">优势</span>，在<span class="blue">力量豁免</span>和<span class="blue">敏捷豁免</span>上获得<span class="blue">劣势</span>，且护甲等级减少2。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="passive"
+        data-bonus="ac">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/ELM103.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">模糊身形</h3>
+        <p class="part__bonus"><span>护甲等级+1</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">减少受到的远程攻击伤害。（远程伤害减免+2）</p>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="react"
+        data-bonus="hit" data-dmg="ele3" data-mult="int">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/ELM103.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">电击器</h3>
+        <p class="part__bonus"><span>法术命中+1</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line ele3">1d4 <img class="ico" src="img/common/ele3.webp" alt="">闪电伤害<img class="ico" src="img/common/INT.webp" alt="智力" title="智力"></span>
+          </span>
+        </div>
+        <p class="part__desc">受到近战攻击时作为反应，对攻击者造成<span class="ele3">1d4 <img src="img/common/ele3.webp" alt="">额外闪电伤害</span><img src="img/common/INT.webp" alt="">并使其陷入<span class="pink">无法反应</span>状态。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">无法反应</span>：无法使用反应动作。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</article>

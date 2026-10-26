@@ -1,0 +1,104 @@
+<!-- BST404 -->
+<article class="monster" id="BST404" data-id="BST404" data-name="独角兽"
+         data-race="beast" data-level="4" data-dom="4"
+         data-str="8" data-dex="16" data-con="11" data-int="9" data-wis="13" data-cha="14" data-hp="44" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/BST404.webp" alt="独角兽"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">独角兽</h2>
+      <p class="monster__meta"><span class="monster__level">4级</span><span class="monster__race">野兽</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">4</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability"><dt>力量</dt><dd>8</dd></div>
+      <div class="ability adv"><dt>敏捷</dt><dd>16</dd></div>
+      <div class="ability"><dt>体质</dt><dd>11</dd></div>
+      <div class="ability"><dt>智力</dt><dd>9</dd></div>
+      <div class="ability"><dt>感知</dt><dd>13</dd></div>
+      <div class="ability"><dt>魅力</dt><dd>14</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>44</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/BST404.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">天界优雅</h3>
+        <p class="part__bonus"><span>免疫中毒</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">入侵开始时，进入<span class="pink">天界优雅</span>状态。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">天界优雅</span>：<img src="img/common/attack.webp" alt="">命中增加魅力调整值的数值，攻击命中时造成魅力调整值的<img src="img/common/mag1.webp" alt=""><span class="mag1">光耀伤害</span>。</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="dex" data-dmg="phy4" data-mult="dex"
+        data-attack="melee"
+        data-check="hit" data-hit="dex">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/BST404.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">天界长枪</h3>
+        <p class="part__bonus"><span>敏捷+2</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line phy4">3d10 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<img class="ico" src="img/common/DEX.webp" alt="敏捷" title="敏捷"></span>
+          </span>
+        </div>
+        <p class="part__desc">无视目标5点<span class="org">护甲等级（AC）</span>。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="passive"
+        data-bonus="dc"
+        data-dcbonus="cha" data-attack="aoe"
+        data-check="save" data-save="wis:13">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/BST404.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">威严存在</h3>
+        <p class="part__bonus"><span>法术豁免难度+1</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">交战开始时，有一定概率使所有敌人陷入<span class="pink">魅惑</span>状态。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">魅惑</span>：在<span class="blue">命中检定</span>上获得<span class="blue">劣势</span>，造成的所有伤害加值减少2。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="passive"
+        data-bonus="ac">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/BST404.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">纯洁之盾</h3>
+        <p class="part__bonus"><span>护甲等级+1</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">交战开始时，获得<span class="pink">纯洁之盾</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">纯洁之盾</span>：受到<span class="blue">法术</span>伤害时，将伤害减少2d10后解除。</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</article>

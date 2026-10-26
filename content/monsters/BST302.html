@@ -1,0 +1,107 @@
+<!-- BST302 -->
+<article class="monster" id="BST302" data-id="BST302" data-name="拉弥亚"
+         data-race="beast" data-level="3" data-dom="3"
+         data-str="7" data-dex="14" data-con="9" data-int="11" data-wis="10" data-cha="13" data-hp="32" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/BST302.webp" alt="拉弥亚"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">拉弥亚</h2>
+      <p class="monster__meta"><span class="monster__level">3级</span><span class="monster__race">野兽</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">3</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability"><dt>力量</dt><dd>7</dd></div>
+      <div class="ability adv"><dt>敏捷</dt><dd>14</dd></div>
+      <div class="ability"><dt>体质</dt><dd>9</dd></div>
+      <div class="ability"><dt>智力</dt><dd>11</dd></div>
+      <div class="ability"><dt>感知</dt><dd>10</dd></div>
+      <div class="ability"><dt>魅力</dt><dd>13</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>32</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/BST302.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">毒蛇之舞</h3>
+        <p class="part__bonus"><span>抵抗<img src="img/common/ele7.webp" alt=""><span class="ele7">自然伤害</span></span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">行动结束时获得<span class="pink">舞蹈</span>。闪避攻击时效果消失。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">舞蹈</span>：护甲等级每层增加2。（最大层数：99）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="dex" data-dmg="phy4" data-mult="dex"
+        data-attack="ranged"
+        data-check="hit" data-hit="dex">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/BST302.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">弹射环刃</h3>
+        <p class="part__bonus"><span>敏捷+1</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line phy4">2d8 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<img class="ico" src="img/common/DEX.webp" alt="敏捷" title="敏捷"></span>
+            <span class="dmg__line phy4">+ 1d8 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<img class="ico" src="img/common/DEX.webp" alt=""><span class="dmg__mult">(0.5)</span></span>
+          </span>
+        </div>
+        <p class="part__desc">命中时，对1名随机敌人造成额外伤害。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="passive"
+        data-bonus="hit"
+        data-dcbonus="con"
+        data-check="save" data-save="con:11">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/BST302.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">剧毒环刃</h3>
+        <p class="part__bonus"><span>远程命中+1</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">攻击命中时，有一定概率使目标陷入<span class="pink">中毒</span>状态。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">中毒</span>：交战结束时，受到1d4<img src="img/common/ele7.webp" alt=""><span class="ele7">自然伤害</span>，且<span class="blue">命中检定</span>获得<span class="blue">劣势</span>。（持续时间：2.4秒 / 非战斗时4.8秒，独立层数）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="react"
+        data-bonus="dc"
+        data-dcbonus="cha"
+        data-check="save" data-save="dex:12">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/BST302.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">缠绕之尾</h3>
+        <p class="part__bonus"><span>法术豁免难度+1</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">受到近战攻击时作为反应，使攻击者陷入<span class="pink">定身</span>状态。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">定身</span>：无法移动。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</article>

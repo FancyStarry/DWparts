@@ -1,0 +1,112 @@
+<!-- UDD303 -->
+<article class="monster" id="UDD303" data-id="UDD303" data-name="女妖"
+         data-race="undead" data-level="3" data-dom="3"
+         data-str="5" data-dex="10" data-con="8" data-int="10" data-wis="13" data-cha="15" data-hp="28" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/UDD303.webp" alt="女妖"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">女妖</h2>
+      <p class="monster__meta"><span class="monster__level">3级</span><span class="monster__race">亡灵</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">3</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability"><dt>力量</dt><dd>5</dd></div>
+      <div class="ability"><dt>敏捷</dt><dd>10</dd></div>
+      <div class="ability"><dt>体质</dt><dd>8</dd></div>
+      <div class="ability"><dt>智力</dt><dd>10</dd></div>
+      <div class="ability"><dt>感知</dt><dd>13</dd></div>
+      <div class="ability adv"><dt>魅力</dt><dd>15</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>28</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main"
+        data-attack="aoe"
+        data-check="save" data-save="wis:12">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/UDD303.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">尖叫灵魂</h3>
+        <p class="part__bonus"><span>免疫中毒</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">交战开始时，使所有敌人陷入<span class="pink">恐慌</span>状态。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">恐慌</span>：向入口撤退，且在<span class="blue">命中检定</span>上获得<span class="blue">劣势</span>。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="cha" data-dmg="mag4"
+        data-dcbonus="cha" data-attack="spell ranged aoe"
+        data-check="save" data-save="wis:12">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/UDD303.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">绝望悲鸣</h3>
+        <p class="part__bonus"><span>魅力+1</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line mag4">2d8 <img class="ico" src="img/common/mag4.webp" alt="">心灵伤害</span>
+          </span>
+        </div>
+        <p class="part__desc">对前排的敌人赋予<span class="pink">命中检定减值</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">命中检定减值</span>：<img src="img/common/attack.webp" alt="">命中减少2。（持续时间：4.8秒 / 非战斗时9.6秒，独立层数）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="react"
+        data-bonus="dex">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/UDD303.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">灵体化</h3>
+        <p class="part__bonus"><span>敏捷+1</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">受到攻击时作为反应，进入<span class="pink">灵体化</span>状态。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">灵体化</span>：获得对非魔法物理伤害的<span class="lb">抗性</span>，受到的伤害减半。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="react"
+        data-bonus="dc" data-dmg="mag4"
+        data-dcbonus="cha"
+        data-check="save" data-save="wis:12">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/UDD303.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">死亡前兆</h3>
+        <p class="part__bonus"><span>法术豁免难度+1</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line mag4">1d10 <img class="ico" src="img/common/mag4.webp" alt="">心灵伤害</span>
+          </span>
+        </div>
+        <p class="part__desc">每当有人死亡时作为反应，有一定概率对所有敌人造成<span class="mag4">1d10 <img src="img/common/mag4.webp" alt="">额外心灵伤害</span>。</p>
+      </div>
+    </li>
+  </ul>
+</article>

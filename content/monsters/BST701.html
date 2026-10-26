@@ -1,0 +1,107 @@
+<!-- BST701 -->
+<article class="monster" id="BST701" data-id="BST701" data-name="沙虫"
+         data-race="beast" data-level="7" data-dom="12"
+         data-str="12" data-dex="8" data-con="19" data-int="6" data-wis="23" data-cha="13" data-hp="100" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/BST701.webp" alt="沙虫"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">沙虫</h2>
+      <p class="monster__meta"><span class="monster__level">7级</span><span class="monster__race">野兽</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">12</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability"><dt>力量</dt><dd>12</dd></div>
+      <div class="ability"><dt>敏捷</dt><dd>8</dd></div>
+      <div class="ability"><dt>体质</dt><dd>19</dd></div>
+      <div class="ability"><dt>智力</dt><dd>6</dd></div>
+      <div class="ability adv"><dt>感知</dt><dd>23</dd></div>
+      <div class="ability"><dt>魅力</dt><dd>13</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>100</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main"
+        data-attack="aoe"
+        data-check="save" data-save="con:12">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/BST701.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">黄沙帷幕</h3>
+        <p class="part__bonus"><span>抵抗<img src="img/common/phy4.webp" alt=""><span class="phy4">物理伤害</span></span><span>免疫盲目</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">交战开始时，在战场上掀起沙暴，使所有敌人陷入<span class="pink">盲目</span>状态。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">盲目</span>：失去视野。在<span class="blue">命中检定</span>上获得<span class="blue">劣势</span>，且受击时攻击者的<span class="blue">命中检定</span>获得<span class="blue">优势</span>。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="wis" data-dmg="phy4" data-mult="wis"
+        data-dcbonus="wis" data-attack="spell ranged aoe"
+        data-check="save" data-save="dex:12">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/BST701.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">沙漠之冠</h3>
+        <p class="part__bonus"><span>感知+2</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line phy4">4d10 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<img class="ico" src="img/common/WIS.webp" alt="感知" title="感知"></span>
+          </span>
+        </div>
+        <p class="part__desc">向后排敌人释放沙尘暴，造成<img src="img/common/phy4.webp" alt=""><span class="phy4">物理伤害</span>。若目标处于<span class="pink">盲目</span>状态，则使其窒息并陷入<span class="pink">窒息</span>状态。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">窒息</span>：因窒息陷入沉默状态，无法使用<span class="blue">法术</span>。（持续时间：4.8秒 / 非战斗时9.6秒）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="react"
+        data-bonus="cha">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/BST701.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">女王之鳞</h3>
+        <p class="part__bonus"><span>魅力+2</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">受到远程攻击时作出反应，以沙风防御一半伤害，并为攻击者赋予<span class="pink">盲目</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">盲目</span>：失去视野。在<span class="blue">命中检定</span>上获得<span class="blue">劣势</span>，且受击时攻击者的<span class="blue">命中检定</span>获得<span class="blue">优势</span>。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="react"
+        data-bonus="con">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/BST701.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">黄沙庇护</h3>
+        <p class="part__bonus"><span>体质+2</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">友军成为攻击目标时，用沙子包裹目标，使其陷入提供防御力和减伤加成的<span class="pink">黄沙护盾</span>状态。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">黄沙护盾</span>：持续期间内护甲等级增加3，受到的伤害减少2d6。（持续时间：4.8秒 / 非战斗时9.6秒）</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</article>

@@ -1,0 +1,118 @@
+<!-- UDD701 -->
+<article class="monster" id="UDD701" data-id="UDD701" data-name="肉体收割者"
+         data-race="undead" data-level="7" data-dom="12"
+         data-str="21" data-dex="10" data-con="19" data-int="8" data-wis="12" data-cha="10" data-hp="107" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/UDD701.webp" alt="肉体收割者"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">肉体收割者</h2>
+      <p class="monster__meta"><span class="monster__level">7级</span><span class="monster__race">亡灵</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">12</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability adv"><dt>力量</dt><dd>21</dd></div>
+      <div class="ability"><dt>敏捷</dt><dd>10</dd></div>
+      <div class="ability"><dt>体质</dt><dd>19</dd></div>
+      <div class="ability"><dt>智力</dt><dd>8</dd></div>
+      <div class="ability"><dt>感知</dt><dd>12</dd></div>
+      <div class="ability"><dt>魅力</dt><dd>10</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>107</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main"
+        data-attack="aoe"
+        data-check="save" data-save="con:17">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/UDD701.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">血肉核心</h3>
+        <p class="part__bonus"><span>免疫倒地</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">交战开始时，强制所有敌人进行体质豁免检定。失败则获得1层<span class="pink">崩坏</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">崩坏</span>：每层使最大生命值减少6。交战开始时，如果当前生命值低于因该效果减少的生命值，则立即死亡。（最大层数：20）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="str" data-dmg="phy4 mag3" data-mult="str"
+        data-dcbonus="cha" data-attack="spell melee"
+        data-check="hit save" data-hit="str" data-save="con:17">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/UDD701.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">巨兽骨拳</h3>
+        <p class="part__bonus"><span>力量+3</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line phy4">5d12 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<img class="ico" src="img/common/STR.webp" alt="力量" title="力量"></span>
+            <span class="dmg__line mag3">+ 3d12 <img class="ico" src="img/common/mag3.webp" alt="">力场伤害<img class="ico" src="img/common/CHA.webp" alt="魅力" title="魅力"></span>
+          </span>
+        </div>
+        <p class="part__desc">对目标赋予<span class="pink">崩坏</span>。若目标生命值在25%以下，则造成额外伤害。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">崩坏</span>：每层使最大生命值减少6。交战开始时，如果当前生命值低于因该效果减少的生命值，则立即死亡。（最大层数：20）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="passive"
+        data-bonus="con"
+        data-dcbonus="cha"
+        data-check="save" data-save="con:17">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/UDD701.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">完美骨骼</h3>
+        <p class="part__bonus"><span>体质+3</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">受到近战攻击时产生反应，强制攻击者进行体质豁免检定。失败则赋予1层<span class="pink">崩坏</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">崩坏</span>：每层使最大生命值减少6。交战开始时，如果当前生命值低于因该效果减少的生命值，则立即死亡。（最大层数：20）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="passive"
+        data-bonus="ac" data-dmg="mag2" data-mult="cha"
+        data-dcbonus="cha"
+        data-check="save" data-save="con:17">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/UDD701.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">拘束锁链</h3>
+        <p class="part__bonus"><span>护甲等级+2</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line mag2">1d12 <img class="ico" src="img/common/mag2.webp" alt="">死灵伤害<img class="ico" src="img/common/CHA.webp" alt="魅力" title="魅力"></span>
+          </span>
+        </div>
+        <p class="part__desc">攻击敌人时造成<span class="mag2">1d12 <img src="img/common/mag2.webp" alt="">额外死灵伤害</span><img src="img/common/CHA.webp" alt="">。若目标处于<span class="pink">崩坏</span>状态，则施加<span class="pink">物理伤害易伤</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">物理伤害易伤</span>：获得对<img src="img/common/phy4.webp" alt=""><span class="phy4">物理伤害</span>的<span class="lb">易伤</span>。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</article>

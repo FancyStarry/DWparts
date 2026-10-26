@@ -1,0 +1,113 @@
+<!-- ELM102 -->
+<article class="monster" id="ELM102" data-id="ELM102" data-name="下级火元素"
+         data-race="elf" data-level="1" data-dom="1"
+         data-str="12" data-dex="8" data-con="10" data-int="8" data-wis="6" data-cha="5" data-hp="16" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/ELM102.webp" alt="下级火元素"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">下级火元素</h2>
+      <p class="monster__meta"><span class="monster__level">1级</span><span class="monster__race">精灵</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">1</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability adv"><dt>力量</dt><dd>12</dd></div>
+      <div class="ability"><dt>敏捷</dt><dd>8</dd></div>
+      <div class="ability"><dt>体质</dt><dd>10</dd></div>
+      <div class="ability"><dt>智力</dt><dd>8</dd></div>
+      <div class="ability"><dt>感知</dt><dd>6</dd></div>
+      <div class="ability"><dt>魅力</dt><dd>5</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>16</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main"
+        data-dmg="ele1"
+        data-attack="aoe">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/ELM102.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">火焰形态</h3>
+        <p class="part__bonus"><span>抵抗<img src="img/common/ele1.webp" alt=""><span class="ele1">火焰伤害</span></span><span>易受<img src="img/common/ele2.webp" alt=""><span class="ele2">寒冷伤害</span></span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line ele1">2d6 <img class="ico" src="img/common/ele1.webp" alt="">火焰伤害<img class="ico" src="img/common/CON.webp" alt="体质" title="体质"></span>
+          </span>
+        </div>
+        <p class="part__desc">死亡时爆炸，对前排敌人造成<span class="ele1">2d6 <img src="img/common/ele1.webp" alt="">额外火焰伤害</span><img src="img/common/CON.webp" alt="">。</p>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="str" data-dmg="phy4" data-mult="str"
+        data-attack="melee"
+        data-check="hit" data-hit="str">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/ELM102.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">灼热尖叉</h3>
+        <p class="part__bonus"><span>力量+1</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line phy4">1d12 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<img class="ico" src="img/common/STR.webp" alt="力量" title="力量"></span>
+          </span>
+        </div>
+        <p class="part__desc">对目标赋予<span class="pink">燃烧</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">燃烧</span>：交战结束时，受到1d4<img src="img/common/ele1.webp" alt=""><span class="ele1">火焰伤害</span>。（持续时间：4.8秒 / 非战斗时9.6秒，独立层数）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="react"
+        data-bonus="mhp">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/ELM102.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">燃烧之心</h3>
+        <p class="part__bonus"><span>最大生命值+5</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">生命值在半数以下时受到伤害作为反应，进入<span class="pink">燃烧之心</span>状态。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">燃烧之心</span>：在敏捷检定上获得<span class="blue">优势</span>。（持续时间：7.2秒 / 非战斗时14.4秒）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="react"
+        data-bonus="ac" data-dmg="ele1" data-mult="int">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/ELM102.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">火焰护盾</h3>
+        <p class="part__bonus"><span>护甲等级+1</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line ele1">1d6 <img class="ico" src="img/common/ele1.webp" alt="">火焰伤害<img class="ico" src="img/common/INT.webp" alt="智力" title="智力"></span>
+          </span>
+        </div>
+        <p class="part__desc">成为攻击目标时作为反应，使受到的伤害减少2d6，并对攻击者造成<span class="ele1">1d6 <img src="img/common/ele1.webp" alt="">额外火焰伤害</span><img src="img/common/INT.webp" alt="">。</p>
+      </div>
+    </li>
+  </ul>
+</article>

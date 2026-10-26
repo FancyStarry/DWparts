@@ -1,0 +1,120 @@
+<!-- UDD601 -->
+<article class="monster" id="UDD601" data-id="UDD601" data-name="吸血鬼领主"
+         data-race="undead" data-level="6" data-dom="9"
+         data-str="12" data-dex="14" data-con="14" data-int="13" data-wis="18" data-cha="18" data-hp="71" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/UDD601.webp" alt="吸血鬼领主"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">吸血鬼领主</h2>
+      <p class="monster__meta"><span class="monster__level">6级</span><span class="monster__race">亡灵</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">9</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability"><dt>力量</dt><dd>12</dd></div>
+      <div class="ability"><dt>敏捷</dt><dd>14</dd></div>
+      <div class="ability"><dt>体质</dt><dd>14</dd></div>
+      <div class="ability"><dt>智力</dt><dd>13</dd></div>
+      <div class="ability adv"><dt>感知</dt><dd>18</dd></div>
+      <div class="ability"><dt>魅力</dt><dd>18</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>71</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main"
+        data-attack="aoe">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/UDD601.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">鲜血帝国</h3>
+        <p class="part__bonus"><span>免疫中毒</span><span>免疫魅惑</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">开始交战时，为所有友军赋予<span class="lgreen">吸血光环</span>。每当友军的生命值直接恢复时，自身获得<span class="heal">10 <img src="img/common/shield.webp" alt="">临时生命值</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">吸血光环</span>：攻击命中时，进行1d8的生命值<span class="blue">治疗</span>。（持续时间：4.8秒 / 非战斗时9.6秒）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="wis" data-dmg="mag2" data-mult="wis"
+        data-dcbonus="wis" data-attack="spell melee aoe"
+        data-check="save" data-save="con:12">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/UDD601.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">鲜血风暴</h3>
+        <p class="part__bonus"><span>感知+2</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line mag2">2d10 <img class="ico" src="img/common/mag2.webp" alt="">死灵伤害<img class="ico" src="img/common/WIS.webp" alt="感知" title="感知"></span>
+            <span class="dmg__line mag2">+ 2d10 <img class="ico" src="img/common/mag2.webp" alt="">死灵伤害</span>
+          </span>
+        </div>
+        <p class="part__desc">使前排敌人陷入<span class="pink">流血</span>状态。对处于<span class="pink">流血</span>状态的敌人造成额外伤害。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">流血</span>：交战结束时，受到1d4<span class="phy1">挥砍伤害</span>。（持续时间：4.8秒 / 非战斗时9.6秒，独立层数）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="react"
+        data-bonus="cha" data-dmg="mag2 heal" data-mult="wis">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/UDD601.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">无情收割</h3>
+        <p class="part__bonus"><span>魅力+2</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line mag2">4d6 <img class="ico" src="img/common/mag2.webp" alt="">死灵伤害<img class="ico" src="img/common/WIS.webp" alt="感知" title="感知"></span>
+            <span class="dmg__line heal">+ 3d10 <img class="ico" src="img/common/heal.webp" alt="">治疗<img class="ico" src="img/common/CHA.webp" alt="魅力" title="魅力"></span>
+          </span>
+        </div>
+        <p class="part__desc">受到生命值在35%以下的敌人伤害时作为反应，对攻击者造成<span class="mag2">4d6 <img src="img/common/mag2.webp" alt="">额外死灵伤害</span><img src="img/common/WIS.webp" alt="">。随后对自己进行<span class="heal">3d10 治疗</span><img src="img/common/CHA.webp" alt="">并获得<span class="lgreen">所有检定加值</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">所有检定加值</span>：所有检定加值增加1d4。（持续时间：4.8秒 / 非战斗时9.6秒，独立层数）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="passive"
+        data-bonus="dc" data-dmg="heal">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/UDD601.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">鲜血征收</h3>
+        <p class="part__bonus"><span>法术豁免难度+1</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line heal">3d8 <img class="ico" src="img/common/heal.webp" alt="">治疗</span>
+          </span>
+        </div>
+        <p class="part__desc">友军陷入<span class="pink">流血</span>状态时立即解除该状态，对自己进行<span class="heal">3d8 治疗</span>并获得<span class="lgreen">所有检定加值</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">所有检定加值</span>：所有检定加值增加1d4。（持续时间：4.8秒 / 非战斗时9.6秒，独立层数）</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</article>

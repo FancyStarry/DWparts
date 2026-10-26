@@ -1,0 +1,111 @@
+<!-- BST902 -->
+<article class="monster" id="BST902" data-id="BST902" data-name="涅墨亚"
+         data-race="beast" data-level="9" data-dom="32"
+         data-str="18" data-dex="20" data-con="26" data-int="38" data-wis="34" data-cha="28" data-hp="190" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/BST902.webp" alt="涅墨亚"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">涅墨亚</h2>
+      <p class="monster__meta"><span class="monster__level">9级</span><span class="monster__race">野兽</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">32</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability"><dt>力量</dt><dd>18</dd></div>
+      <div class="ability"><dt>敏捷</dt><dd>20</dd></div>
+      <div class="ability"><dt>体质</dt><dd>26</dd></div>
+      <div class="ability adv"><dt>智力</dt><dd>38</dd></div>
+      <div class="ability"><dt>感知</dt><dd>34</dd></div>
+      <div class="ability"><dt>魅力</dt><dd>28</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>190</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/BST902.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">狮王之心</h3>
+        <p class="part__bonus"><span>免疫恐慌</span><span>免疫沉默</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">自身造成的<img src="img/common/mag3.webp" alt=""><span class="mag3">力场伤害</span>无视敌人的<span class="lb">抗性</span>和<span class="lb">免疫</span>。对入侵地下城的敌人赋予<span class="pink">被碾碎的心脏</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">被碾碎的心脏</span>：自身受到的<img src="img/common/mag3.webp" alt=""><span class="mag3">力场伤害</span>会加上涅墨亚的力量调整值，受到的<img src="img/common/phy4.webp" alt=""><span class="phy4">物理伤害</span>会加上涅墨亚的智力调整值。</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="int" data-dmg="mag3 phy4" data-mult="int"
+        data-dcbonus="int" data-attack="spell ranged aoe"
+        data-check="save" data-save="dex:12">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/BST902.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">真理权杖</h3>
+        <p class="part__bonus"><span>智力+5</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line mag3">8d10 <img class="ico" src="img/common/mag3.webp" alt="">力场伤害<img class="ico" src="img/common/INT.webp" alt="智力" title="智力"></span>
+            <span class="dmg__line phy4">+ 4d8 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<img class="ico" src="img/common/CHA.webp" alt="魅力" title="魅力"></span>
+          </span>
+        </div>
+        <p class="part__desc">对目标造成强力<img src="img/common/mag3.webp" alt=""><span class="mag3">力场伤害</span>并将其击飞至空中，随后砸落，对所有敌人造成<img src="img/common/phy4.webp" alt=""><span class="phy4">物理伤害</span>。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="react"
+        data-bonus="str" data-dmg="mag3" data-mult="int">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/BST902.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">万象洞察</h3>
+        <p class="part__bonus"><span>力量+4</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line mag3">10d10 <img class="ico" src="img/common/mag3.webp" alt="">力场伤害<img class="ico" src="img/common/INT.webp" alt="智力" title="智力"></span>
+          </span>
+        </div>
+        <p class="part__desc">受到暴击攻击时作出反应，进入<span class="pink">物理伤害免疫</span>状态，并对前排敌人造成<span class="mag3">10d10 <img src="img/common/mag3.webp" alt="">额外力场伤害</span><img src="img/common/INT.webp" alt="">。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">物理伤害免疫</span>：获得对<img src="img/common/phy4.webp" alt=""><span class="phy4">物理伤害</span>的<span class="lb">免疫</span>。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="passive"
+        data-bonus="dc" data-dmg="shield"
+        data-attack="aoe">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/BST902.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">超越斗篷</h3>
+        <p class="part__bonus"><span>法术豁免难度+2</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">交战开始时，对前排敌人同时施加<span class="pink">力场易伤</span>与<span class="pink">物理伤害易伤</span>，自身获得<span class="heal">6d8 <img src="img/common/shield.webp" alt="">临时生命值</span><img src="img/common/INT.webp" alt="">。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">力场易伤</span>：获得对<img src="img/common/mag3.webp" alt=""><span class="mag3">力场伤害</span>的<span class="lb">易伤</span>。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+          <p class="effect"><span class="effect__name">物理伤害易伤</span>：获得对<img src="img/common/phy4.webp" alt=""><span class="phy4">物理伤害</span>的<span class="lb">易伤</span>。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</article>

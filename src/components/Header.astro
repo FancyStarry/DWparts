@@ -1,0 +1,58 @@
+---
+/**
+ * 站点顶栏：品牌 + 搜索 + 模式切换 + 折叠筛选
+ */
+interface Props {
+  total: number;
+  parts: number;
+}
+const { total, parts } = Astro.props;
+---
+<header class="site-header">
+  <div class="site-header__bar">
+    <div class="site-header__brand">
+      <span class="site-header__title">DW <span>Wiki</span></span>
+      <span class="site-header__sub" data-result-count>{total} 魔物 · {parts} 部件</span>
+    </div>
+
+    <div class="search">
+      <span class="search__icon" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+          <circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path>
+        </svg>
+      </span>
+      <input
+        class="search__input"
+        type="text" role="searchbox"
+        placeholder="搜索魔物 / 部件 / 效果…（按 / 聚焦）"
+        aria-label="搜索魔物、部件或效果"
+        autocomplete="off"
+        spellcheck="false"
+        data-search
+      >
+      <button class="search__clear" type="button" aria-label="清除搜索" data-search-clear>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+          <path d="M6 6l12 12M18 6L6 18"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="header-actions">
+      <button class="btn" type="button" aria-pressed="false" data-mode-toggle>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <rect x="3" y="4" width="18" height="6" rx="1.5"></rect>
+          <rect x="3" y="14" width="8" height="6" rx="1.5"></rect>
+          <rect x="13" y="14" width="8" height="6" rx="1.5"></rect>
+        </svg>
+        <span>只看命中部件</span>
+      </button>
+
+      <button class="btn btn--ghost" type="button" aria-expanded="true" data-filters-toggle aria-controls="filters">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M3 6h18M7 12h10M11 18h2"></path>
+        </svg>
+        <span>筛选</span>
+      </button>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,349 @@
+/* ═══════════════════════════════════════════════
+   页壳：粘性顶栏 + 筛选面板 + 魔物列表
+   ═══════════════════════════════════════════════ */
+.site-top {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg-glass);
+  backdrop-filter: blur(12px) saturate(140%);
+  border-bottom: 1px solid var(--line-1);
+}
+
+.site-header__bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  padding: var(--s-3) var(--s-4);
+  max-width: 1400px;
+  margin-inline: auto;
+}
+
+.site-header__brand {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s-2);
+  flex: 0 0 auto;
+}
+.site-header__title {
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--fg-0);
+}
+.site-header__title span { color: var(--accent); }
+.site-header__sub {
+  font-size: var(--fs-xs);
+  color: var(--fg-3);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── 搜索框 ── */
+.search {
+  position: relative;
+  flex: 1 1 auto;
+  max-width: 340px;
+  margin-inline-start: auto;
+}
+/* 无边框输入：只有一条下划线，聚焦时变亮 */
+.search__input {
+  width: 100%;
+  padding: var(--s-2) 22px var(--s-2) 22px;
+  font: inherit;
+  font-size: var(--fs-md);
+  color: var(--fg-0);
+  background: none;
+  border: none;
+  border-block-end: 1px solid var(--line-1);
+  border-radius: 0;
+  transition: border-color 0.15s;
+}
+.search__input::placeholder { color: var(--fg-3); }
+.search__input:focus {
+  outline: none;
+  border-block-end-color: var(--fg-2);
+}
+.search__icon {
+  position: absolute;
+  inset-inline-start: 2px;
+  inset-block-start: 50%;
+  translate: 0 -50%;
+  color: var(--fg-3);
+  pointer-events: none;
+  display: flex;
+}
+.search__clear {
+  position: absolute;
+  inset-inline-end: 8px;
+  inset-block-start: 50%;
+  translate: 0 -50%;
+  color: var(--fg-3);
+  padding: 2px;
+  display: none;
+}
+.search__clear[data-visible] { display: block; }
+.search__clear:hover { color: var(--fg-0); }
+
+/* ── 顶栏操作区 ── */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  flex: 0 0 auto;
+}
+
+/* 按钮也是纯文字：状态靠字色与字重，不靠色块 */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 2px;
+  font-size: var(--fs-sm);
+  color: var(--fg-2);
+  background: none;
+  border: none;
+  border-block-end: 1px solid transparent;
+  border-radius: 0;
+  transition: color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+}
+.btn:hover { color: var(--fg-0); }
+.btn[aria-pressed='true'] {
+  color: var(--fg-0);
+  font-weight: 700;
+  border-block-end-color: var(--fg-2);
+}
+.btn:disabled { opacity: 0.35; cursor: not-allowed; }
+.btn:disabled:hover { color: var(--fg-2); }
+.btn__count {
+  font-variant-numeric: tabular-nums;
+  font-size: var(--fs-xs);
+  color: var(--fg-3);
+}
+
+/* ── 筛选面板 ── */
+/*
+ * 筛选面板：悬浮下拉（两层结构）
+ *
+ * ⚠ 关键约束：带 backdrop-filter 的元素不能自己做几何动画。
+ *   Chromium 会把参与 transform / clip-path 动画的元素提升为独立合成层，
+ *   而合成层的 backdrop 采样不到下方内容 —— 表现为动画全程是"半透明 + 锐利背景"，
+ *   动画结束图层合并后才突然变模糊，肉眼就是"最后卡一下然后变纯色"。
+ *
+ *   实测（条纹背景 + 逐秒采样标准差，sd 低=模糊生效）：
+ *     clip-path 单层： 127 → 127 → 96 → 0      ← 动画中 blur 全程失效
+ *     分层方案：       107 → 66 → 36 → 1.5      ← 全程平滑
+ *
+ *   所以拆成两层：
+ *     .filters        只负责毛玻璃 + 淡入淡出（不碰任何几何属性）
+ *     .filters__panel 负责展开/收起的向上滑动（无 backdrop-filter，随便动）
+ */
+.filters {
+  position: fixed;
+  inset-block-start: var(--header-h, 56px);
+  inset-inline: 0;
+  z-index: 99;
+  max-block-size: min(70dvh, calc(100dvh - var(--header-h, 56px) - 40px));
+  overflow: hidden;
+  background: var(--bg-glass);
+  backdrop-filter: blur(14px) saturate(140%);
+  /* 提示浏览器提前把图层准备好，减少首帧抖动 */
+  will-change: backdrop-filter, opacity;
+  border-block-end: 1px solid var(--line-2);
+  box-shadow: 0 18px 48px rgb(0 0 0 / 0.72);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 260ms cubic-bezier(0.16, 1, 0.3, 1),
+    visibility 0s linear 260ms;
+}
+.filters[data-open] {
+  opacity: 1;
+  visibility: visible;
+  transition:
+    opacity 220ms cubic-bezier(0.16, 1, 0.3, 1),
+    visibility 0s;
+}
+
+/* 几何动画只发生在这一层：向上收起 = 整块向上滑出父级并被裁剪 */
+.filters__panel {
+  display: flex;
+  flex-direction: column;
+  max-block-size: inherit;
+  transform: translateY(-100%);
+  transition: transform 420ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+.filters[data-open] .filters__panel {
+  transform: translateY(0);
+  transition: transform 520ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.filters__inner {
+  max-width: 1400px;
+  width: 100%;
+  margin-inline: auto;
+  padding: var(--s-4);
+  display: grid;
+  gap: 2px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.filter-row {
+  display: grid;
+  grid-template-columns: 4.5em 1fr;
+  align-items: baseline;
+  gap: var(--s-2);
+  padding-block: 1px;
+}
+
+.filter-row__label {
+  font-size: var(--fs-xs);
+  color: var(--fg-2);
+  text-align: end;
+  white-space: nowrap;
+}
+
+.filter-row__values {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px var(--s-3);
+  min-width: 0;
+  align-items: center;
+}
+
+/* ── 标签 chip（可点选） ── */
+/* 筛选标签：无底色无边框，纯文字。
+   选中态 = 白色加粗 + 下划线，一眼可辨，且不会在页面上堆满小方块。 */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 30px;
+  padding: 2px 0;
+  font-size: var(--fs-sm);
+  line-height: 1.4;
+  color: var(--fg-2);
+  background: none;
+  border: none;
+  border-radius: 0;
+  transition: color 0.12s;
+  user-select: none;
+}
+.chip .ico { width: 1.05em; height: 1.05em; margin: 0; }
+.chip:hover { color: var(--fg-0); }
+.chip:active { opacity: 0.6; }
+
+.chip[aria-pressed='true'] {
+  color: var(--fg-0);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.chip[aria-pressed='true'] .ico { filter: brightness(1.6); }
+.chip[data-empty] { opacity: 0.3; }
+/* 「全部」略强一点，作为每组的复位入口 */
+.chip--all { color: var(--fg-1); font-weight: 600; }
+.chip--all[aria-pressed='true'] { color: var(--fg-0); }
+
+/* 组内用细分隔点代替间隙，密度更高也更干净 */
+.chip + .chip::before {
+  content: '';
+  display: inline-block;
+  width: 2px;
+  height: 2px;
+  margin-inline-end: var(--s-2);
+  border-radius: 50%;
+  background: var(--line-3);
+  vertical-align: 0.2em;
+}
+
+/* ── 主内容 ── */
+.main {
+  max-width: 1400px;
+  margin-inline: auto;
+  padding: var(--s-4);
+}
+
+/* 空状态 */
+.empty {
+  padding: var(--s-6) var(--s-4);
+  text-align: center;
+  color: var(--fg-2);
+}
+.empty[hidden] { display: none; }
+.empty__title { font-size: var(--fs-lg); color: var(--fg-1); margin-block-end: var(--s-2); }
+
+/* 回到顶部 */
+/* 无底色图标按钮 */
+.to-top {
+  position: fixed;
+  inset-inline-end: var(--s-5);
+  inset-block-end: var(--s-5);
+  z-index: 90;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  color: var(--fg-3);
+  background: none;
+  border: none;
+  border-radius: 0;
+  opacity: 0;
+  visibility: hidden;
+  translate: 0 6px;
+  transition: color 0.2s, opacity 0.2s, translate 0.2s;
+}
+.to-top[data-visible] { opacity: 1; visibility: visible; translate: 0; }
+.to-top:hover { color: var(--fg-0); }
+
+/* ── 响应式 ── */
+@media (max-width: 860px) {
+  .site-header__bar {
+  position: relative; flex-wrap: wrap; padding: var(--s-2) var(--s-3); gap: var(--s-2); }
+  .search { order: 3; flex: 1 1 100%; max-width: none; }
+  .header-actions { margin-inline-start: auto; }
+  .filter-row { grid-template-columns: 1fr; gap: var(--s-1); }
+  .filter-row__label { text-align: start; padding-block-start: 0; }
+  .main { padding: var(--s-3); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════
+   筛选面板的移动端形态：从顶栏下拉的浮层，独立滚动
+   ═══════════════════════════════════════════════ */
+@media (max-width: 900px) {
+  .filters__inner { padding: var(--s-3); }
+  .filter-row {
+    grid-template-columns: 4em 1fr;
+    padding-block: 5px;
+  }
+  .filter-row__values { gap: 6px; }
+}
+
+/* 触控设备：放大点击区域 */
+@media (pointer: coarse) {
+  .chip { min-height: 32px; padding-inline: 12px; }
+  .btn { min-height: 34px; }
+  .search__clear { padding: 6px; }
+}
+
+/* 顶栏吸顶时给页面留出视觉呼吸 */
+.site-top + .main { padding-block-start: var(--s-3); }
+
+/* 窄屏（浮层形态）下 chip 放大到符合触控规范 */
+@media (max-width: 900px) {
+  .chip { min-height: 36px; font-size: var(--fs-md); }
+  .chip .ico { width: 1.15em; height: 1.15em; }
+  .filter-row { grid-template-columns: 4.2em 1fr; align-items: start; padding-block: 4px; }
+  .filter-row__label { padding-block-start: 10px; }
+}

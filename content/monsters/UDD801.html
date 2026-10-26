@@ -1,0 +1,118 @@
+<!-- UDD801 -->
+<article class="monster" id="UDD801" data-id="UDD801" data-name="巫妖女王"
+         data-race="undead" data-level="8" data-dom="16"
+         data-str="8" data-dex="12" data-con="14" data-int="26" data-wis="22" data-cha="20" data-hp="105" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/UDD801.webp" alt="巫妖女王"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">巫妖女王</h2>
+      <p class="monster__meta"><span class="monster__level">8级</span><span class="monster__race">亡灵</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">16</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability"><dt>力量</dt><dd>8</dd></div>
+      <div class="ability"><dt>敏捷</dt><dd>12</dd></div>
+      <div class="ability"><dt>体质</dt><dd>14</dd></div>
+      <div class="ability adv"><dt>智力</dt><dd>26</dd></div>
+      <div class="ability"><dt>感知</dt><dd>22</dd></div>
+      <div class="ability"><dt>魅力</dt><dd>20</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>105</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main"
+        data-dmg="heal"
+        data-attack="aoe"
+        data-check="save" data-save="cha:15">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/UDD801.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">律令：死亡</h3>
+        <p class="part__bonus"><span>免疫中毒</span><span>免疫<img src="img/common/mag2.webp" alt=""><span class="mag2">死灵伤害</span></span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line heal">6d6 <img class="ico" src="img/common/heal.webp" alt="">治疗<img class="ico" src="img/common/CHA.webp" alt="魅力" title="魅力"></span>
+          </span>
+        </div>
+        <p class="part__desc">交战开始时，对生命值在20%以下的敌人尝试即死。若成功，则恢复自身生命值，且地下城全区域的所有友军获得<span class="pink">灵魂</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">灵魂</span>：造成的<img src="img/common/mag2.webp" alt=""><span class="mag2">死灵伤害</span>增加等同于层数的数值。（最大层数：10）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="int" data-dmg="mag2" data-mult="int"
+        data-dcbonus="int" data-attack="spell ranged"
+        data-check="save" data-save="cha:12">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/UDD801.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">死亡一指</h3>
+        <p class="part__bonus"><span>智力+3</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line mag2">6d10 <img class="ico" src="img/common/mag2.webp" alt="">死灵伤害<img class="ico" src="img/common/INT.webp" alt=""><span class="dmg__mult">(2)</span></span>
+          </span>
+        </div>
+        <p class="part__desc">对目标造成<img src="img/common/mag2.webp" alt=""><span class="mag2">死灵伤害</span>并获得3层<span class="pink">灵魂</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">灵魂</span>：造成的<img src="img/common/mag2.webp" alt=""><span class="mag2">死灵伤害</span>增加等同于层数的数值。（最大层数：10）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="passive"
+        data-bonus="dc" data-dmg="mag4" data-mult="wis">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/UDD801.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">死灵波动</h3>
+        <p class="part__bonus"><span>法术豁免难度+2</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line mag4">2d8 <img class="ico" src="img/common/mag4.webp" alt="">心灵伤害<img class="ico" src="img/common/WIS.webp" alt="感知" title="感知"></span>
+          </span>
+        </div>
+        <p class="part__desc">在自身的法术中附加<span class="mag4">2d8 <img src="img/common/mag4.webp" alt="">额外心灵伤害</span><img src="img/common/WIS.webp" alt="">，且自身的<img src="img/common/mag2.webp" alt=""><span class="mag2">死灵伤害</span>无视目标的抗性与免疫。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="passive"
+        data-bonus="wis"
+        data-attack="aoe">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/UDD801.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">灵魂回响</h3>
+        <p class="part__bonus"><span>感知+3</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">交战中若有角色死亡，为全区域所有友军赋予<span class="pink">灵魂</span>，且自身的下一次攻击必定造成重击。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">灵魂</span>：造成的<img src="img/common/mag2.webp" alt=""><span class="mag2">死灵伤害</span>增加等同于层数的数值。（最大层数：10）</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</article>

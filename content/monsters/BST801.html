@@ -1,0 +1,102 @@
+<!-- BST801 -->
+<article class="monster" id="BST801" data-id="BST801" data-name="芬里尔"
+         data-race="beast" data-level="8" data-dom="16"
+         data-str="27" data-dex="20" data-con="24" data-int="6" data-wis="14" data-cha="10" data-hp="135" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/BST801.webp" alt="芬里尔"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">芬里尔</h2>
+      <p class="monster__meta"><span class="monster__level">8级</span><span class="monster__race">野兽</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">16</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability adv"><dt>力量</dt><dd>27</dd></div>
+      <div class="ability"><dt>敏捷</dt><dd>20</dd></div>
+      <div class="ability"><dt>体质</dt><dd>24</dd></div>
+      <div class="ability"><dt>智力</dt><dd>6</dd></div>
+      <div class="ability"><dt>感知</dt><dd>14</dd></div>
+      <div class="ability"><dt>魅力</dt><dd>10</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>135</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main"
+        data-attack="aoe">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/BST801.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">末日狂嗥</h3>
+        <p class="part__bonus"><span>免疫恐慌</span><span>免疫<img src="img/common/ele2.webp" alt=""><span class="ele2">寒冷伤害</span></span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">交战开始时，所有友军获得<span class="pink">末日咆哮</span>层数。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">末日咆哮</span>：每层使重击所需的掷骰值减少1。层数达到5层及以上时，所有攻击额外造成2d8点<img src="img/common/ele2.webp" alt=""><span class="ele2">寒冷伤害</span>。（持续时间：4.8秒 / 非战斗时9.6秒，最大层数：5）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="str" data-dmg="phy4 ele2" data-mult="str"
+        data-dcbonus="str" data-attack="melee aoe"
+        data-check="hit save" data-hit="str" data-save="dex:12">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/BST801.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">霜牙巨剑</h3>
+        <p class="part__bonus"><span>力量+3</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line phy4">4d10 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<img class="ico" src="img/common/STR.webp" alt="力量" title="力量"></span>
+            <span class="dmg__line ele2">+ 3d8 <img class="ico" src="img/common/ele2.webp" alt="">寒冷伤害<img class="ico" src="img/common/WIS.webp" alt="感知" title="感知"></span>
+          </span>
+        </div>
+        <p class="part__desc">挥砍目标，对所有敌人造成<img src="img/common/ele2.webp" alt=""><span class="ele2">寒冷伤害</span>。</p>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="passive"
+        data-bonus="wis">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/BST801.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">粉碎</h3>
+        <p class="part__bonus"><span>感知+3</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">造成暴击时，使目标获得对<img src="img/common/phy4.webp" alt=""><span class="phy4">物理伤害</span>与<img src="img/common/ele2.webp" alt=""><span class="ele2">寒冷伤害</span>的易伤状态。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">物理伤害易伤</span>：获得对<img src="img/common/phy4.webp" alt=""><span class="phy4">物理伤害</span>的<span class="lb">易伤</span>。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+          <p class="effect"><span class="effect__name">寒冷易伤</span>：获得对<img src="img/common/ele2.webp" alt=""><span class="ele2">寒冷伤害</span>的<span class="lb">易伤</span>。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="passive"
+        data-bonus="ini">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/BST801.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">捕食者本能</h3>
+        <p class="part__bonus"><span>先攻+4</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">攻击生命值在35%及以下的敌人时，必定触发重击。战场上每当有人死亡时，恢复已消耗的<img src="img/common/main.webp" alt=""><span class="green">动作</span>。</p>
+      </div>
+    </li>
+  </ul>
+</article>

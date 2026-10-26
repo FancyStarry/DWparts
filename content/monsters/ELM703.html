@@ -1,0 +1,118 @@
+<!-- ELM703 -->
+<article class="monster" id="ELM703" data-id="ELM703" data-name="水之君主"
+         data-race="elf" data-level="7" data-dom="12"
+         data-str="19" data-dex="12" data-con="18" data-int="20" data-wis="14" data-cha="11" data-hp="107" data-ac="8">
+  <header class="monster__head">
+    <figure class="monster__portrait"><img src="img/characters/ELM703.webp" alt="水之君主"></figure>
+    <div class="monster__title">
+      <h2 class="monster__name">水之君主</h2>
+      <p class="monster__meta"><span class="monster__level">7级</span><span class="monster__race">精灵</span><span class="monster__dom"><img src="img/common/Dom.webp" class="ico" alt="支配">12</span></p>
+    </div>
+    <dl class="monster__abilities">
+      <div class="ability"><dt>力量</dt><dd>19</dd></div>
+      <div class="ability"><dt>敏捷</dt><dd>12</dd></div>
+      <div class="ability"><dt>体质</dt><dd>18</dd></div>
+      <div class="ability adv"><dt>智力</dt><dd>20</dd></div>
+      <div class="ability"><dt>感知</dt><dd>14</dd></div>
+      <div class="ability"><dt>魅力</dt><dd>11</dd></div>
+    </dl>
+    <dl class="monster__vitals">
+      <div class="vital"><dt><img src="img/common/MHP.webp" class="ico" alt="">最大生命值</dt><dd>107</dd></div>
+      <div class="vital"><dt><img src="img/common/AC.webp" class="ico" alt="">护甲等级（AC）</dt><dd>8</dd></div>
+    </dl>
+  </header>
+  <ul class="parts">
+    <li class="part" data-part="basic" data-act="main"
+        data-attack="aoe"
+        data-check="save" data-save="con:12">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/b.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-basic.png)"><img src="img/characters/ELM703.webp" alt=""></span>
+          <img src="img/common/bt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">海神之威</h3>
+        <p class="part__bonus"><span>免疫<img src="img/common/ele2.webp" alt=""><span class="ele2">寒冷伤害</span></span><span>抵抗<span class="ele5">强酸伤害</span></span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">交战开始时深海寒气笼罩战场，在交战期间对所有敌人赋予<span class="pink">极寒</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">极寒</span>：交战期间获得对<img src="img/common/ele2.webp" alt=""><span class="ele2">寒冷伤害</span>的<span class="lb">易伤</span>。（持续时间：2.4秒 / 非战斗时4.8秒）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="m" data-act="main"
+        data-bonus="int" data-dmg="ele2 phy4" data-mult="int"
+        data-dcbonus="int" data-attack="spell melee"
+        data-check="hit save" data-hit="int" data-save="str:12">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/m.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-m.png)"><img src="img/characters/ELM703.webp" alt=""></span>
+          <img src="img/common/mt.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">深海之枪</h3>
+        <p class="part__bonus"><span>智力+2</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line ele2">4d10 <img class="ico" src="img/common/ele2.webp" alt="">寒冷伤害<img class="ico" src="img/common/INT.webp" alt="智力" title="智力"></span>
+            <span class="dmg__line phy4">+ 2d10 <img class="ico" src="img/common/phy4.webp" alt="">物理伤害<img class="ico" src="img/common/CHA.webp" alt="魅力" title="魅力"></span>
+          </span>
+        </div>
+        <p class="part__desc">在目标处掀起激流，若其无法承受则赋予1层<span class="pink">深海重压</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">深海重压</span>：每层使敏捷豁免和先攻值减少1。（持续时间：4.8秒 / 非战斗时9.6秒，最大层数：5）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s1" data-act="passive"
+        data-bonus="cha"
+        data-dcbonus="int"
+        data-check="save" data-save="con:14">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s1.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s1.png)"><img src="img/characters/ELM703.webp" alt=""></span>
+          <img src="img/common/s1t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">漩涡核心</h3>
+        <p class="part__bonus"><span>魅力+2</span></p>
+      </div>
+      <div class="part__body">
+        <p class="part__desc">对被自身攻击的敌人赋予1层<span class="pink">冻伤</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">冻伤</span>：交战结束时，每层受到1d8<img src="img/common/ele2.webp" alt=""><span class="ele2">寒冷伤害</span>。（持续时间：2.4秒 / 非战斗时4.8秒，最大层数：10）</p>
+        </div>
+      </div>
+    </li>
+    <li class="part" data-part="s2" data-act="passive"
+        data-bonus="ac" data-dmg="ele2" data-mult="int"
+        data-dcbonus="int"
+        data-check="save" data-save="con:12">
+      <div class="part__head">
+        <span class="badge">
+          <img src="img/common/s2.webp" class="badge__frame" alt="">
+          <span class="badge__portrait" style="--badge-matte:url(img/common/mask-s2.png)"><img src="img/characters/ELM703.webp" alt=""></span>
+          <img src="img/common/s2t.webp" class="badge__label" alt="">
+        </span>
+        <h3 class="part__name">海啸之鳞</h3>
+        <p class="part__bonus"><span>护甲等级+2</span></p>
+      </div>
+      <div class="part__body">
+        <div class="dmg">
+          <span class="dmg__die"><img src="img/common/dice.webp" alt=""></span>
+          <span class="dmg__lines">
+            <span class="dmg__line ele2">1d8 <img class="ico" src="img/common/ele2.webp" alt="">寒冷伤害<img class="ico" src="img/common/INT.webp" alt=""><span class="dmg__mult">(0.5)</span></span>
+          </span>
+        </div>
+        <p class="part__desc">向攻击自身的敌人反弹<span class="ele2">1d8 <img src="img/common/ele2.webp" alt="">额外寒冷伤害</span><img src="img/common/INT.webp" alt="">( 0.5 )，并赋予1层<span class="pink">深海重压</span>。</p>
+        <div class="effects">
+          <p class="effect"><span class="effect__name">深海重压</span>：每层使敏捷豁免和先攻值减少1。（持续时间：4.8秒 / 非战斗时9.6秒，最大层数：5）</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</article>
